@@ -8,7 +8,9 @@
 
 ## TODO:
 [ x ] Zjistit cislo ucebny - 54
+## Mapa:
 
+![Mapa](https://github.com/karl0st/zachran-purkiadu/blob/main/graphics/signal-2023-01-30-000902_002.png)
 ## Postavy:
 
 ### Hlavni:
