@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/school/ucitelska_lavice.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=4]
 [ext_resource path="res://graphics/school/tabule.png" type="Texture" id=5]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=6]
+[ext_resource path="res://global_data/Checkpoint.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
@@ -556,4 +557,9 @@ texture = ExtResource( 2 )
 [node name="Door" parent="." instance=ExtResource( 1 )]
 position = Vector2( 228, 36 )
 
+[node name="Checkpoint" parent="." instance=ExtResource( 7 )]
+position = Vector2( 118, 35 )
+
 [editable path="Camera2D"]
+[editable path="Door"]
+[editable path="Checkpoint"]

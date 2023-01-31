@@ -14,12 +14,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Action RPG"
-run/main_scene="res://Level_0.tscn"
+config/name="Zachran Purkiadu"
+run/main_scene="res://Menu/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
+GlobalData="*res://global_data/Global_data.gd"
 PlayerStats="*res://Player/PlayerStats.tscn"
 
 [display]
