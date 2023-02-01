@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Login/interface/login/Login.gd" type="Script" id=1]
 [ext_resource path="res://graphics/backgound-test.jpg" type="Texture" id=2]
-[ext_resource path="res://graphics/ui/buttons/UI_Flat_Button_Medium_Lock_02a4.png" type="Texture" id=3]
-[ext_resource path="res://graphics/ui/buttons/UI_Flat_Button_Medium_Lock_02a2.png" type="Texture" id=4]
+[ext_resource path="res://graphics/ui/buttons/button/UI_Flat_Button_Medium_Lock_02a4.png" type="Texture" id=3]
+[ext_resource path="res://graphics/ui/buttons/button/UI_Flat_Button_Medium_Lock_02a2.png" type="Texture" id=4]
 [ext_resource path="res://Login/interface/fonts/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://graphics/ui/buttons/UI_Flat_Button_Medium_Lock_02a1.png" type="Texture" id=6]
+[ext_resource path="res://graphics/ui/buttons/button/UI_Flat_Button_Medium_Lock_02a1.png" type="Texture" id=6]
 [ext_resource path="res://graphics/logo-mozna.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=2]

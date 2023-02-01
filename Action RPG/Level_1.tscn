@@ -8,12 +8,12 @@
 [node name="Background" parent="." index="0"]
 rotation = -0.000870795
 
+[node name="AnimatedSprite" parent="YSort/Checkpoint" index="1"]
+frame = 1
+
 [node name="Bat" parent="Door" index="2" instance=ExtResource( 2 )]
 position = Vector2( -187, 4 )
 
-[node name="CollisionShape2D" parent="Checkpoint" index="1"]
-checkpoint_num = 1
-
 [editable path="Camera2D"]
+[editable path="YSort/Checkpoint"]
 [editable path="Door"]
-[editable path="Checkpoint"]
