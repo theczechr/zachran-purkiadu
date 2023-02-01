@@ -5,10 +5,18 @@ onready var username : LineEdit = $LoginContainer/UserContainer/username
 onready var password : LineEdit = $LoginContainer/PassContainer/password
 onready var notification : Label = $Notification
 onready var Firebase = $Firebase
+var credentials = _load_csv()
 
 func _on_LoginButton_pressed() -> void:
 	if username.text.empty() or password.text.empty():
-		notification.text = "Please, enter your username and password"
+		notification.text = "Zadej prosím přihlašovací jméno a heslo"
+		return
+	if username.text in credentials:
+		if password.text != credentials[username.text]:
+			notification.text = "Nesprávné heslo"
+			return
+	else:
+		notification.text = "Nesprávné přihlašovací údaje"
 		return
 	GlobalData.current_data["player_id"] = username.text
 	GlobalData.save_data(GlobalData.player_file_path)
@@ -26,3 +34,13 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 
 func _on_BackButton_pressed():
 	get_tree().change_scene("res://Menu/Menu.tscn")
+
+func _load_csv():
+	var file = File.new()
+	var result = {}
+	file.open("res://global_data/ucastnici.csv", file.READ)
+	while !file.eof_reached():
+		var line = file.get_csv_line(";")
+		result[line[0]] = line[-1]
+	file.close()
+	return result
