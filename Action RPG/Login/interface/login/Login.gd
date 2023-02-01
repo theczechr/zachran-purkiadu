@@ -38,7 +38,7 @@ func _on_BackButton_pressed():
 func _load_csv():
 	var file = File.new()
 	var result = {}
-	file.open("res://global_data/ucastnici.csv", file.READ)
+	file.open("res://global_data/ucastnici.csv.txt", file.READ)
 	while !file.eof_reached():
 		var line = file.get_csv_line(";")
 		result[line[0]] = line[-1]
