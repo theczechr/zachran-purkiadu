@@ -8,6 +8,9 @@
 [node name="Background" parent="." index="0"]
 rotation = -0.000870795
 
+[node name="CollisionShape2D" parent="YSort/Checkpoint" index="0"]
+checkpoint_num = 1
+
 [node name="AnimatedSprite" parent="YSort/Checkpoint" index="1"]
 frame = 1
 
