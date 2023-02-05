@@ -19,21 +19,6 @@ onready var camera := $Camera2D
 func _ready() -> void:
 	set_physics_process(false)
 
-func _physics_process(delta: float) -> void:
-	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	
-	var desired_velocity := stats.run_speed * direction
-	
-	var steering := desired_velocity - velocity
-	velocity += steering * DRAG_FACTOR
-	velocity = move_and_slide(velocity, Vector2.ZERO)
-
-	var direction_key := direction.round()
-	direction_key.x = abs(direction_key.x)
-	if direction_key in DIRECTION_TO_FRAME:
-		sprite.frame = DIRECTION_TO_FRAME[direction_key]
-		sprite.flip_h = sign(direction.x) == -1
-
 
 func set_stats(new_stats: Character) -> void:
 	stats = new_stats
