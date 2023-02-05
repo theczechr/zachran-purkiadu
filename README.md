@@ -10,7 +10,7 @@
 [ x ] Zjistit cislo ucebny - 54
 ## Mapa:
 
-![Mapa](https://github.com/karl0st/zachran-purkiadu/blob/main/graphics/mapa.png)
+![Mapa](https://github.com/karl0st/zachran-purkiadu/blob/temp/mapa.png)
 ## Postavy:
 
 ### Hlavni:
