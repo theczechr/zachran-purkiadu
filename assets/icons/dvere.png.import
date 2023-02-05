@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lavice.png-a14ff6e0558cd4f697731e53f2c65819.stex"
+path="res://.import/dvere.png-da82e0c24a52f9b50a92c423434b2602.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/lavice.png"
-dest_files=[ "res://.import/lavice.png-a14ff6e0558cd4f697731e53f2c65819.stex" ]
+source_file="res://assets/icons/dvere.png"
+dest_files=[ "res://.import/dvere.png-da82e0c24a52f9b50a92c423434b2602.stex" ]
 
 [params]
 
