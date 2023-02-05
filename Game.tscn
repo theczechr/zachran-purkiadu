@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://player/Camera/Camera2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PlayerCharacter.gd" type="Script" id=3]
+[ext_resource path="res://assets/sprites/background/wooden-floor.png" type="Texture" id=4]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+var _save: SaveGame
+onready var _player := $PlayerCharacter
+
+func _ready():
+	_create_or_load_save()
+
+func _create_or_load_save() -> void:
+	if SaveGame.save_exists():
+		_save = SaveGame.load_savegame() as SaveGame
+	else:
+		_save = SaveGame.new()
+		_save.inventory = Inventory.new()
+		_save.character = Character.new()
+		_save.global_position = _player.global_position
+		
+		_save.write_savegame()
+		
+	_player.global_position = _save.global_position
+	_player.stats = _save.character
+		
+func _save_game() -> void:
+	_save.global_position = _player.global_position
+	_save.write_savegame()
+"
+
+[node name="U54" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -2.0
+margin_top = -4.0
+margin_right = 12798.0
+margin_bottom = 7196.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 2
+
+[node name="PlayerCharacter" type="KinematicBody2D" parent="."]
+visible = false
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
+
+[node name="Sprite" type="Sprite" parent="PlayerCharacter"]
+
+[node name="Camera2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 466, 295 )
+zoom = Vector2( 0.3, 0.3 )
+
+[node name="BottomRight" parent="Camera2D/Limits" index="1"]
+position = Vector2( 1280, 720 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 466, 295 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[editable path="Camera2D"]

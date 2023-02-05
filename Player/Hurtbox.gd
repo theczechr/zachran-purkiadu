@@ -1,6 +1,6 @@
 extends Area2D
 
-const HitEffect = preload("res://Effects/HitEffect.tscn")
+const HitEffect = preload("res://assets/effects/HitEffect.tscn")
 
 var invincible = false setget set_invincible
 

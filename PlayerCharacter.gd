@@ -13,14 +13,11 @@ var stats: Character setget set_stats
 
 var velocity := Vector2.ZERO
 
-onready var sprite := $Godot
-onready var smoke_particles := $SmokeParticles
+onready var sprite := $Sprite
 onready var camera := $Camera2D
-
 
 func _ready() -> void:
 	set_physics_process(false)
-
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -36,8 +33,6 @@ func _physics_process(delta: float) -> void:
 	if direction_key in DIRECTION_TO_FRAME:
 		sprite.frame = DIRECTION_TO_FRAME[direction_key]
 		sprite.flip_h = sign(direction.x) == -1
-
-	smoke_particles.emitting = velocity.length() > stats.run_speed / 2.0
 
 
 func set_stats(new_stats: Character) -> void:

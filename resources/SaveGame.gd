@@ -1,7 +1,7 @@
 class_name SaveGame
 extends Resource
 
-const SAVE_GAME_BASE_PATH := "user://ZPUX.tres" # Zachran Purkiadu Uloha X
+const SAVE_GAME_BASE_PATH := "user://ZPU4" # Zachran Purkiadu Uloha X
 
 # Use this to detect old player saves and update their data.
 export var version := 1
@@ -11,7 +11,6 @@ export var version := 1
 export var character: Resource = Character.new()
 export var inventory: Resource = Inventory.new()
 
-export var map_name := ""
 export var global_position := Vector2.ZERO
 
 func write_savegame() -> void:
