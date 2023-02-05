@@ -20,8 +20,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-GlobalData="*res://global_data/Global_data.gd"
 PlayerStats="*res://Player/PlayerStats.tscn"
+GlobalData="*res://global_data/Global_data.gd"
 
 [display]
 
