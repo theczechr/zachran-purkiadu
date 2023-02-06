@@ -26,8 +26,6 @@ func _on_LoginButton_pressed() -> void:
 		popup.show()
 		popup.dialog_text = "Nesprávné přihlašovací údaje"
 		return
-
-
 	get_tree().change_scene("res://Game.tscn")
 
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
@@ -42,7 +40,7 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 func _load_csv():
 	var file = File.new()
 	var result = {}
-	file.open("res://ucastnici.csv.txt", file.READ)
+	file.open("res://resources/ucastnici.txt", file.READ)
 	while !file.eof_reached():
 		var line = file.get_csv_line(";")
 		result[line[0]] = line[-1]

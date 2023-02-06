@@ -133,6 +133,7 @@ enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
 [global]
 
 reso=false
+export=false
 
 [gui]
 
