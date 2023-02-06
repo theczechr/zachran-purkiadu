@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/lista-polovicni.png-0f2775618eeaa6dea5efa96eb51f9372.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://mapa.png"
+source_file="res://assets/tilemaps/lista-polovicni.png"
+dest_files=[ "res://.import/lista-polovicni.png-0f2775618eeaa6dea5efa96eb51f9372.stex" ]
+
 [params]
 
 compress/mode=0
@@ -15,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -26,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
