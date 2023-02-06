@@ -309,7 +309,7 @@ height = 16.0
 0/shapes = [  ]
 0/z_index = 0
 
-[node name="U54" type="Node2D"]
+[node name="U55" type="Node2D"]
 script = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -490,6 +490,7 @@ position = Vector2( 341, 240 )
 texture = ExtResource( 20 )
 
 [node name="Inventory" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource( 22 )
 
 [node name="Inventory" type="Control" parent="Inventory"]
