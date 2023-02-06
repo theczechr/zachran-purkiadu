@@ -10,7 +10,7 @@
 [ x ] Zjistit cislo ucebny - 54
 ## Mapa:
 
-![Mapa](https://github.com/karl0st/zachran-purkiadu/blob/temp/mapa.png)
+![Mapa](https://github.com/karl0st/zachran-purkiadu/blob/main/graphics/signal-2023-01-30-000902_002.png)
 ## Postavy:
 
 ### Hlavni:
@@ -42,7 +42,7 @@ __Sem piste napady na puzzly/questy pls help guys__
 * **Level 2 Zjišťuje co se stalo**
 * **Level 3 Fix tím že vypustíš bazén z 5. Patra a ten vše uhasí**
 * **Level 4 Znovu nahození serveru**
- * **Level 5Nakonec se vzbudíš -> byl to jen sen**
+* **Level 5 Nakonec se vzbudíš -> byl to jen sen**
 
 
 ### Level 1 - The Beginning
@@ -65,44 +65,45 @@ Super! To by bylo za mnou, měl bych zjistit jak to vypadá venku..
 * BONUS TIP:
 bro proste vezmi ten hasicak ze zdi
 
-### Level 2:
+### Level 2 - What happened?:
 
 #### Prostredi:
-*
+* Chodba ve 4. patre, vlevo ucebna 50 bude horet a zachody taky, budes moct jit pouze do prava
+
 ##### Scena:
-*
+* Podařilo se ti utéct z učebny 53, ale nepamatuješ si co se stalo předtím, musíš zjistit, co se děje a zastavit to co nejdřív
 #### Quest:
-*
+* Vyjdes, v ceste ti bude branit zase ohen, tak proste pujdes zase pro hasicak, pokusis se ho pouzit - znici se/nebude fungovat/bude prazdny, prehraje se nejaky monolog a ty budes vymyslet nejaky jiny zpusob, budou tam dvere, prijdes k nim -jsou zamcene, budou na kod, budes to muset hacknout (omg vim klise ale tak co uz - bude to nejaka minihra, spojovani atd.), otevres ty dvere a dostanes se do dalsiho levelu - serverovny
 #### Text:
 *
-### Level 3:
+### Level 3 Server fix:
 
 #### Prostredi:
-*
+* Serverovna(ktera irl neni tam kde bude ve hre)
 ##### Scena:
-*
+* Dostal ses do serverovny, mas pristup ke vsem logum a je ted na tobe zjistit co se stalo.
 #### Quest:
-*
+* Projdes logs, zjistis ze nejaky byvaly zak skoly overloadnul servery, musis najit USB s backupem a dat ji do serveru na druhe strane 4. patra, vezmes si pacidlo, ze se bude hodit
 #### Text:
 *
-### Level 4:
+### Level 4 stop the fire:
 
 #### Prostredi:
-*
+* Chodba ve 4. patre, kolem auly atd.
 ##### Scena:
-*
+* Vysel jsi ze serverovny a musis se dostat na druhou stranu skoly ale vsude hori a neni kam vyjit.. vidis ze ze stropu kape voda a je trochu nakruplej, musis zjistit, jestli by to neslo nejak pouzit
 #### Quest:
-*
+* Vypust bazen za pomoci pacidla a uhas 4. patro, dojdi do serverovny 
 #### Text:
 *
 ### Level 5 (Konec):
 
 #### Prostredi:
-*
+* treba u60
 ##### Scena:
-*
+* Prijdes a nahodis backup na servery, vzbudis se zpatky na zacatku v u54 a zjistis ze to cele bylo jen sen :D
 #### Quest:
-*
+* Dat USB do pc.
 #### Text:
 *
 ## Easter Eggy
