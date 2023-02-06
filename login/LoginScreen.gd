@@ -7,7 +7,6 @@ onready var http : HTTPRequest = $HTTPRequest
 onready var username : LineEdit = $NinePatchRect/VBoxContainer/UsernameContainer/Username
 onready var password : LineEdit = $NinePatchRect/VBoxContainer/PasswordContainer/Password
 onready var popup : AcceptDialog = $PopUp
-onready var firebase = $Firebase
 
 func _ready():
 	if SaveGame.save_exists():
@@ -28,7 +27,7 @@ func _on_LoginButton_pressed() -> void:
 		popup.dialog_text = "Nesprávné přihlašovací údaje"
 		return
 
-#	firebase.get_progress(username.text, http)
+
 	get_tree().change_scene("res://Game.tscn")
 
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
