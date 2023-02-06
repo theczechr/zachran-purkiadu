@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/tilemaps/lista.png" type="Texture" id=9]
 [ext_resource path="res://assets/tilemaps/podlaha1.png" type="Texture" id=10]
 [ext_resource path="res://assets/tilemaps/zedtest.png" type="Texture" id=11]
+[ext_resource path="res://assets/icons/podlaha-svetla.png" type="Texture" id=12]
 [ext_resource path="res://assets/sprites/kamera_doprava.png" type="Texture" id=13]
 [ext_resource path="res://Server.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Skrinky.tscn" type="PackedScene" id=15]
@@ -79,6 +80,29 @@ func _save_game() -> void:
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
+1/name = "podlaha-svetla.png 1"
+1/texture = ExtResource( 12 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 1
+1/autotile/bitmask_flags = [ Vector2( 0, 0 ), 16 ]
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=58]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
