@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Panel" type="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -193.0
+margin_top = -50.0
+margin_right = 193.0
+rect_min_size = Vector2( 300, 50 )
