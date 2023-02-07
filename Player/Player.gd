@@ -5,6 +5,8 @@ export var MAX_SPEED = 80
 export var ROLL_SPEED = 120
 export var FRICTION = 500
 
+var stats: Character setget set_stats
+
 enum {
 	MOVE,
 	ROLL,
@@ -26,6 +28,10 @@ func _ready():
 	randomize()
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
+	
+func set_stats(new_stats: Character) -> void:
+	stats = new_stats
+	set_physics_process(stats != null)
 
 func _unhandled_input(event):
 	if event is InputEventKey:

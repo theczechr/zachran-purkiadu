@@ -3,8 +3,6 @@ extends Resource
 
 export var items := {}
 
-# TODO: Remove amount
-
 func add_item(unique_id: String, amount := 1) -> void:
 	if unique_id in items:
 		items[unique_id] += amount
