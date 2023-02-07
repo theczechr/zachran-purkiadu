@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -330,9 +330,6 @@ height = 16.0
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-
-[sub_resource type="ConvexPolygonShape2D" id=72]
-points = PoolVector2Array( 0, 0, 1, 0, 1, 1, 0, 1 )
 
 [sub_resource type="TileSet" id=71]
 0/name = "black.png 0"
@@ -680,6 +677,7 @@ stretch_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 expand = true
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource( 22 )
 
