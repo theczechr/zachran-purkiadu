@@ -1,11 +1,10 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Camera/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://1stul_zidle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=5]
-[ext_resource path="res://interface/Inventory.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/hasicak.png" type="Texture" id=8]
 [ext_resource path="res://assets/tilemaps/lista.png" type="Texture" id=9]
@@ -30,13 +29,7 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
-# TODO: Remove PlayerHurtSouds ?
-# TODO: Remove PlayerStats ?
-
-onready var _inventory := $CanvasLayer/Inventory
-
 var _save: SaveGame
-
 onready var _level := get_tree().current_scene.get_name()
 func _ready():
 	_create_or_load_save()
@@ -53,8 +46,6 @@ func _create_or_load_save() -> void:
 		_save.character = Character.new()
 
 		_save.write_savegame()
-		
-	_inventory.inventory = _save.inventory
 
 func _save_game() -> void:
 	_save.write_savegame()
@@ -381,6 +372,13 @@ texture = ExtResource( 7 )
 expand = true
 stretch_mode = 2
 
+[node name="PlayerCharacter" type="KinematicBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
+
+[node name="Sprite" type="Sprite" parent="PlayerCharacter"]
+
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 281, 287 )
 zoom = Vector2( 0.2, 0.2 )
@@ -546,10 +544,119 @@ position = Vector2( 341, 240 )
 z_index = 2
 texture = ExtResource( 20 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Inventory" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource( 22 )
 
-[node name="Inventory" parent="CanvasLayer" instance=ExtResource( 6 )]
+[node name="Inventory" type="Control" parent="Inventory"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -40.0
+margin_right = 20.0
+
+[node name="Background" type="TextureRect" parent="Inventory/Inventory"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -465.0
+margin_top = -387.0
+margin_right = -365.0
+margin_bottom = -367.0
+grow_horizontal = 2
+grow_vertical = 0
+rect_min_size = Vector2( 100, 20 )
+texture = ExtResource( 21 )
+expand = true
+stretch_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Inventory/Inventory/Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_right = -5.0
+
+[node name="Item" type="TextureRect" parent="Inventory/Inventory/Background/HBoxContainer"]
+margin_top = 2.0
+margin_right = 15.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 15, 15 )
+size_flags_vertical = 4
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Inventory/Inventory/Background/HBoxContainer/Item" groups=["Items"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+
+[node name="Item2" type="TextureRect" parent="Inventory/Inventory/Background/HBoxContainer"]
+margin_left = 19.0
+margin_top = 2.0
+margin_right = 34.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 15, 15 )
+size_flags_vertical = 4
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Inventory/Inventory/Background/HBoxContainer/Item2" groups=["Items"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+
+[node name="Item3" type="TextureRect" parent="Inventory/Inventory/Background/HBoxContainer"]
+margin_left = 38.0
+margin_top = 2.0
+margin_right = 53.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 15, 15 )
+size_flags_vertical = 4
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Inventory/Inventory/Background/HBoxContainer/Item3" groups=["Items"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+
+[node name="Item4" type="TextureRect" parent="Inventory/Inventory/Background/HBoxContainer"]
+margin_left = 57.0
+margin_top = 2.0
+margin_right = 72.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 15, 15 )
+size_flags_vertical = 4
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Inventory/Inventory/Background/HBoxContainer/Item4" groups=["Items"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+
+[node name="Item5" type="TextureRect" parent="Inventory/Inventory/Background/HBoxContainer"]
+margin_left = 76.0
+margin_top = 2.0
+margin_right = 91.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 15, 15 )
+size_flags_vertical = 4
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Inventory/Inventory/Background/HBoxContainer/Item5" groups=["Items"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
 
 [node name="cerna" type="TileMap" parent="."]
 tile_set = SubResource( 71 )
@@ -557,81 +664,79 @@ cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( 13369690, -1610612735, 0, 16253145, -1610612735, 0, 16253354, 1, 0, 26542426, -1610612735, 0, 26542441, -1610612735, 0 )
 
-[node name="Ohne" type="Node" parent="."]
-
-[node name="KinematicBody2D" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D" parent="." instance=ExtResource( 26 )]
 position = Vector2( 248, 376 )
 
-[node name="KinematicBody2D2" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 26 )]
 position = Vector2( 250, 394 )
 
-[node name="KinematicBody2D23" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D23" parent="." instance=ExtResource( 26 )]
 position = Vector2( 238, 382 )
 
-[node name="KinematicBody2D24" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D24" parent="." instance=ExtResource( 26 )]
 position = Vector2( 237, 393 )
 
-[node name="KinematicBody2D20" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D20" parent="." instance=ExtResource( 26 )]
 position = Vector2( 265, 391 )
 
-[node name="KinematicBody2D21" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D21" parent="." instance=ExtResource( 26 )]
 position = Vector2( 304, 392 )
 
-[node name="KinematicBody2D22" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D22" parent="." instance=ExtResource( 26 )]
 position = Vector2( 339, 391 )
 
-[node name="KinematicBody2D16" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D16" parent="." instance=ExtResource( 26 )]
 position = Vector2( 281, 374 )
 
-[node name="KinematicBody2D17" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D17" parent="." instance=ExtResource( 26 )]
 position = Vector2( 308, 368 )
 
-[node name="KinematicBody2D18" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D18" parent="." instance=ExtResource( 26 )]
 position = Vector2( 225, 373 )
 
-[node name="KinematicBody2D19" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D19" parent="." instance=ExtResource( 26 )]
 position = Vector2( 316, 389 )
 
-[node name="KinematicBody2D3" parent="Ohne" instance=ExtResource( 26 )]
-position = Vector2( 253, 235 )
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 26 )]
+position = Vector2( 252, 242 )
 
-[node name="KinematicBody2D4" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D4" parent="." instance=ExtResource( 26 )]
 position = Vector2( 221, 391 )
 
-[node name="KinematicBody2D5" parent="Ohne" instance=ExtResource( 26 )]
-position = Vector2( 267, 236 )
+[node name="KinematicBody2D5" parent="." instance=ExtResource( 26 )]
+position = Vector2( 270, 237 )
 
-[node name="KinematicBody2D6" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D6" parent="." instance=ExtResource( 26 )]
 position = Vector2( 273, 378 )
 
-[node name="KinematicBody2D7" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D7" parent="." instance=ExtResource( 26 )]
 position = Vector2( 279, 392 )
 
-[node name="KinematicBody2D8" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D8" parent="." instance=ExtResource( 26 )]
 position = Vector2( 325, 394 )
 
-[node name="KinematicBody2D25" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D25" parent="." instance=ExtResource( 26 )]
 position = Vector2( 316, 372 )
 
-[node name="KinematicBody2D9" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D9" parent="." instance=ExtResource( 26 )]
 position = Vector2( 292, 392 )
 
-[node name="KinematicBody2D10" parent="Ohne" instance=ExtResource( 26 )]
-position = Vector2( 260, 239 )
+[node name="KinematicBody2D10" parent="." instance=ExtResource( 26 )]
+position = Vector2( 263, 243 )
 
-[node name="KinematicBody2D11" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D11" parent="." instance=ExtResource( 26 )]
 position = Vector2( 323, 237 )
 
-[node name="KinematicBody2D12" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D12" parent="." instance=ExtResource( 26 )]
 position = Vector2( 230, 240 )
 
-[node name="KinematicBody2D13" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D13" parent="." instance=ExtResource( 26 )]
 position = Vector2( 297, 237 )
 
-[node name="KinematicBody2D14" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D14" parent="." instance=ExtResource( 26 )]
 position = Vector2( 389, 329 )
 
-[node name="KinematicBody2D15" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D15" parent="." instance=ExtResource( 26 )]
 position = Vector2( 371, 328 )
 
 [editable path="Camera2D"]
