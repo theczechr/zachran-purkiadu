@@ -10,7 +10,7 @@ onready var popup : AcceptDialog = $PopUp
 
 func _ready():
 	if SaveGame.save_exists():
-		get_tree().change_scene("res://Level1.tscn")
+		get_tree().change_scene("res://Game.tscn")
 
 func _on_LoginButton_pressed() -> void:
 	if username.text.empty() or password.text.empty():
@@ -26,7 +26,7 @@ func _on_LoginButton_pressed() -> void:
 		popup.show()
 		popup.dialog_text = "Nesprávné přihlašovací údaje"
 		return
-	get_tree().change_scene("res://Level1.tscn")
+	get_tree().change_scene("res://Game.tscn")
 
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
 	var response_body := JSON.parse(body.get_string_from_ascii())
