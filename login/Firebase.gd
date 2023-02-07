@@ -16,7 +16,8 @@ func get_progress(username: String, http: HTTPRequest) -> void:
 	var result := yield(http, "request_completed") as 	Array
 	print(result)
 	if result[1] == 200:
-		return _parse_result(result)
+		pass
+		#return _parse_result(result)
 		#current_token = _get_token_id_from_result(result)
 
 func set_progress(username: String, progress: String, http: HTTPRequest) -> void:
@@ -27,5 +28,6 @@ func set_progress(username: String, progress: String, http: HTTPRequest) -> void
 	var result := yield(http, "request_completed") as 	Array
 	print(result)
 	if result[1] == 200:
-		return _parse_result(result)
+		pass
+		#return _parse_result(result)
 		#current_token = _get_token_id_from_result(result)

@@ -53,14 +53,14 @@ func _create_or_load_save() -> void:
 		_save.write_savegame()
 
 	_inventory.inventory = _save.inventory
-	_player.level = _save.character.level
+	#_player.level = _save.character.level
 
 func _save_game() -> void:
 	_save.write_savegame()
 
 func progress_sync(force: bool) -> void:
 	var file = SaveGame.load_savegame() as SaveGame
-	var player_level = _player.level
+	#var player_level = _player.level
 	var save_file_level = file.character.level
 	
 	
