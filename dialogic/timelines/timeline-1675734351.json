@@ -1,6 +1,17 @@
 {
 	"events": [
-
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Kontrolní panel, super.. Měl bych se podívat na záznamy serveru, musím zjistit co je přetížilo."
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm, jaké by tu tak mohlo být heslo?"
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.5",

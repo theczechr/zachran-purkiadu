@@ -7,17 +7,12 @@ radius = 5.0
 height = 4.0
 
 [node name="kos" type="KinematicBody2D"]
-position = Vector2( 270, 4 )
+position = Vector2( 1, 0 )
 z_index = 1
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="SvetlyKos2" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 56, 185 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 56, 187 )
 shape = SubResource( 1 )
