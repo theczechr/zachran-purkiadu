@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/svit-bocniho-okna.png-86b0cffc5bc99d5c69bb0cc7aeaaf1ad.stex"
+path="res://.import/kafe-automat.png-022325dad15f1030565801c33b73c397.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/svit-bocniho-okna.png"
-dest_files=[ "res://.import/svit-bocniho-okna.png-86b0cffc5bc99d5c69bb0cc7aeaaf1ad.stex" ]
+source_file="res://assets/sprites/kafe-automat.png"
+dest_files=[ "res://.import/kafe-automat.png-022325dad15f1030565801c33b73c397.stex" ]
 
 [params]
 

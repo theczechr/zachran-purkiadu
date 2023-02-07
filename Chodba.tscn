@@ -42,7 +42,7 @@ visible = true
 position = Vector2( -24, -5 )
 
 [node name="Camera2D" parent="." index="2"]
-position = Vector2( 180, 264 )
+position = Vector2( 202, 243 )
 
 [node name="stul_s_monitorem" parent="YSort" index="0"]
 position = Vector2( -178, 170 )

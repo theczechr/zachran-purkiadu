@@ -74,11 +74,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://resources/Inventory.gd"
 }, {
-"base": "Panel",
-"class": "Item",
-"language": "GDScript",
-"path": "res://interface/Item.gd"
-}, {
 "base": "Resource",
 "class": "ItemData",
 "language": "GDScript",
@@ -88,6 +83,11 @@ _global_script_classes=[ {
 "class": "SaveGame",
 "language": "GDScript",
 "path": "res://resources/SaveGame.gd"
+}, {
+"base": "Control",
+"class": "UIItem",
+"language": "GDScript",
+"path": "res://interface/Item.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
@@ -103,9 +103,9 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "HistoryRow": "",
 "Inventory": "",
-"Item": "",
 "ItemData": "",
-"SaveGame": ""
+"SaveGame": "",
+"UIItem": ""
 }
 
 [application]
