@@ -11,8 +11,6 @@ export var version := 1
 export var character: Resource = Character.new()
 export var inventory: Resource = Inventory.new()
 
-export var global_position := Vector2.ZERO
-
 func write_savegame() -> void:
 	ResourceSaver.save(get_save_path(), self)
 
