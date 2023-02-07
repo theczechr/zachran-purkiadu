@@ -1,11 +1,11 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Camera/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://1stul_zidle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=5]
-[ext_resource path="res://PlayerCharacter.gd" type="Script" id=6]
+[ext_resource path="res://assets/tilemaps/tileset_edit.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/hasicak.png" type="Texture" id=8]
 [ext_resource path="res://assets/tilemaps/lista.png" type="Texture" id=9]
@@ -25,12 +25,12 @@
 [ext_resource path="res://assets/tilemaps/lista-polovicni.png" type="Texture" id=23]
 [ext_resource path="res://assets/tilemaps/zed-modra-stin-polovicni.png" type="Texture" id=24]
 [ext_resource path="res://PolickasKnihami.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/tilemaps/podlaha-svetla.png" type="Texture" id=26]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
 var _save: SaveGame
-onready var _player := $PlayerCharacter
 onready var _level := get_tree().current_scene.get_name()
 func _ready():
 	_create_or_load_save()
@@ -45,15 +45,10 @@ func _create_or_load_save() -> void:
 		_save = SaveGame.new()
 		_save.inventory = Inventory.new()
 		_save.character = Character.new()
-		_save.global_position = _player.global_position
 
 		_save.write_savegame()
 
-	_player.global_position = _save.global_position
-	_player.stats = _save.character
-
 func _save_game() -> void:
-	_save.global_position = _player.global_position
 	_save.write_savegame()
 "
 
@@ -81,6 +76,20 @@ func _save_game() -> void:
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
+1/name = "podlaha-svetla.png 1"
+1/texture = ExtResource( 26 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=58]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -311,6 +320,9 @@ height = 16.0
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="ConvexPolygonShape2D" id=72]
+points = PoolVector2Array( 0, 0, 1, 0, 1, 1, 0, 1 )
+
 [sub_resource type="TileSet" id=71]
 0/name = "black.png 0"
 0/texture = ExtResource( 7 )
@@ -340,6 +352,27 @@ height = 16.0
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
+2/name = "tileset_edit.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 10, 0, 1, 1 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 72 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 72 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
 
 [node name="U55" type="Node2D"]
 script = SubResource( 1 )
@@ -353,14 +386,6 @@ rect_scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
 expand = true
 stretch_mode = 2
-
-[node name="PlayerCharacter" type="KinematicBody2D" parent="."]
-visible = false
-script = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
-
-[node name="Sprite" type="Sprite" parent="PlayerCharacter"]
 
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 281, 287 )
@@ -387,10 +412,6 @@ tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 851978, -1610612736, 0, 851979, -1610612736, 0, 851980, -1610612736, 0, 851981, -1610612736, 0, 851982, -1610612736, 0, 851983, -1610612736, 0, 851984, -1610612736, 0, 851985, -1610612736, 0, 851986, -1610612736, 0, 851987, -1610612736, 0, 851988, -1610612736, 0, 851989, -1610612736, 0, 851990, -1610612736, 0, 917514, -1610612736, 0, 917515, -1610612736, 0, 917516, -1610612736, 0, 917517, -1610612736, 0, 917518, -1610612736, 0, 917519, -1610612736, 0, 917520, -1610612736, 0, 917521, -1610612736, 0, 917522, -1610612736, 0, 917523, -1610612736, 0, 917524, -1610612736, 0, 917525, -1610612736, 0, 917526, -1610612736, 0, 983050, -1610612736, 0, 983051, -1610612736, 0, 983052, -1610612736, 0, 983053, -1610612736, 0, 983054, -1610612736, 0, 983055, -1610612736, 0, 983056, -1610612736, 0, 983057, -1610612736, 0, 983058, -1610612736, 0, 983059, -1610612736, 0, 983060, -1610612736, 0, 983061, -1610612736, 0, 983062, -1610612736, 0, 1048586, -1610612736, 0, 1048587, -1610612736, 0, 1048588, -1610612736, 0, 1048589, -1610612736, 0, 1048590, -1610612736, 0, 1048591, -1610612736, 0, 1048592, -1610612736, 0, 1048593, -1610612736, 0, 1048594, -1610612736, 0, 1048595, -1610612736, 0, 1048596, -1610612736, 0, 1048597, -1610612736, 0, 1048598, -1610612736, 0, 1114122, -1610612736, 0, 1114123, -1610612736, 0, 1114124, -1610612736, 0, 1114125, -1610612736, 0, 1114126, -1610612736, 0, 1114127, -1610612736, 0, 1114128, -1610612736, 0, 1114129, -1610612736, 0, 1114130, -1610612736, 0, 1114131, -1610612736, 0, 1114132, -1610612736, 0, 1114133, -1610612736, 0, 1114134, -1610612736, 0, 1179658, -1610612736, 0, 1179659, -1610612736, 0, 1179660, -1610612736, 0, 1179661, -1610612736, 0, 1179662, -1610612736, 0, 1179663, -1610612736, 0, 1179664, -1610612736, 0, 1179665, -1610612736, 0, 1179666, -1610612736, 0, 1179667, -1610612736, 0, 1179668, -1610612736, 0, 1179669, -1610612736, 0, 1179670, -1610612736, 0, 1245194, -1610612736, 0, 1245195, -1610612736, 0, 1245196, -1610612736, 0, 1245197, -1610612736, 0, 1245198, -1610612736, 0, 1245199, -1610612736, 0, 1245200, -1610612736, 0, 1245201, -1610612736, 0, 1245202, -1610612736, 0, 1245203, -1610612736, 0, 1245204, -1610612736, 0, 1245205, -1610612736, 0, 1245206, -1610612736, 0, 1310730, -1610612736, 0, 1310731, -1610612736, 0, 1310732, -1610612736, 0, 1310733, -1610612736, 0, 1310734, -1610612736, 0, 1310735, -1610612736, 0, 1310736, -1610612736, 0, 1310737, -1610612736, 0, 1310738, -1610612736, 0, 1310739, -1610612736, 0, 1310740, -1610612736, 0, 1310741, -1610612736, 0, 1310742, -1610612736, 0, 1376266, -1610612736, 0, 1376267, -1610612736, 0, 1376268, -1610612736, 0, 1376269, -1610612736, 0, 1376270, -1610612736, 0, 1376271, -1610612736, 0, 1376272, -1610612736, 0, 1376273, -1610612736, 0, 1376274, -1610612736, 0, 1376275, -1610612736, 0, 1376276, -1610612736, 0, 1376277, -1610612736, 0, 1376278, -1610612736, 0, 1441801, -1610612736, 0, 1441802, -1610612736, 0, 1441803, -1610612736, 0, 1441804, -1610612736, 0, 1441805, -1610612736, 0, 1441806, -1610612736, 0, 1441807, -1610612736, 0, 1441808, -1610612736, 0, 1441809, -1610612736, 0, 1441810, -1610612736, 0, 1441811, -1610612736, 0, 1441812, -1610612736, 0, 1441813, -1610612736, 0, 1441814, -1610612736, 0, 1441815, -1610612736, 0 )
-
-[node name="kos" parent="YSort" instance=ExtResource( 12 )]
-show_behind_parent = true
-position = Vector2( 225, 18 )
 
 [node name="zed" type="TileMap" parent="YSort"]
 tile_set = SubResource( 55 )
@@ -499,6 +520,10 @@ position = Vector2( 176, 196 )
 
 [node name="PolickasKnihami2" parent="YSort" instance=ExtResource( 25 )]
 position = Vector2( 350, 343 )
+
+[node name="kos" parent="YSort" instance=ExtResource( 12 )]
+show_behind_parent = true
+position = Vector2( 281, 206 )
 
 [node name="test" type="TileMap" parent="."]
 visible = false
@@ -645,3 +670,4 @@ format = 1
 tile_data = PoolIntArray( 13369690, -1610612735, 0, 16253145, -1610612735, 0, 16253354, 1, 0, 26542426, -1610612735, 0, 26542441, -1610612735, 0 )
 
 [editable path="Camera2D"]
+[editable path="YSort/Dvere"]

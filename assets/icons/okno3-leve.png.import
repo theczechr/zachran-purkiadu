@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/svit-bocniho-okna.png-86b0cffc5bc99d5c69bb0cc7aeaaf1ad.stex"
+path="res://.import/okno3-leve.png-4ed57383bec701f2e56a567368e00b62.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/svit-bocniho-okna.png"
-dest_files=[ "res://.import/svit-bocniho-okna.png-86b0cffc5bc99d5c69bb0cc7aeaaf1ad.stex" ]
+source_file="res://assets/icons/okno3-leve.png"
+dest_files=[ "res://.import/okno3-leve.png-4ed57383bec701f2e56a567368e00b62.stex" ]
 
 [params]
 

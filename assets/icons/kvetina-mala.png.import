@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/svit-bocniho-okna.png-86b0cffc5bc99d5c69bb0cc7aeaaf1ad.stex"
+path="res://.import/kvetina-mala.png-eb0755fdb47de90c417c4481dbba045a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/svit-bocniho-okna.png"
-dest_files=[ "res://.import/svit-bocniho-okna.png-86b0cffc5bc99d5c69bb0cc7aeaaf1ad.stex" ]
+source_file="res://assets/icons/kvetina-mala.png"
+dest_files=[ "res://.import/kvetina-mala.png-eb0755fdb47de90c417c4481dbba045a.stex" ]
 
 [params]
 

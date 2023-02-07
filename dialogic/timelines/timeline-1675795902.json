@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Panebože co mám dělat všude je oheň!!!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1675795902.json",
+		"name": "Chodba_level4"
+	}
+}
