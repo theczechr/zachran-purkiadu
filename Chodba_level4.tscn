@@ -15,7 +15,6 @@
 [ext_resource path="res://Kreslo-cervene-horni.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Kvetina-chodba-1.tscn" type="PackedScene" id=14]
 
-
 [sub_resource type="TileSet" id=1]
 0/name = "svit-spodniho-okna.png 0"
 0/texture = ExtResource( 2 )
