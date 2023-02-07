@@ -31,9 +31,12 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
+<<<<<<< HEAD
 onready var _inventory := $CanvasLayer/Inventory
 onready var _player := $YSort/Player
 
+=======
+>>>>>>> 6e794a7a3519847e2c7df9e077e584ac3c85f46d
 var _save: SaveGame
 onready var _level := get_tree().current_scene.get_name()
 func _ready():
@@ -51,9 +54,12 @@ func _create_or_load_save() -> void:
 		_save.character = Character.new()
 
 		_save.write_savegame()
+<<<<<<< HEAD
 
 	_inventory.inventory = _save.inventory
 	#_player.level = _save.character.level
+=======
+>>>>>>> 6e794a7a3519847e2c7df9e077e584ac3c85f46d
 
 func _save_game() -> void:
 	_save.write_savegame()
