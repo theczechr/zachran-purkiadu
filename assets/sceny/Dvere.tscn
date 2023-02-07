@@ -24,4 +24,6 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interacteble"]
 shape = SubResource( 2 )
 
+[connection signal="input_event" from="." to="." method="_on_Dvere_input_event"]
 [connection signal="body_entered" from="Interacteble" to="." method="_on_Interacteble_body_entered"]
+[connection signal="body_exited" from="Interacteble" to="." method="_on_Interacteble_body_exited"]

@@ -1,0 +1,69 @@
+{
+	"events": [
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Uuufff.. to bylo těsné."
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Měl bych zjisit co se stalo.."
+		},
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1634488067",
+			"index": 0,
+			"name": "hasicak"
+		},
+		{
+			"condition": "",
+			"definition": "1675733096-807",
+			"event_id": "dialogic_012",
+			"value": "true"
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sakra! Co teď?"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Musím najít nějaký jiný způsob"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 5
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"event_id": "dialogic_025",
+			"extra": "",
+			"glossary_id": "",
+			"text": "",
+			"title": ""
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1675733013.json",
+		"name": "U56"
+	}
+}

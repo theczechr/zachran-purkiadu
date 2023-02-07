@@ -29,6 +29,14 @@ func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_P:
+			emit_signal("input_event")
+			Dialogic.set_variable(("hasicak_used"), "true")
+
+
+
 func _physics_process(delta):
 	match state:
 		MOVE:

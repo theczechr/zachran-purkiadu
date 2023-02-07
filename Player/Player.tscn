@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/sprites/MediumShadow.png" type="Texture" id=6]
 [ext_resource path="res://assets/shaders/WhiteColor.shader" type="Shader" id=9]
 
-
 [sub_resource type="ShaderMaterial" id=50]
 shader = ExtResource( 9 )
 shader_param/active = false
@@ -837,6 +836,7 @@ shape = SubResource( 47 )
 anims/Start = SubResource( 48 )
 anims/Stop = SubResource( 49 )
 
+[connection signal="input_event" from="." to="." method="_on_Player_input_event"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
 [connection signal="invincibility_started" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_started"]
