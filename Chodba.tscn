@@ -18,6 +18,7 @@
 [ext_resource path="res://assets/sprites/nastenka2.png" type="Texture" id=16]
 [ext_resource path="res://kos.tscn" type="PackedScene" id=17]
 
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0
 height = 4.0
