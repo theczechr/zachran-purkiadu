@@ -2,15 +2,18 @@ extends Control
 
 var _credentials = _load_csv()
 
-onready var http : HTTPRequest = $HTTPRequest
-
 onready var username : LineEdit = $NinePatchRect/VBoxContainer/UsernameContainer/Username
 onready var password : LineEdit = $NinePatchRect/VBoxContainer/PasswordContainer/Password
 onready var popup : AcceptDialog = $PopUp
 
+var http = load("res://login/Firebase.gd").new()
+
 func _ready():
 	if SaveGame.save_exists():
 		get_tree().change_scene("res://Game.tscn")
+		
+	print(http.get_progress("test15", $HTTPRequest))
+	#print(http.set_progress("test15", "2", $HTTPRequest))
 
 func _on_LoginButton_pressed() -> void:
 	if username.text.empty() or password.text.empty():

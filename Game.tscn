@@ -30,10 +30,8 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
-# TODO: Remove PlayerHurtSouds ?
-# TODO: Remove PlayerStats ?
-
 onready var _inventory := $CanvasLayer/Inventory
+onready var _player := $YSort/Player
 
 var _save: SaveGame
 
@@ -53,11 +51,19 @@ func _create_or_load_save() -> void:
 		_save.character = Character.new()
 
 		_save.write_savegame()
-		
+
 	_inventory.inventory = _save.inventory
+	_player.level = _save.character.level
 
 func _save_game() -> void:
 	_save.write_savegame()
+
+func progress_sync(force: bool) -> void:
+	var file = SaveGame.load_savegame() as SaveGame
+	var player_level = _player.level
+	var save_file_level = file.character.level
+	
+	
 "
 
 [sub_resource type="TileSet" id=3]
@@ -372,10 +378,10 @@ height = 16.0
 script = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 6.0
-margin_top = 1.0
-margin_right = 6886.0
-margin_bottom = 5331.0
+margin_left = -7.0
+margin_top = -3.0
+margin_right = 6873.0
+margin_bottom = 5327.0
 rect_scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
 expand = true
