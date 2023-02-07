@@ -13,5 +13,5 @@ func _on_Interacteble_body_entered(body):
 		state = true
 
 func _on_Interacteble_body_exited(body):
-	print("exited")
+	print("Exited")
 	state = false
