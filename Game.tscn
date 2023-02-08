@@ -408,13 +408,6 @@ texture = ExtResource( 7 )
 expand = true
 stretch_mode = 2
 
-[node name="PlayerCharacter" type="KinematicBody2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
-
-[node name="Sprite" type="Sprite" parent="PlayerCharacter"]
-
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 281, 287 )
 zoom = Vector2( 0.2, 0.2 )
