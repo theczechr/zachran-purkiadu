@@ -1,11 +1,11 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player/Camera/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/Camera/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://1stul_zidle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=5]
-[ext_resource path="res://PlayerCharacter.gd" type="Script" id=6]
+[ext_resource path="res://assets/tilemaps/tileset_edit.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/hasicak.png" type="Texture" id=8]
 [ext_resource path="res://assets/tilemaps/lista.png" type="Texture" id=9]
@@ -25,12 +25,16 @@
 [ext_resource path="res://assets/tilemaps/lista-polovicni.png" type="Texture" id=23]
 [ext_resource path="res://assets/tilemaps/zed-modra-stin-polovicni.png" type="Texture" id=24]
 [ext_resource path="res://PolickasKnihami.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Ohen.tscn" type="PackedScene" id=26]
+[ext_resource path="res://interface/Inventory.tscn" type="PackedScene" id=27]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
+onready var _inventory := $CanvasLayer/Inventory
+onready var _player := $YSort/Player
+
 var _save: SaveGame
-onready var _player := $PlayerCharacter
 onready var _level := get_tree().current_scene.get_name()
 func _ready():
 	_create_or_load_save()
@@ -45,16 +49,21 @@ func _create_or_load_save() -> void:
 		_save = SaveGame.new()
 		_save.inventory = Inventory.new()
 		_save.character = Character.new()
-		_save.global_position = _player.global_position
 
 		_save.write_savegame()
 
-	_player.global_position = _save.global_position
-	_player.stats = _save.character
+	_inventory.inventory = _save.inventory
+	#_player.level = _save.character.level
 
 func _save_game() -> void:
-	_save.global_position = _player.global_position
 	_save.write_savegame()
+
+func progress_sync(force: bool) -> void:
+	var file = SaveGame.load_savegame() as SaveGame
+	#var player_level = _player.level
+	var save_file_level = file.character.level
+	
+	
 "
 
 [sub_resource type="TileSet" id=3]
@@ -183,6 +192,9 @@ points = PoolVector2Array( 8, 8, 0, 8, 0, 0, 8, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=64]
 points = PoolVector2Array( 8, 8, 0, 8, 0, 0, 8, 0 )
 
+[sub_resource type="ConvexPolygonShape2D" id=72]
+points = PoolVector2Array( 8, 8, 0, 8, 0, 0, 8, 0 )
+
 [sub_resource type="TileSet" id=65]
 0/name = "zed-modra-stin-polovicni.png 0"
 0/texture = ExtResource( 24 )
@@ -205,6 +217,27 @@ points = PoolVector2Array( 8, 8, 0, 8, 0, 0, 8, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
+1/name = "zed-modra-uprostred.png 1"
+1/texture = ExtResource( 22 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 8, 8, 8, 8 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 72 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 72 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=66]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 16, 16, 16 )
@@ -340,15 +373,36 @@ height = 16.0
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
+2/name = "tileset_edit.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 10, 0, 1, 1 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 72 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 72 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
 
 [node name="U55" type="Node2D"]
 script = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 6.0
-margin_top = 1.0
-margin_right = 6886.0
-margin_bottom = 5331.0
+margin_left = -7.0
+margin_top = -3.0
+margin_right = 6873.0
+margin_bottom = 5327.0
 rect_scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
 expand = true
@@ -356,7 +410,6 @@ stretch_mode = 2
 
 [node name="PlayerCharacter" type="KinematicBody2D" parent="."]
 visible = false
-script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCharacter"]
 
@@ -377,6 +430,7 @@ position = Vector2( 58, 41 )
 
 [node name="stul_s_monitorem" parent="YSort" instance=ExtResource( 17 )]
 position = Vector2( 219, 259 )
+z_index = 1
 
 [node name="Dvere" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 200, 200 )
@@ -436,6 +490,7 @@ shape = SubResource( 5 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 223, 246 )
+z_index = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
@@ -500,6 +555,10 @@ position = Vector2( 176, 196 )
 [node name="PolickasKnihami2" parent="YSort" instance=ExtResource( 25 )]
 position = Vector2( 350, 343 )
 
+[node name="kos" parent="YSort" instance=ExtResource( 12 )]
+show_behind_parent = true
+position = Vector2( 281, 206 )
+
 [node name="test" type="TileMap" parent="."]
 visible = false
 tile_set = SubResource( 54 )
@@ -510,6 +569,7 @@ tile_data = PoolIntArray( 262154, 0, 196611, 327691, 0, 0, 327692, 0, 1, 327693,
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 122, 29 )
+z_index = 2
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 8, 8 )
 format = 1
@@ -638,10 +698,91 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 expand = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 22 )
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource( 27 )]
+
 [node name="cerna" type="TileMap" parent="."]
 tile_set = SubResource( 71 )
 cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( 13369690, -1610612735, 0, 16253145, -1610612735, 0, 16253354, 1, 0, 26542426, -1610612735, 0, 26542441, -1610612735, 0 )
 
+[node name="KinematicBody2D" parent="." instance=ExtResource( 26 )]
+position = Vector2( 248, 376 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 26 )]
+position = Vector2( 250, 394 )
+
+[node name="KinematicBody2D23" parent="." instance=ExtResource( 26 )]
+position = Vector2( 238, 382 )
+
+[node name="KinematicBody2D24" parent="." instance=ExtResource( 26 )]
+position = Vector2( 237, 393 )
+
+[node name="KinematicBody2D20" parent="." instance=ExtResource( 26 )]
+position = Vector2( 265, 391 )
+
+[node name="KinematicBody2D21" parent="." instance=ExtResource( 26 )]
+position = Vector2( 304, 392 )
+
+[node name="KinematicBody2D22" parent="." instance=ExtResource( 26 )]
+position = Vector2( 339, 391 )
+
+[node name="KinematicBody2D16" parent="." instance=ExtResource( 26 )]
+position = Vector2( 281, 374 )
+
+[node name="KinematicBody2D17" parent="." instance=ExtResource( 26 )]
+position = Vector2( 308, 368 )
+
+[node name="KinematicBody2D18" parent="." instance=ExtResource( 26 )]
+position = Vector2( 225, 373 )
+
+[node name="KinematicBody2D19" parent="." instance=ExtResource( 26 )]
+position = Vector2( 316, 389 )
+
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 26 )]
+position = Vector2( 252, 242 )
+
+[node name="KinematicBody2D4" parent="." instance=ExtResource( 26 )]
+position = Vector2( 221, 391 )
+
+[node name="KinematicBody2D5" parent="." instance=ExtResource( 26 )]
+position = Vector2( 270, 237 )
+
+[node name="KinematicBody2D6" parent="." instance=ExtResource( 26 )]
+position = Vector2( 273, 378 )
+
+[node name="KinematicBody2D7" parent="." instance=ExtResource( 26 )]
+position = Vector2( 279, 392 )
+
+[node name="KinematicBody2D8" parent="." instance=ExtResource( 26 )]
+position = Vector2( 325, 394 )
+
+[node name="KinematicBody2D25" parent="." instance=ExtResource( 26 )]
+position = Vector2( 316, 372 )
+
+[node name="KinematicBody2D9" parent="." instance=ExtResource( 26 )]
+position = Vector2( 292, 392 )
+
+[node name="KinematicBody2D10" parent="." instance=ExtResource( 26 )]
+position = Vector2( 263, 243 )
+
+[node name="KinematicBody2D11" parent="." instance=ExtResource( 26 )]
+position = Vector2( 323, 237 )
+
+[node name="KinematicBody2D12" parent="." instance=ExtResource( 26 )]
+position = Vector2( 230, 240 )
+
+[node name="KinematicBody2D13" parent="." instance=ExtResource( 26 )]
+position = Vector2( 297, 237 )
+
+[node name="KinematicBody2D14" parent="." instance=ExtResource( 26 )]
+position = Vector2( 389, 329 )
+
+[node name="KinematicBody2D15" parent="." instance=ExtResource( 26 )]
+position = Vector2( 371, 328 )
+
 [editable path="Camera2D"]
+[editable path="YSort/Dvere"]

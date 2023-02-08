@@ -2,7 +2,7 @@ extends KinematicBody2D
 export (String, FILE) var NEXT_LEVEL : String = "Level"
 var state = false
 func _unhandled_input(event):
-	if (Input.is_key_pressed(KEY_E)):
+	if (Input.is_key_pressed(KEY_E) and state):
 			print("DONE")
 			get_tree().change_scene("res://Chodba.tscn")
 
@@ -13,4 +13,5 @@ func _on_Interacteble_body_entered(body):
 		state = true
 
 func _on_Interacteble_body_exited(body):
+	print("Exited")
 	state = false

@@ -26,3 +26,8 @@ func remove_item(item_unique_id: String, amount := 1) -> void:
 	if items[item_unique_id] <= 0:
 		items.erase(item_unique_id)
 	emit_changed()
+
+func is_item(unique_id: String) -> bool:
+	if unique_id in items:
+		return true
+	return false
