@@ -1,8 +1,8 @@
 [gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player/Camera/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/Camera/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://1stul_zidle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/tilemaps/tileset_edit.png" type="Texture" id=6]
