@@ -1,8 +1,8 @@
 [gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player/Camera/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/Camera/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://1stul_zidle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/tilemaps/tileset_edit.png" type="Texture" id=6]
@@ -709,81 +709,79 @@ cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( 13369690, -1610612735, 0, 16253145, -1610612735, 0, 16253354, 1, 0, 26542426, -1610612735, 0, 26542441, -1610612735, 0 )
 
-[node name="Ohne" type="Node" parent="."]
-
-[node name="KinematicBody2D" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D" parent="." instance=ExtResource( 26 )]
 position = Vector2( 248, 376 )
 
-[node name="KinematicBody2D2" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 26 )]
 position = Vector2( 250, 394 )
 
-[node name="KinematicBody2D23" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D23" parent="." instance=ExtResource( 26 )]
 position = Vector2( 238, 382 )
 
-[node name="KinematicBody2D24" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D24" parent="." instance=ExtResource( 26 )]
 position = Vector2( 237, 393 )
 
-[node name="KinematicBody2D20" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D20" parent="." instance=ExtResource( 26 )]
 position = Vector2( 265, 391 )
 
-[node name="KinematicBody2D21" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D21" parent="." instance=ExtResource( 26 )]
 position = Vector2( 304, 392 )
 
-[node name="KinematicBody2D22" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D22" parent="." instance=ExtResource( 26 )]
 position = Vector2( 339, 391 )
 
-[node name="KinematicBody2D16" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D16" parent="." instance=ExtResource( 26 )]
 position = Vector2( 281, 374 )
 
-[node name="KinematicBody2D17" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D17" parent="." instance=ExtResource( 26 )]
 position = Vector2( 308, 368 )
 
-[node name="KinematicBody2D18" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D18" parent="." instance=ExtResource( 26 )]
 position = Vector2( 225, 373 )
 
-[node name="KinematicBody2D19" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D19" parent="." instance=ExtResource( 26 )]
 position = Vector2( 316, 389 )
 
-[node name="KinematicBody2D3" parent="Ohne" instance=ExtResource( 26 )]
-position = Vector2( 253, 235 )
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 26 )]
+position = Vector2( 252, 242 )
 
-[node name="KinematicBody2D4" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D4" parent="." instance=ExtResource( 26 )]
 position = Vector2( 221, 391 )
 
-[node name="KinematicBody2D5" parent="Ohne" instance=ExtResource( 26 )]
-position = Vector2( 267, 236 )
+[node name="KinematicBody2D5" parent="." instance=ExtResource( 26 )]
+position = Vector2( 270, 237 )
 
-[node name="KinematicBody2D6" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D6" parent="." instance=ExtResource( 26 )]
 position = Vector2( 273, 378 )
 
-[node name="KinematicBody2D7" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D7" parent="." instance=ExtResource( 26 )]
 position = Vector2( 279, 392 )
 
-[node name="KinematicBody2D8" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D8" parent="." instance=ExtResource( 26 )]
 position = Vector2( 325, 394 )
 
-[node name="KinematicBody2D25" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D25" parent="." instance=ExtResource( 26 )]
 position = Vector2( 316, 372 )
 
-[node name="KinematicBody2D9" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D9" parent="." instance=ExtResource( 26 )]
 position = Vector2( 292, 392 )
 
-[node name="KinematicBody2D10" parent="Ohne" instance=ExtResource( 26 )]
-position = Vector2( 260, 239 )
+[node name="KinematicBody2D10" parent="." instance=ExtResource( 26 )]
+position = Vector2( 263, 243 )
 
-[node name="KinematicBody2D11" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D11" parent="." instance=ExtResource( 26 )]
 position = Vector2( 323, 237 )
 
-[node name="KinematicBody2D12" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D12" parent="." instance=ExtResource( 26 )]
 position = Vector2( 230, 240 )
 
-[node name="KinematicBody2D13" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D13" parent="." instance=ExtResource( 26 )]
 position = Vector2( 297, 237 )
 
-[node name="KinematicBody2D14" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D14" parent="." instance=ExtResource( 26 )]
 position = Vector2( 389, 329 )
 
-[node name="KinematicBody2D15" parent="Ohne" instance=ExtResource( 26 )]
+[node name="KinematicBody2D15" parent="." instance=ExtResource( 26 )]
 position = Vector2( 371, 328 )
 
 [connection signal="body_entered" from="YSort/Hasicak/Area2D" to="YSort/Hasicak" method="_on_Area2D_body_entered"]
