@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://PolickasKnihami.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Ohen.tscn" type="PackedScene" id=26]
 [ext_resource path="res://interface/Inventory.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Hasicak.gd" type="Script" id=28]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -62,8 +63,6 @@ func progress_sync(force: bool) -> void:
 	var file = SaveGame.load_savegame() as SaveGame
 	#var player_level = _player.level
 	var save_file_level = file.character.level
-	
-	
 "
 
 [sub_resource type="TileSet" id=3]
@@ -315,6 +314,8 @@ points = PoolVector2Array( 8, 16, 0, 16, 0, 16, 8, 16 )
 } ]
 0/z_index = 0
 
+[sub_resource type="CapsuleShape2D" id=73]
+
 [sub_resource type="CapsuleShape2D" id=5]
 radius = 6.0
 height = 16.0
@@ -469,6 +470,7 @@ tile_data = PoolIntArray( 2228260, 1610612736, 0, 2228261, 1610612736, 0 )
 [node name="Hasicak" type="KinematicBody2D" parent="YSort"]
 position = Vector2( 296, 215 )
 scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 28 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -476,6 +478,11 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="YSort/Hasicak"]
 scale = Vector2( 2, 2 )
 texture = ExtResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="YSort/Hasicak"]
+
+[node name="interakce" type="CollisionShape2D" parent="YSort/Hasicak/Area2D"]
+shape = SubResource( 73 )
 
 [node name="Kolize" type="CollisionShape2D" parent="YSort/Hasicak"]
 position = Vector2( 0, 2 )
@@ -778,6 +785,9 @@ position = Vector2( 389, 329 )
 
 [node name="KinematicBody2D15" parent="Ohne" instance=ExtResource( 26 )]
 position = Vector2( 371, 328 )
+
+[connection signal="body_entered" from="YSort/Hasicak/Area2D" to="YSort/Hasicak" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="YSort/Hasicak/Area2D" to="YSort/Hasicak" method="_on_Area2D_body_exited"]
 
 [editable path="Camera2D"]
 [editable path="YSort/Dvere"]
