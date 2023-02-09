@@ -552,13 +552,6 @@ visible = false
 position = Vector2( 329, 200 )
 texture = ExtResource( 16 )
 
-[node name="Server" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 323, 270 )
-
-[node name="Server2" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 323, 287 )
-scale = Vector2( 0.978754, 1 )
-
 [node name="Skrinky2" parent="YSort" instance=ExtResource( 15 )]
 position = Vector2( 243, 194 )
 
@@ -570,10 +563,20 @@ position = Vector2( 176, 196 )
 
 [node name="PolickasKnihami2" parent="YSort" instance=ExtResource( 25 )]
 position = Vector2( 350, 343 )
+z_index = 1
 
 [node name="kos" parent="YSort" instance=ExtResource( 12 )]
 show_behind_parent = true
 position = Vector2( 281, 206 )
+
+[node name="Server" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 323, 270 )
+z_index = 1
+
+[node name="Server2" parent="YSort" instance=ExtResource( 14 )]
+position = Vector2( 323, 287 )
+scale = Vector2( 0.978754, 1 )
+z_index = 1
 
 [node name="test" type="TileMap" parent="."]
 visible = false
@@ -795,10 +798,10 @@ position = Vector2( 230, 240 )
 position = Vector2( 297, 237 )
 
 [node name="KinematicBody2D14" parent="." instance=ExtResource( 26 )]
-position = Vector2( 389, 329 )
+position = Vector2( 415, 331 )
 
 [node name="KinematicBody2D15" parent="." instance=ExtResource( 26 )]
-position = Vector2( 371, 328 )
+position = Vector2( 372, 343 )
 
 [connection signal="body_entered" from="YSort/Hasicak/Area2D" to="YSort/Hasicak" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="YSort/Hasicak/Area2D" to="YSort/Hasicak" method="_on_Area2D_body_exited"]

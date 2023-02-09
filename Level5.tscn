@@ -44,7 +44,7 @@ position = Vector2( 384, 220 )
 tile_data = PoolIntArray( 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1441805, 0, 0, 1441806, 0, 0, 1441807, 0, 0, 1441808, 0, 0, 1441809, 0, 0, 1507342, 0, 0 )
 
 [node name="kos" parent="YSort" index="3"]
-position = Vector2( 281, 206 )
+position = Vector2( 225, 18 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="zed" parent="YSort" index="4"]
@@ -83,23 +83,20 @@ position = Vector2( -15, 299 )
 [node name="KinematicBody2D" parent="YSort" index="12"]
 position = Vector2( 68, 352 )
 
-[node name="Server" parent="YSort" index="14"]
-position = Vector2( 13, 406 )
-
-[node name="Server2" parent="YSort" index="15"]
-position = Vector2( 59.0001, 404 )
-
-[node name="Skrinky2" parent="YSort" index="16"]
+[node name="Skrinky2" parent="YSort" index="14"]
 position = Vector2( 9, 147 )
 
-[node name="PCaStolek" parent="YSort" index="17"]
+[node name="PCaStolek" parent="YSort" index="15"]
 position = Vector2( -15, 242 )
 
-[node name="PolickasKnihami" parent="YSort" index="18"]
+[node name="PolickasKnihami" parent="YSort" index="16"]
 position = Vector2( -3, 183 )
 
-[node name="PolickasKnihami2" parent="YSort" index="19"]
+[node name="PolickasKnihami2" parent="YSort" index="17"]
 position = Vector2( -32, 401 )
+
+[node name="Server" parent="YSort" index="19"]
+position = Vector2( 13, 406 )
 
 [node name="Zachod1" type="Sprite" parent="YSort" index="20"]
 position = Vector2( 315, 255 )
@@ -164,8 +161,8 @@ scale = Vector2( 0.75, 0.75 )
 z_index = 1
 texture = ExtResource( 8 )
 
-[node name="kos" parent="YSort" index="29"]
-position = Vector2( 281, 206 )
+[node name="Server2" parent="YSort" index="29"]
+position = Vector2( 59.0001, 404 )
 
 [node name="Svit dveri" type="Sprite" parent="YSort" index="30"]
 position = Vector2( 232, 370 )

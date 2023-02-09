@@ -41,7 +41,7 @@ z_index = 1
 tile_data = PoolIntArray( 851982, -1610612736, 0, 917518, -1610612736, 0, 917519, -1610612736, 0, 983054, -1610612736, 0, 983055, -1610612736, 0, 1048590, -1610612736, 0, 1048591, -1610612736, 0, 1048592, -1610612736, 0, 1048593, -1610612736, 0, 1048594, -1610612736, 0, 1048595, -1610612736, 0, 1048596, -1610612736, 0, 1048597, -1610612736, 0, 1048598, -1610612736, 0, 1114126, -1610612736, 0, 1114127, -1610612736, 0, 1114128, -1610612736, 0, 1114129, -1610612736, 0, 1114130, -1610612736, 0, 1114131, -1610612736, 0, 1179662, -1610612736, 0, 1179663, -1610612736, 0, 1179664, -1610612736, 0, 1179665, -1610612736, 0, 1179666, -1610612736, 0, 1179667, -1610612736, 0 )
 
 [node name="kos" parent="YSort" index="3"]
-position = Vector2( -126, -11 )
+position = Vector2( 225, 18 )
 
 [node name="zed" parent="YSort" index="4"]
 z_index = 1
@@ -77,23 +77,18 @@ position = Vector2( -176, 299 )
 [node name="KinematicBody2D" parent="YSort" index="12"]
 position = Vector2( -164, 355 )
 
-[node name="Server" parent="YSort" index="14"]
-position = Vector2( 351, 218 )
-z_index = 1
-
-[node name="Server2" parent="YSort" index="15"]
-position = Vector2( 351, 202 )
-z_index = 1
-
-[node name="Skrinky2" parent="YSort" index="16"]
+[node name="Skrinky2" parent="YSort" index="14"]
 position = Vector2( -246, 147 )
 
-[node name="PCaStolek" parent="YSort" index="17"]
+[node name="PCaStolek" parent="YSort" index="15"]
 position = Vector2( 320, 203 )
 z_index = 1
 
-[node name="PolickasKnihami" parent="YSort" index="18"]
+[node name="PolickasKnihami" parent="YSort" index="16"]
 position = Vector2( -136, 164 )
+
+[node name="PolickasKnihami2" parent="YSort" index="17"]
+position = Vector2( -239, 233 )
 
 [node name="kos2" parent="YSort" index="19" instance=ExtResource( 6 )]
 position = Vector2( 212, 100 )
@@ -161,8 +156,8 @@ position = Vector2( 273, 220 )
 z_index = 1
 shape = SubResource( 2 )
 
-[node name="PolickasKnihami2" parent="YSort" index="25"]
-position = Vector2( -239, 233 )
+[node name="Server" parent="YSort" index="25"]
+position = Vector2( 351, 218 )
 
 [node name="Podlaha" type="Sprite" parent="YSort" index="26"]
 position = Vector2( 348, 225 )
@@ -220,8 +215,8 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="kos" parent="YSort" index="34"]
-position = Vector2( 281, 206 )
+[node name="Server2" parent="YSort" index="34"]
+position = Vector2( 351, 202 )
 
 [node name="TileMap" parent="." index="4"]
 z_index = 1

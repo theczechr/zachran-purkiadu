@@ -4,7 +4,10 @@ var state = false
 func _unhandled_input(event):
 	if (Input.is_key_pressed(KEY_E) and state):
 			print("DONE")
-			get_tree().change_scene(NEXT_LEVEL)
+			if NEXT_LEVEL == "Level" or NEXT_LEVEL == "":
+				print("Dveře jsou zamčené")
+			else:
+				get_tree().change_scene(NEXT_LEVEL)
 
 
 func _on_Interacteble_body_entered(body):
