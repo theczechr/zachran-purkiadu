@@ -13,7 +13,7 @@ func _ready() -> void:
 		test_inventory.add_item("extinguisher")
 		set_inventory(test_inventory)
 		
-	inventory.add_item("extinguisher")
+	#inventory.add_item("extinguisher")
 
 func set_inventory(new_inventory: Inventory) -> void:
 	if inventory != new_inventory:
