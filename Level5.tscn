@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/sprites/zachod1.png" type="Texture" id=2]
@@ -9,6 +9,16 @@
 [ext_resource path="res://assets/sprites/stolecek.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/cervena_vec.png" type="Texture" id=8]
 [ext_resource path="res://assets/sprites/podlaha.png" type="Texture" id=9]
+[ext_resource path="res://assets/icons/svit-dveri.png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 35, 13 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 35.5, 13.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14, 9 )
 
 [node name="U59" instance=ExtResource( 1 )]
 
@@ -18,8 +28,8 @@ margin_top = 25.0
 margin_right = 6885.0
 margin_bottom = 5355.0
 
-[node name="Camera2D" parent="." index="2"]
-position = Vector2( 348, 347 )
+[node name="Camera2D" parent="." index="1"]
+position = Vector2( 310, 385 )
 
 [node name="stul_s_monitorem" parent="YSort" index="0"]
 position = Vector2( -7, 211 )
@@ -27,11 +37,14 @@ position = Vector2( -7, 211 )
 [node name="Dvere" parent="YSort" index="1"]
 position = Vector2( 40, 264 )
 
+[node name="Interacteble" parent="YSort/Dvere" index="2"]
+position = Vector2( 384, 220 )
+
 [node name="podlaha" parent="YSort" index="2"]
 tile_data = PoolIntArray( 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1441805, 0, 0, 1441806, 0, 0, 1441807, 0, 0, 1441808, 0, 0, 1441809, 0, 0, 1507342, 0, 0 )
 
 [node name="kos" parent="YSort" index="3"]
-position = Vector2( 253, 325 )
+position = Vector2( 281, 206 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="zed" parent="YSort" index="4"]
@@ -39,96 +52,104 @@ z_index = 1
 cell_quadrant_size = 16
 tile_data = PoolIntArray( 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 851988, 4, 0, 851989, 4, 0, 851990, 4, 0, 851991, -1610612734, 0, 917517, 6, 0, 917518, 6, 0, 917519, 6, 0, 917520, 6, 0, 917521, 6, 0, 917522, 6, 0, 917523, 6, 0, 917524, 6, 0, 917525, 6, 0, 917526, 6, 0, 917527, -1610612734, 0, 983053, 6, 0, 983054, 6, 0, 983055, 6, 0, 983056, 6, 0, 983057, 6, 0, 983058, 6, 0, 983059, 6, 0, 983060, 6, 0, 983061, 6, 0, 983062, 6, 0, 983063, -1610612734, 0, 1048599, -1610612734, 0, 1114135, -1610612734, 0, 1179661, 4, 0, 1179662, 4, 0, 1179663, 4, 0, 1179671, -1610612734, 0, 1245197, 6, 0, 1245198, 6, 0, 1245199, 6, 0, 1245207, -1610612734, 0, 1310738, -1610612729, 0, 1376274, -1610612729, 0, 1441810, -1610612729, 0 )
 
-[node name="Umyvadlo" type="Sprite" parent="YSort" index="5"]
-position = Vector2( 233, 318 )
-z_index = 1
-texture = ExtResource( 3 )
-
-[node name="polovicni_zed" parent="YSort" index="6"]
+[node name="polovicni_zed" parent="YSort" index="5"]
 z_index = 1
 tile_data = PoolIntArray( 1703962, 0, 0, 1769498, 0, 0, 1835034, 0, 0, 1900570, 0, 0, 1966106, 0, 0, 2031642, 0, 0, 2097178, 0, 0, 2097188, 0, 0, 2162714, 0, 0, 2162724, 1, 0, 2228250, 0, 0, 2228260, 1, 0, 2293786, 0, 0, 2359322, 0, 0, 2424858, 0, 0, 2490394, 0, 0, 2555930, 0, 0, 2621466, 0, 0, 2687002, 0, 0, 2752537, 0, 0, 2752538, 0, 0, 2752548, 1610612736, 0, 2818073, 0, 0, 2818074, 0, 0, 2818084, 1610612736, 0, 2883609, 0, 0, 2883610, 0, 0, 2949145, 0, 0, 2949146, 0, 0, 4849738, 0, 0, 4915274, 0, 0, 4980810, 0, 0, 5046346, 0, 0, 5111882, 0, 0 )
 
-[node name="lista" parent="YSort" index="7"]
+[node name="lista" parent="YSort" index="6"]
 tile_data = PoolIntArray( 786442, 0, 0, 1376279, -1610612736, 0 )
 
-[node name="polovicni_lista" parent="YSort" index="8"]
+[node name="polovicni_lista" parent="YSort" index="7"]
 tile_data = PoolIntArray(  )
 
-[node name="Hasicak" parent="YSort" index="9"]
+[node name="Hasicak" parent="YSort" index="8"]
 position = Vector2( 86, 141 )
 
-[node name="Player" parent="YSort" index="10"]
-position = Vector2( 270, 316 )
+[node name="Player" parent="YSort" index="9"]
+position = Vector2( 232, 354 )
 
 [node name="RemoteTransform2D" parent="YSort/Player" index="9"]
 position = Vector2( 20, -10 )
 
-[node name="KameraDoprava" parent="YSort" index="11"]
+[node name="KameraDoprava" parent="YSort" index="10"]
 position = Vector2( 109, 176 )
 
 [node name="KameraDoprava2" parent="YSort/KameraDoprava" index="0"]
 position = Vector2( -86, 35 )
 
-[node name="KinematicBody2D5" parent="YSort" index="12"]
+[node name="KinematicBody2D5" parent="YSort" index="11"]
 position = Vector2( -15, 299 )
 
-[node name="KinematicBody2D" parent="YSort" index="13"]
+[node name="KinematicBody2D" parent="YSort" index="12"]
 position = Vector2( 68, 352 )
 
-[node name="Server" parent="YSort" index="15"]
+[node name="Server" parent="YSort" index="14"]
 position = Vector2( 13, 406 )
 
-[node name="Server2" parent="YSort" index="16"]
+[node name="Server2" parent="YSort" index="15"]
 position = Vector2( 59.0001, 404 )
 
-[node name="Skrinky2" parent="YSort" index="17"]
+[node name="Skrinky2" parent="YSort" index="16"]
 position = Vector2( 9, 147 )
 
-[node name="PCaStolek" parent="YSort" index="18"]
+[node name="PCaStolek" parent="YSort" index="17"]
 position = Vector2( -15, 242 )
 
-[node name="PolickasKnihami" parent="YSort" index="19"]
+[node name="PolickasKnihami" parent="YSort" index="18"]
 position = Vector2( -3, 183 )
 
-[node name="PolickasKnihami2" parent="YSort" index="20"]
+[node name="PolickasKnihami2" parent="YSort" index="19"]
 position = Vector2( -32, 401 )
 
-[node name="Zachod1" type="Sprite" parent="YSort" index="21"]
+[node name="Zachod1" type="Sprite" parent="YSort" index="20"]
 position = Vector2( 315, 255 )
 z_index = 1
 texture = ExtResource( 2 )
 
-[node name="Zachod2" type="Sprite" parent="YSort" index="22"]
+[node name="Zachod2" type="Sprite" parent="YSort" index="21"]
 position = Vector2( 350, 255 )
 z_index = 1
 texture = ExtResource( 2 )
 
-[node name="Zachod3" type="Sprite" parent="YSort" index="23"]
+[node name="Zachod3" type="Sprite" parent="YSort" index="22"]
 position = Vector2( 234, 255 )
 z_index = 1
 texture = ExtResource( 2 )
 
-[node name="Zachod4" type="Sprite" parent="YSort" index="24"]
+[node name="Zachod4" type="Sprite" parent="YSort" index="23"]
 position = Vector2( 268, 255 )
 z_index = 1
 texture = ExtResource( 2 )
 
-[node name="ZachodDvere" type="Sprite" parent="YSort" index="25"]
+[node name="Zachod-cely" type="KinematicBody2D" parent="YSort" index="24"]
 position = Vector2( 332, 256 )
+
+[node name="ZachodDvere" type="Sprite" parent="YSort/Zachod-cely" index="0"]
 z_index = 1
 texture = ExtResource( 4 )
 
-[node name="ZachodDvere2" type="Sprite" parent="YSort" index="26"]
-position = Vector2( 252, 256 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Zachod-cely" index="1"]
+position = Vector2( 1, 8 )
+shape = SubResource( 1 )
+
+[node name="Zachod-cely2" type="KinematicBody2D" parent="YSort" index="25"]
+position = Vector2( 332, 256 )
+
+[node name="ZachodDvere2" type="Sprite" parent="YSort/Zachod-cely2" index="0"]
+position = Vector2( -80, 0 )
 z_index = 1
 texture = ExtResource( 4 )
 
-[node name="ZachodSkrin" type="Sprite" parent="YSort" index="27"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Zachod-cely2" index="1"]
+position = Vector2( -80.5, 4.5 )
+shape = SubResource( 2 )
+
+[node name="ZachodSkrin" type="Sprite" parent="YSort" index="26"]
 position = Vector2( 358, 317 )
 z_index = 1
 texture = ExtResource( 5 )
 
-[node name="ZachodSkrin2" type="Sprite" parent="YSort" index="28"]
+[node name="ZachodSkrin2" type="Sprite" parent="YSort" index="27"]
 position = Vector2( 344, 317 )
 z_index = 1
 texture = ExtResource( 5 )
@@ -137,20 +158,39 @@ texture = ExtResource( 5 )
 position = Vector2( -62, 44 )
 texture = ExtResource( 7 )
 
-[node name="CervenaVec" type="Sprite" parent="YSort" index="29"]
+[node name="CervenaVec" type="Sprite" parent="YSort" index="28"]
 position = Vector2( 292, 278 )
 scale = Vector2( 0.75, 0.75 )
 z_index = 1
 texture = ExtResource( 8 )
 
-[node name="TileMap" parent="." index="5"]
+[node name="kos" parent="YSort" index="29"]
+position = Vector2( 281, 206 )
+
+[node name="Svit dveri" type="Sprite" parent="YSort" index="30"]
+position = Vector2( 232, 370 )
+z_index = 1
+texture = ExtResource( 10 )
+
+[node name="Umyvadlo-cele" type="KinematicBody2D" parent="YSort" index="31"]
+position = Vector2( 233, 318 )
+
+[node name="Umyvadlo" type="Sprite" parent="YSort/Umyvadlo-cele" index="0"]
+z_index = 1
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Umyvadlo-cele" index="1"]
+position = Vector2( 0, 7 )
+shape = SubResource( 3 )
+
+[node name="TileMap" parent="." index="4"]
 z_index = 1
 tile_data = PoolIntArray( -1, 0, 196608, -65536, 0, 7, 0, 0, 131075, 1769489, 0, 4, 1769490, 0, 196609, 1769491, 0, 196609, 1769492, 0, 196609, 1769493, 0, 196609, 1769494, 0, 196609, 1769495, 0, 196609, 1769496, 0, 196609, 1769497, 0, 196609, 1769498, 0, 196609, 1769499, 0, 196609, 1769500, 0, 8, 1769501, 0, 196609, 1769502, 0, 196609, 1769503, 0, 196609, 1769504, 0, 196609, 1769505, 0, 196609, 1769506, 0, 196609, 1769507, 0, 196609, 1769508, 0, 196609, 1769509, 0, 196609, 1769510, 0, 196609, 1769511, 0, 7, 1835025, 0, 65539, 1835036, 0, 65539, 1835047, 0, 65539, 1900561, 0, 65539, 1900572, 0, 65539, 1900583, 0, 65539, 1966097, 0, 65539, 1966108, 0, 65539, 1966119, 0, 65539, 2031633, 0, 65539, 2031644, 0, 65539, 2031655, 0, 65539, 2097169, 0, 65539, 2097180, 0, 65539, 2097191, 0, 65539, 2162705, 0, 65539, 2162716, 0, 131075, 2162727, 0, 65539, 2228241, 0, 65539, 2228263, 0, 65539, 2293777, 0, 65539, 2293799, 0, 65539, 2359313, 0, 65539, 2359335, 0, 65539, 2424849, 0, 262148, 2424850, 0, 196609, 2424851, 0, 196609, 2424852, 0, 196609, 2424853, 0, 196609, 2424854, 0, 196609, 2424855, 0, 196610, 2424871, 0, 65539, 2490385, 0, 65539, 2490407, 0, 65539, 2555921, 0, 65539, 2555943, 0, 65539, 2621457, 0, 65539, 2621479, 0, 65539, 2686993, 0, 65539, 2687004, 0, 4, 2687005, 0, 196609, 2687006, 0, 196608, 2687007, 0, 196609, 2687008, 0, 196609, 2687009, 0, 196609, 2687010, 0, 196609, 2687011, 0, 196609, 2687012, 0, 196609, 2687013, 0, 196609, 2687014, 0, 196609, 2687015, 0, 196615, 2752529, 0, 65539, 2752540, 0, 65539, 2818065, 0, 65539, 2818076, 0, 65539, 2883601, 0, 65539, 2883612, 0, 65539, 2949137, 0, 65539, 2949148, 0, 65539, 3014673, 0, 65539, 3014684, 0, 65539, 3080209, 0, 196612, 3080210, 0, 196609, 3080211, 0, 7, 3080214, 0, 4, 3080215, 0, 196609, 3080216, 0, 196609, 3080217, 0, 196609, 3080218, 0, 196609, 3080219, 0, 196609, 3080220, 0, 196615, 3145747, 0, 196612, 3145748, 0, 196609, 3145749, 0, 196609, 3145750, 0, 196615, 4128851, 0, 196611 )
 
-[node name="KameraVlevo" parent="." index="6"]
+[node name="KameraVlevo" parent="." index="5"]
 position = Vector2( 84, 215 )
 
-[node name="KameraVlevo2" parent="." index="7"]
+[node name="KameraVlevo2" parent="." index="6"]
 position = Vector2( 135, 223 )
 
 [node name="cerna" parent="." index="9"]
@@ -253,4 +293,68 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="KinematicBody2D" parent="." index="24"]
+position = Vector2( 155, 80 )
+
+[node name="KinematicBody2D2" parent="." index="25"]
+position = Vector2( 157, 98 )
+
+[node name="KinematicBody2D23" parent="." index="26"]
+position = Vector2( 145, 86 )
+
+[node name="KinematicBody2D24" parent="." index="27"]
+position = Vector2( 144, 97 )
+
+[node name="KinematicBody2D20" parent="." index="28"]
+position = Vector2( 172, 95 )
+
+[node name="KinematicBody2D21" parent="." index="29"]
+position = Vector2( 330, 382 )
+
+[node name="KinematicBody2D22" parent="." index="30"]
+position = Vector2( 382, 338 )
+
+[node name="KinematicBody2D16" parent="." index="31"]
+position = Vector2( 324, 321 )
+
+[node name="KinematicBody2D18" parent="." index="33"]
+position = Vector2( 132, 77 )
+
+[node name="KinematicBody2D19" parent="." index="34"]
+position = Vector2( 359, 336 )
+
+[node name="KinematicBody2D3" parent="." index="35"]
+position = Vector2( 159, -54 )
+
+[node name="KinematicBody2D4" parent="." index="36"]
+position = Vector2( 128, 95 )
+
+[node name="KinematicBody2D5" parent="." index="37"]
+position = Vector2( 184, 131 )
+
+[node name="KinematicBody2D6" parent="." index="38"]
+position = Vector2( 180, 82 )
+
+[node name="KinematicBody2D7" parent="." index="39"]
+position = Vector2( 322, 339 )
+
+[node name="KinematicBody2D8" parent="." index="40"]
+position = Vector2( 368, 341 )
+
+[node name="KinematicBody2D9" parent="." index="42"]
+position = Vector2( 335, 339 )
+
+[node name="KinematicBody2D10" parent="." index="43"]
+position = Vector2( 170, -53 )
+
+[node name="KinematicBody2D11" parent="." index="44"]
+position = Vector2( 230, -59 )
+
+[node name="KinematicBody2D12" parent="." index="45"]
+position = Vector2( 137, -56 )
+
+[node name="KinematicBody2D13" parent="." index="46"]
+position = Vector2( 204, -59 )
+
 [editable path="Camera2D"]
+[editable path="YSort/Dvere"]
