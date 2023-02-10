@@ -686,10 +686,6 @@ position = Vector2( 415, 331 )
 [node name="KinematicBody2D15" parent="." instance=ExtResource( 26 )]
 position = Vector2( 372, 343 )
 
-[node name="kos" parent="." instance=ExtResource( 12 )]
-position = Vector2( 340, 243 )
-z_index = 0
-
 [connection signal="body_entered" from="YSort/Hasicak/Area2D" to="CanvasLayer/Inventory" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="YSort/Hasicak/Area2D" to="CanvasLayer/Inventory" method="_on_Area2D_body_exited"]
 

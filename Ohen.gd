@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var state = false
 func _unhandled_input(event):
-	if (Input.is_key_pressed(KEY_E) and state):
+	if (Input.is_action_just_pressed("interact") and state):
 			#print("DONE")
 			get_node("AnimatedSprite").queue_free()
 			get_node("CollisionShape2D").queue_free()

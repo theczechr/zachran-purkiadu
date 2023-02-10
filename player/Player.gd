@@ -16,6 +16,7 @@ enum {
 var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
+var show_prompt : bool setget set_show_prompt
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -42,15 +43,17 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("interact"):
+		self.show_prompt = false
+	
 	match state:
 		MOVE:
 			move_state(delta)
 		
 		ROLL:
 			roll_state()
-		
-		ATTACK:
-			attack_state()
+
+
 	
 func move_state(delta):
 	var input_vector = Vector2.ZERO
@@ -73,11 +76,9 @@ func move_state(delta):
 	
 	move()
 	
-	if Input.is_action_just_pressed("roll"):
-		state = ROLL
+	#if Input.is_action_just_pressed("roll"):
+	#	state = ROLL
 	
-	if Input.is_action_just_pressed("attack"):
-		state = ATTACK
 
 func roll_state():
 	velocity = roll_vector * ROLL_SPEED
@@ -97,6 +98,16 @@ func roll_animation_finished():
 
 func attack_animation_finished():
 	state = MOVE
+
+func set_show_prompt(new_value : bool):
+	if new_value:
+		$KeyHint.show()
+		$KeyPrompt.play("KeyPrompt")		
+	else:
+		$KeyHint.hide()
+		$KeyPrompt.stop()
+		
+	show_prompt = new_value
 
 func _on_Hurtbox_area_entered(area):
 	hurtbox.start_invincibility(0.6)

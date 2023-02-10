@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MediumShadow.png-8ea8aad4f9d678816de338467623f46f.stex"
+path="res://.import/Keys.png-09bb2dc7ef4fca75c638103aa959d673.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/MediumShadow.png"
-dest_files=[ "res://.import/MediumShadow.png-8ea8aad4f9d678816de338467623f46f.stex" ]
+source_file="res://assets/sprites/button/Keys.png"
+dest_files=[ "res://.import/Keys.png-09bb2dc7ef4fca75c638103aa959d673.stex" ]
 
 [params]
 
