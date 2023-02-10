@@ -13,8 +13,6 @@ func _ready() -> void:
 		test_inventory.add_item("extinguisher")
 		set_inventory(test_inventory)
 		
-	#inventory.add_item("extinguisher")
-
 func set_inventory(new_inventory: Inventory) -> void:
 	if inventory != new_inventory:
 		new_inventory.connect("changed", self, "_update_items_display")
@@ -45,7 +43,21 @@ func _add_random_item() -> void:
 	var item_unique_id: String = ItemDatabase.ITEMS.keys()[randi() % ItemDatabase.ITEMS.keys().size()]
 	inventory.add_item(item_unique_id, 1)
 
-
 func _remove_random_item() -> void:
 	if inventory.items:
 		inventory.remove_item(inventory.items.keys()[randi() % inventory.items.keys().size()])
+
+var state = false
+func _unhandled_input(event):
+	if (Input.is_key_pressed(KEY_E) and state):
+			get_node("../../YSort/Hasicak/Sprite").hide()
+			get_node("../../YSort/Hasicak/Kolize").disabled = true
+			
+			inventory.add_item("extinguisher")
+
+func _on_Area2D_body_entered(body):
+	if body.is_in_group("Player"):
+		state = true
+
+func _on_Area2D_body_exited(body):
+	state = false
