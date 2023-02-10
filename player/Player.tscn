@@ -840,7 +840,8 @@ anims/Start = SubResource( 48 )
 anims/Stop = SubResource( 49 )
 
 [node name="KeyHint" type="Sprite" parent="."]
-position = Vector2( 0, -37 )
+position = Vector2( 0, -26 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 hframes = 5
 vframes = 8

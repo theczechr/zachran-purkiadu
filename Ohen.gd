@@ -1,6 +1,5 @@
 extends KinematicBody2D
-
-#var player = load("res://player/Player.gd")
+onready var player = get_tree().get_root().find_node("Player")
 var state = false
 
 func _unhandled_input(event):
@@ -12,11 +11,12 @@ func _unhandled_input(event):
 
 func _on_Area2D_body_entered(body):
 	print("Press E to extinguish the fire")
-	#player.show_prompt = true
 	if body.is_in_group("Player"):
+		body.set("show_prompt", true)
 		state = true
 
 func _on_Area2D_body_exited(body):
-	#print("Exited")
-	#player.show_prompt = false
-	state = false
+	if body.is_in_group("Player"):	
+		body.set("show_prompt", false)
+		print("Exited")
+		state = false

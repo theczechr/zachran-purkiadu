@@ -6,18 +6,16 @@ export var ROLL_SPEED = 120
 export var FRICTION = 500
 
 var stats: Character setget set_stats
-var show_prompt : bool setget set_show_prompt
-
+export(bool) var show_prompt setget _show_prompt_set
 enum {
 	MOVE,
 	ROLL,
 	ATTACK
 }
-
 var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
-
+onready var keyHint = $KeyHint
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
@@ -26,6 +24,7 @@ onready var hurtbox = $Hurtbox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
 func _ready():
+	self.show_prompt = false
 	randomize()
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
@@ -99,7 +98,7 @@ func roll_animation_finished():
 func attack_animation_finished():
 	state = MOVE
 
-func set_show_prompt(new_value : bool):
+func _show_prompt_set(new_value : bool):
 	if new_value:
 		$KeyHint.show()
 		$KeyPrompt.play("KeyPrompt")
@@ -107,8 +106,10 @@ func set_show_prompt(new_value : bool):
 	else:
 		$KeyHint.hide()
 		$KeyPrompt.stop()
-		
+	
 	show_prompt = new_value
+func _show_prompt_get() -> bool:
+	return show_prompt
 
 func _on_Hurtbox_area_entered(area):
 	hurtbox.start_invincibility(0.6)
