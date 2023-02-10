@@ -6,39 +6,27 @@ onready var username : LineEdit = $NinePatchRect/VBoxContainer/UsernameContainer
 onready var password : LineEdit = $NinePatchRect/VBoxContainer/PasswordContainer/Password
 onready var popup : AcceptDialog = $PopUp
 
-var http = load("res://login/Firebase.gd").new()
+
 
 func _ready():
 	if SaveGame.save_exists():
 		get_tree().change_scene("res://Game.tscn")
-		
-	print(http.get_progress("test15", $HTTPRequest))
-	#print(http.set_progress("test15", "2", $HTTPRequest))
 
 func _on_LoginButton_pressed() -> void:
 	if username.text.empty() or password.text.empty():
 		popup.show()
-		popup.dialog_text = "Zadej prosím přihlašovací jméno a heslo"
+		popup.dialog_text = "Zadej prosim prihlasovaci jmeno i heslo"
 		return
 	if username.text in _credentials:
 		if password.text != _credentials[username.text]:
 			popup.show()
-			popup.dialog_text = "Nesprávné heslo"
+			popup.dialog_text = "Nespravne heslo"
 			return
 	else:
 		popup.show()
-		popup.dialog_text = "Nesprávné přihlašovací údaje"
+		popup.dialog_text = "Nespravne prihlasovaci udaje"
 		return
 	get_tree().change_scene("res://Game.tscn")
-
-func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
-	var response_body := JSON.parse(body.get_string_from_ascii())
-	if response_code != 200:
-		popup.show()
-		popup.dialog_text = response_body.result.error.message.capitalize()
-	else:
-		popup.show()
-		popup.dialog_text = "Přihlášení úspěšné!"
 
 func _load_csv():
 	var file = File.new()

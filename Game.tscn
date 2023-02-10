@@ -35,8 +35,10 @@ script/source = "extends Node2D
 onready var _inventory := $CanvasLayer/Inventory
 onready var _player := $YSort/Player
 
+var _http = load(\"res://login/Firebase.gd\").new()
 var _save: SaveGame
 onready var _level := get_tree().current_scene.get_name()
+
 func _ready():
 	_create_or_load_save()
 	print(str(_level))
@@ -55,14 +57,17 @@ func _create_or_load_save() -> void:
 
 	_inventory.inventory = _save.inventory
 	#_player.level = _save.character.level
+	_progress_sync()
 
 func _save_game() -> void:
 	_save.write_savegame()
+	_progress_sync()
 
-func progress_sync(force: bool) -> void:
-	var file = SaveGame.load_savegame() as SaveGame
-	#var player_level = _player.level
-	var save_file_level = file.character.level
+func _progress_sync() -> void:
+	print(\"character level: \", _save.character.level)
+	print(\"server level: \", str(_http.get_progress(_save.character.id, $HTTPRequest)))
+	
+	
 "
 
 [sub_resource type="TileSet" id=3]
@@ -689,6 +694,8 @@ position = Vector2( 372, 343 )
 [node name="kos" parent="." instance=ExtResource( 12 )]
 position = Vector2( 340, 243 )
 z_index = 0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [connection signal="body_entered" from="YSort/Hasicak/Area2D" to="CanvasLayer/Inventory" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="YSort/Hasicak/Area2D" to="CanvasLayer/Inventory" method="_on_Area2D_body_exited"]
