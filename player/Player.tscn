@@ -840,13 +840,14 @@ anims/Start = SubResource( 48 )
 anims/Stop = SubResource( 49 )
 
 [node name="KeyHint" type="Sprite" parent="."]
-position = Vector2( 0, 21 )
+position = Vector2( 0, -37 )
 texture = ExtResource( 8 )
 hframes = 5
 vframes = 8
 frame = 4
 
 [node name="KeyPrompt" type="AnimationPlayer" parent="."]
+autoplay = "KeyPrompt"
 anims/KeyPrompt = SubResource( 50 )
 anims/RESET = SubResource( 51 )
 

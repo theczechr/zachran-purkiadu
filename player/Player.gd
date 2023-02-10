@@ -6,6 +6,7 @@ export var ROLL_SPEED = 120
 export var FRICTION = 500
 
 var stats: Character setget set_stats
+var show_prompt : bool setget set_show_prompt
 
 enum {
 	MOVE,
@@ -16,7 +17,6 @@ enum {
 var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
-var show_prompt : bool setget set_show_prompt
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -102,7 +102,8 @@ func attack_animation_finished():
 func set_show_prompt(new_value : bool):
 	if new_value:
 		$KeyHint.show()
-		$KeyPrompt.play("KeyPrompt")		
+		$KeyPrompt.play("KeyPrompt")
+		print("animace jede")		
 	else:
 		$KeyHint.hide()
 		$KeyPrompt.stop()

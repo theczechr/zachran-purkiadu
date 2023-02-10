@@ -36,7 +36,7 @@ margin_top = -1.0
 margin_bottom = 5329.0
 
 [node name="Camera2D" parent="." index="1"]
-position = Vector2( 179, 290 )
+position = Vector2( 179, 284 )
 
 [node name="stul_s_monitorem" parent="YSort" index="0"]
 position = Vector2( 728, -374.5 )
@@ -114,7 +114,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="YSort" index="12"]
-position = Vector2( 121, 249 )
+position = Vector2( 121, 243 )
 
 [node name="KameraDoprava" parent="YSort" index="13"]
 position = Vector2( 534, -447.5 )
