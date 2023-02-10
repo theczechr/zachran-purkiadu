@@ -455,7 +455,7 @@ tile_data = PoolIntArray( 851978, -1610612736, 0, 851979, -1610612736, 0, 851980
 
 [node name="kos" parent="YSort" instance=ExtResource( 12 )]
 show_behind_parent = true
-position = Vector2( 225, 18 )
+position = Vector2( 246, -49 )
 
 [node name="zed" type="TileMap" parent="YSort"]
 tile_set = SubResource( 55 )
@@ -565,10 +565,6 @@ position = Vector2( 176, 196 )
 [node name="PolickasKnihami2" parent="YSort" instance=ExtResource( 25 )]
 position = Vector2( 350, 343 )
 z_index = 1
-
-[node name="kos" parent="YSort" instance=ExtResource( 12 )]
-show_behind_parent = true
-position = Vector2( 281, 206 )
 
 [node name="Server" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 323, 270 )
