@@ -6,6 +6,7 @@ export var ROLL_SPEED = 120
 export var FRICTION = 500
 
 var stats: Character setget set_stats
+
 export(bool) var show_prompt setget _show_prompt_set
 enum {
 	MOVE,
@@ -39,8 +40,6 @@ func _unhandled_input(event):
 			emit_signal("input_event")
 			Dialogic.set_variable(("hasicak_used"), "true")
 
-
-
 func _physics_process(delta):
 	if Input.is_action_just_pressed("interact"):
 		self.show_prompt = false
@@ -52,8 +51,6 @@ func _physics_process(delta):
 		ROLL:
 			roll_state()
 
-
-	
 func move_state(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -102,12 +99,12 @@ func _show_prompt_set(new_value : bool):
 	if new_value:
 		$KeyHint.show()
 		$KeyPrompt.play("KeyPrompt")
-		print("animace jede")		
 	else:
 		$KeyHint.hide()
 		$KeyPrompt.stop()
 	
 	show_prompt = new_value
+	
 func _show_prompt_get() -> bool:
 	return show_prompt
 

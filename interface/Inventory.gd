@@ -1,6 +1,6 @@
 extends Control
 
-const ItemScene := preload("Item.tscn")
+const ItemScene := preload("Item.tscn")	
 
 var inventory: Inventory = null setget set_inventory
 
@@ -12,7 +12,7 @@ func _ready() -> void:
 		var test_inventory := Inventory.new()
 		test_inventory.add_item("extinguisher")
 		set_inventory(test_inventory)
-		
+
 func set_inventory(new_inventory: Inventory) -> void:
 	if inventory != new_inventory:
 		new_inventory.connect("changed", self, "_update_items_display")
@@ -29,35 +29,25 @@ func _update_items_display() -> void:
 		_item_grid.add_child(item)
 		item.display_item(item_unique_id, inventory.get_amount(item_unique_id))
 
-func _input(event):
-	if event is InputEventKey:
-		if event.scancode == KEY_1:
-			if inventory.is_item("extinguisher"):
-				inventory.remove_item("extinguisher", 1)
-		elif event.scancode == KEY_2:
-			pass
-		elif event.scancode == KEY_3:
-			pass
-				
-func _add_random_item() -> void:
-	var item_unique_id: String = ItemDatabase.ITEMS.keys()[randi() % ItemDatabase.ITEMS.keys().size()]
-	inventory.add_item(item_unique_id, 1)
-
-func _remove_random_item() -> void:
-	if inventory.items:
-		inventory.remove_item(inventory.items.keys()[randi() % inventory.items.keys().size()])
-
-var state = false
+var hasicak_in_status = false
+var ohen_in_status = false
 func _unhandled_input(event):
-	if (Input.is_key_pressed(KEY_E) and state):
+	if Input.is_key_pressed(KEY_E) and hasicak_in_status:
 			get_node("../../YSort/Hasicak/Sprite").hide()
 			get_node("../../YSort/Hasicak/Kolize").disabled = true
-			
-			inventory.add_item("extinguisher")
 
+			inventory.add_item("extinguisher")
+	
+	elif Input.is_key_pressed(KEY_E) and ohen_in_status:
+		if inventory.is_item("extinguisher"):
+			inventory.remove_item("extinguisher")
+
+var ohen = get_tree().get_root().find_node("Ohen")
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
-		state = true
+		hasicak_in_status = true
+	print("OEHEHHEH: ", ohen)
 
 func _on_Area2D_body_exited(body):
-	state = false
+	hasicak_in_status = false
+	

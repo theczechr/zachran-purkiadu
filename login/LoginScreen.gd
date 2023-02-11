@@ -6,8 +6,6 @@ onready var username : LineEdit = $NinePatchRect/VBoxContainer/UsernameContainer
 onready var password : LineEdit = $NinePatchRect/VBoxContainer/PasswordContainer/Password
 onready var popup : AcceptDialog = $PopUp
 
-
-
 func _ready():
 	if SaveGame.save_exists():
 		get_tree().change_scene("res://Game.tscn")
