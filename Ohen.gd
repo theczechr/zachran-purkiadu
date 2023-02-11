@@ -13,6 +13,6 @@ func _on_Area2D_body_entered(body):
 		state = true
 
 func _on_Area2D_body_exited(body):
-	if body.is_in_group("Player"):	
+	if body.is_in_group("Player"):
 		body.set("show_prompt", false)
 		state = false
