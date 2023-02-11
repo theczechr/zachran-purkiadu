@@ -656,8 +656,16 @@ tile_data = PoolIntArray( 13369690, -1610612735, 0, 16253145, -1610612735, 0, 16
 [node name="KinematicBody2D" parent="." index="14"]
 position = Vector2( 602, -111 )
 
-[node name="Dvere" parent="." index="15" instance=ExtResource( 6 )]
-position = Vector2( -402, 420 )
+[node name="Dvere2" parent="." index="15" instance=ExtResource( 6 )]
+position = Vector2( 435, 335 )
+scale = Vector2( 0.5, 0.5 )
+NEXT_LEVEL = "res://Vytah.tscn"
+
+[node name="Sprite" parent="Dvere2" index="0"]
+visible = false
+
+[node name="Dvere" parent="." index="16" instance=ExtResource( 6 )]
+position = Vector2( -402, 441 )
 NEXT_LEVEL = "res://Level3.tscn"
 
 [node name="Sprite" parent="Dvere" index="0"]
@@ -666,78 +674,79 @@ visible = false
 [node name="Kolize" parent="Dvere" index="1"]
 position = Vector2( 0, 10 )
 
-[node name="KinematicBody2D2" parent="." index="16"]
+[node name="KinematicBody2D2" parent="." index="17"]
 position = Vector2( 476, -115 )
 
-[node name="KinematicBody2D23" parent="." index="17"]
+[node name="KinematicBody2D23" parent="." index="18"]
 position = Vector2( 464, -127 )
 
-[node name="KinematicBody2D24" parent="." index="18"]
+[node name="KinematicBody2D24" parent="." index="19"]
 position = Vector2( 463, -116 )
 
-[node name="KinematicBody2D20" parent="." index="19"]
+[node name="KinematicBody2D20" parent="." index="20"]
 position = Vector2( 491, -118 )
 
-[node name="KinematicBody2D21" parent="." index="20"]
+[node name="KinematicBody2D21" parent="." index="21"]
 position = Vector2( 530, -117 )
 
-[node name="KinematicBody2D22" parent="." index="21"]
+[node name="KinematicBody2D22" parent="." index="22"]
 position = Vector2( 565, -118 )
 
-[node name="KinematicBody2D16" parent="." index="22"]
+[node name="KinematicBody2D16" parent="." index="23"]
 position = Vector2( 507, -135 )
 
-[node name="KinematicBody2D17" parent="." index="23"]
+[node name="KinematicBody2D17" parent="." index="24"]
 position = Vector2( 534, -141 )
 
-[node name="KinematicBody2D18" parent="." index="24"]
+[node name="KinematicBody2D18" parent="." index="25"]
 position = Vector2( 451, -136 )
 
-[node name="KinematicBody2D19" parent="." index="25"]
+[node name="KinematicBody2D19" parent="." index="26"]
 position = Vector2( 542, -120 )
 
-[node name="KinematicBody2D3" parent="." index="26"]
+[node name="KinematicBody2D3" parent="." index="27"]
 position = Vector2( 478, -267 )
 
-[node name="KinematicBody2D4" parent="." index="27"]
+[node name="KinematicBody2D4" parent="." index="28"]
 position = Vector2( 447, -118 )
 
-[node name="KinematicBody2D5" parent="." index="28"]
+[node name="KinematicBody2D5" parent="." index="29"]
 position = Vector2( 496, -272 )
 
-[node name="KinematicBody2D6" parent="." index="29"]
+[node name="KinematicBody2D6" parent="." index="30"]
 position = Vector2( 499, -131 )
 
-[node name="KinematicBody2D7" parent="." index="30"]
+[node name="KinematicBody2D7" parent="." index="31"]
 position = Vector2( 505, -117 )
 
-[node name="KinematicBody2D8" parent="." index="31"]
+[node name="KinematicBody2D8" parent="." index="32"]
 position = Vector2( 551, -115 )
 
-[node name="KinematicBody2D25" parent="." index="32"]
+[node name="KinematicBody2D25" parent="." index="33"]
 position = Vector2( 542, -137 )
 
-[node name="KinematicBody2D9" parent="." index="33"]
+[node name="KinematicBody2D9" parent="." index="34"]
 position = Vector2( 518, -117 )
 
-[node name="KinematicBody2D10" parent="." index="34"]
+[node name="KinematicBody2D10" parent="." index="35"]
 position = Vector2( 489, -266 )
 
-[node name="KinematicBody2D11" parent="." index="35"]
+[node name="KinematicBody2D11" parent="." index="36"]
 position = Vector2( 549, -272 )
 
-[node name="KinematicBody2D12" parent="." index="36"]
+[node name="KinematicBody2D12" parent="." index="37"]
 position = Vector2( 456, -269 )
 
-[node name="KinematicBody2D13" parent="." index="37"]
+[node name="KinematicBody2D13" parent="." index="38"]
 position = Vector2( 523, -272 )
 
-[node name="KinematicBody2D14" parent="." index="38"]
+[node name="KinematicBody2D14" parent="." index="39"]
 position = Vector2( 641, -178 )
 
-[node name="KinematicBody2D15" parent="." index="39"]
+[node name="KinematicBody2D15" parent="." index="40"]
 position = Vector2( 598, -166 )
 
 [editable path="Camera2D"]
 [editable path="YSort/Dvere"]
+[editable path="Dvere2"]
 [editable path="Dvere"]

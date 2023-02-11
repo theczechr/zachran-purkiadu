@@ -1,7 +1,7 @@
 extends Control
 
-const ItemScene := preload("Item.tscn")
-
+const ItemScene := preload("Item.tscn")	
+export var hasicak_uses = 1
 var inventory: Inventory = null setget set_inventory
 
 onready var _item_grid := $HBoxContainer/ItemGrid as GridContainer
@@ -37,8 +37,8 @@ func _unhandled_input(event):
 			get_node("../../YSort/Hasicak/Kolize").disabled = true
 
 			inventory.add_item("extinguisher")
-
-	elif Input.is_key_pressed(KEY_E) and ohen_in_status:
+	
+	elif Input.is_key_pressed(KEY_E) and hasicak_uses == 1:
 		if inventory.is_item("extinguisher"):
 			inventory.remove_item("extinguisher")
 

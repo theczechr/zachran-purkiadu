@@ -3,7 +3,6 @@ extends KinematicBody2D
 export var ACCELERATION = 500
 export var MAX_SPEED = 80
 export var FRICTION = 500
-
 var stats: Character setget set_stats
 
 export(bool) var show_prompt setget _show_prompt_set
