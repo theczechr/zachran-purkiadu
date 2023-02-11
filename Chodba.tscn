@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/icons/svit-dveri.png" type="Texture" id=3]
 [ext_resource path="res://kvetina.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/sprites/moderni_dvere.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/kamera_doprava.png" type="Texture" id=6]
@@ -253,82 +254,86 @@ position = Vector2( 798, -380.5 )
 [node name="cerna" parent="." index="8"]
 tile_data = PoolIntArray( 20250794, 0, 0, 20250795, 0, 0, 20250796, 0, 0, 20250797, 0, 0, 20250799, 0, 0, 20250800, 0, 0, 20250801, 0, 0, 20250802, 0, 0, 20250803, 0, 0, 20250804, 0, 0, 20250805, 0, 0, 20250806, 0, 0, 20250807, 0, 0, 20250808, 0, 0, 20316333, 0, 0, 20316334, 0, 0, 20316335, 0, 0, 20316344, 0, 0, 20316345, 0, 0, 20381865, 0, 0, 20381866, 0, 0, 20381867, 0, 0, 20381868, 0, 0, 20381869, 0, 0, 20381870, 0, 0, 20381871, 0, 0, 20381872, 0, 0, 20381873, 0, 0, 20381874, 0, 0, 20381875, 0, 0, 20381876, 0, 0, 20381877, 0, 0, 20381878, 0, 0, 20381879, 0, 0, 20381880, 0, 0, 20381881, 0, 0, 20447411, 0, 0, 20447412, 0, 0, 20447413, 0, 0, 20447414, 0, 0, 20447415, 0, 0, 26542426, -1610612735, 0, 26542441, -1610612735, 0 )
 
-[node name="KinematicBody2D" parent="." index="9"]
+[node name="dvere_stin" type="Sprite" parent="." index="9"]
+position = Vector2( 178, 299 )
+texture = ExtResource( 3 )
+
+[node name="KinematicBody2D" parent="." index="10"]
 position = Vector2( 368, 218 )
 
-[node name="KinematicBody2D2" parent="." index="10"]
+[node name="KinematicBody2D2" parent="." index="11"]
 position = Vector2( 328, 278 )
 
-[node name="KinematicBody2D23" parent="." index="11"]
+[node name="KinematicBody2D23" parent="." index="12"]
 position = Vector2( 249, 273 )
 
-[node name="KinematicBody2D24" parent="." index="12"]
+[node name="KinematicBody2D24" parent="." index="13"]
 position = Vector2( 240, 278 )
 
-[node name="KinematicBody2D20" parent="." index="13"]
+[node name="KinematicBody2D20" parent="." index="14"]
 position = Vector2( 437, 279 )
 
-[node name="KinematicBody2D21" parent="." index="14"]
+[node name="KinematicBody2D21" parent="." index="15"]
 position = Vector2( 376, 219 )
 
-[node name="KinematicBody2D22" parent="." index="15"]
+[node name="KinematicBody2D22" parent="." index="16"]
 position = Vector2( 258, 272 )
 
-[node name="KinematicBody2D16" parent="." index="16"]
+[node name="KinematicBody2D16" parent="." index="17"]
 position = Vector2( 324, 283 )
 
-[node name="KinematicBody2D17" parent="." index="17"]
+[node name="KinematicBody2D17" parent="." index="18"]
 position = Vector2( 326, 212 )
 
-[node name="KinematicBody2D18" parent="." index="18"]
+[node name="KinematicBody2D18" parent="." index="19"]
 position = Vector2( 228, 282 )
 
-[node name="KinematicBody2D19" parent="." index="19"]
+[node name="KinematicBody2D19" parent="." index="20"]
 position = Vector2( 338, 210 )
 
-[node name="KinematicBody2D3" parent="." index="20"]
+[node name="KinematicBody2D3" parent="." index="21"]
 position = Vector2( 125, 265 )
 z_index = 1
 
-[node name="KinematicBody2D4" parent="." index="21"]
+[node name="KinematicBody2D4" parent="." index="22"]
 position = Vector2( 218, 284 )
 
-[node name="KinematicBody2D5" parent="." index="22"]
+[node name="KinematicBody2D5" parent="." index="23"]
 position = Vector2( 124, 277 )
 
-[node name="KinematicBody2D6" parent="." index="23"]
+[node name="KinematicBody2D6" parent="." index="24"]
 position = Vector2( 457, 279 )
 
-[node name="KinematicBody2D7" parent="." index="24"]
+[node name="KinematicBody2D7" parent="." index="25"]
 position = Vector2( 253, 283 )
 
-[node name="KinematicBody2D8" parent="." index="25"]
+[node name="KinematicBody2D8" parent="." index="26"]
 position = Vector2( 429, 282 )
 
-[node name="KinematicBody2D25" parent="." index="26"]
+[node name="KinematicBody2D25" parent="." index="27"]
 position = Vector2( 264, 279 )
 
-[node name="KinematicBody2D9" parent="." index="27"]
+[node name="KinematicBody2D9" parent="." index="28"]
 position = Vector2( 448, 280 )
 
-[node name="KinematicBody2D10" parent="." index="28"]
+[node name="KinematicBody2D10" parent="." index="29"]
 position = Vector2( 466, 280 )
 
-[node name="KinematicBody2D11" parent="." index="29"]
+[node name="KinematicBody2D11" parent="." index="30"]
 position = Vector2( 305, 211 )
 
-[node name="KinematicBody2D12" parent="." index="30"]
+[node name="KinematicBody2D12" parent="." index="31"]
 position = Vector2( 132, 271 )
 z_index = 1
 
-[node name="KinematicBody2D13" parent="." index="31"]
+[node name="KinematicBody2D13" parent="." index="32"]
 position = Vector2( 316, 213 )
 
-[node name="KinematicBody2D14" parent="." index="32"]
+[node name="KinematicBody2D14" parent="." index="33"]
 position = Vector2( 135, 280 )
 z_index = 1
 
-[node name="KinematicBody2D15" parent="." index="33"]
+[node name="KinematicBody2D15" parent="." index="34"]
 position = Vector2( 143, 278 )
 z_index = 1
 

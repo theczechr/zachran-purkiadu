@@ -24,7 +24,7 @@ func _on_LoginButton_pressed() -> void:
 		popup.show()
 		popup.dialog_text = "Nespravne prihlasovaci udaje"
 		return
-	get_tree().change_scene("res://Game.tscn")
+	get_tree().change_scene("res://Controls_info.tscn")
 
 func _load_csv():
 	var file = File.new()
