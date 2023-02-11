@@ -4,7 +4,6 @@ export var ACCELERATION = 500
 export var MAX_SPEED = 80
 export var ROLL_SPEED = 120
 export var FRICTION = 500
-
 var stats: Character setget set_stats
 
 export(bool) var show_prompt setget _show_prompt_set
