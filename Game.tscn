@@ -64,8 +64,10 @@ func _save_game() -> void:
 	_progress_sync()
 
 func _progress_sync() -> void:
+	var server_level = str(yield(_http.get_progress(_save.character.id, $HTTPRequest), \"completed\") as int)
+	print(\"character: \", _save.character.id)
 	print(\"character level: \", _save.character.level)
-	print(\"server level: \", str(_http.get_progress(_save.character.id, $HTTPRequest)))
+	print(\"server level: \", server_level)
 
 
 "

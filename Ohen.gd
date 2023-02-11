@@ -10,13 +10,13 @@ func _unhandled_input(event):
 			get_node("Area2D/interakce").queue_free()
 
 func _on_Area2D_body_entered(body):
-	print("Press E to extinguish the fire")
+	# print("Press E to extinguish the fire")
 	if body.is_in_group("Player"):
 		body.set("show_prompt", true)
 		state = true
 
 func _on_Area2D_body_exited(body):
-	if body.is_in_group("Player"):	
+	if body.is_in_group("Player"):
 		body.set("show_prompt", false)
 		print("Exited")
 		state = false

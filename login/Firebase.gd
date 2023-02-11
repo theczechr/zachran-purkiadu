@@ -29,4 +29,3 @@ func set_progress(username: String, progress: String, http: HTTPRequest) -> bool
 	var result := yield(http, "request_completed") as 	Array
 	print(result)
 	return result[1] == 200
-	
