@@ -34,7 +34,6 @@ script/source = "extends Node2D
 
 onready var _inventory := $CanvasLayer/Inventory
 onready var _player := $YSort/Player
-
 var _http = load(\"res://login/Firebase.gd\").new()
 var _save: SaveGame
 onready var _level := get_tree().current_scene.get_name()
@@ -611,6 +610,7 @@ texture = ExtResource( 20 )
 script = ExtResource( 22 )
 
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource( 27 )]
+hasicak_uses = 5000
 
 [node name="cerna" type="TileMap" parent="."]
 tile_set = SubResource( 71 )

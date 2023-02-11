@@ -1,6 +1,7 @@
 extends KinematicBody2D
 export (String, FILE) var NEXT_LEVEL : String = "Level"
 var state = false
+var last_use = false
 func _unhandled_input(event):
 	if (Input.is_key_pressed(KEY_E) and state):
 			print("DONE")
