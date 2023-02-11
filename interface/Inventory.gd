@@ -1,7 +1,7 @@
 extends Control
 
 const ItemScene := preload("Item.tscn")	
-
+export var hasicak_uses = 1
 var inventory: Inventory = null setget set_inventory
 
 onready var _item_grid := $HBoxContainer/ItemGrid as GridContainer
@@ -38,15 +38,13 @@ func _unhandled_input(event):
 
 			inventory.add_item("extinguisher")
 	
-	elif Input.is_key_pressed(KEY_E) and ohen_in_status:
+	elif Input.is_key_pressed(KEY_E) and hasicak_uses == 1:
 		if inventory.is_item("extinguisher"):
 			inventory.remove_item("extinguisher")
 
-#var ohen = get_tree().get_root().find_node("Ohen")
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		hasicak_in_status = true
-	#print("OEHEHHEH: ", ohen)
 
 func _on_Area2D_body_exited(body):
 	hasicak_in_status = false
