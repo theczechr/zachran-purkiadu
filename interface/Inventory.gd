@@ -38,7 +38,7 @@ func _unhandled_input(event):
 
 			inventory.add_item("extinguisher")
 	
-	elif Input.is_key_pressed(KEY_E):
+	elif Input.is_key_pressed(KEY_E) and hasicak_uses == 1:
 		if inventory.is_item("extinguisher"):
 			inventory.remove_item("extinguisher")
 
