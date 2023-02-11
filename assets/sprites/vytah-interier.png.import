@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vytah-zed1.png-e18c77bbe5b8c0df08a98bd4242c953b.stex"
+path="res://.import/vytah-interier.png-1fc41513c875467bbb4319835d1e1b29.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/vytah/vytah-zed1.png"
-dest_files=[ "res://.import/vytah-zed1.png-e18c77bbe5b8c0df08a98bd4242c953b.stex" ]
+source_file="res://assets/sprites/vytah-interier.png"
+dest_files=[ "res://.import/vytah-interier.png-1fc41513c875467bbb4319835d1e1b29.stex" ]
 
 [params]
 

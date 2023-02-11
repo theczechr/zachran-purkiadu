@@ -453,6 +453,9 @@ position = Vector2( 200, 195 )
 scale = Vector2( 0.5, 0.5 )
 NEXT_LEVEL = "res://Chodba.tscn"
 
+[node name="Kolize" parent="YSort/Dvere" index="1"]
+position = Vector2( -0.5, 0.999969 )
+
 [node name="podlaha" type="TileMap" parent="YSort"]
 tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
