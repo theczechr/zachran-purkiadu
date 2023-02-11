@@ -1,5 +1,7 @@
 extends KinematicBody2D
+
 export (String, FILE) var NEXT_LEVEL : String = "Level"
+
 var state = false
 func _unhandled_input(event):
 	if (Input.is_key_pressed(KEY_E) and state):
@@ -9,12 +11,9 @@ func _unhandled_input(event):
 			else:
 				get_tree().change_scene(NEXT_LEVEL)
 
-
 func _on_Interacteble_body_entered(body):
-	print("Press E to enter")
 	if body.is_in_group("Player") and NEXT_LEVEL != "":
 		state = true
 
 func _on_Interacteble_body_exited(body):
-	print("Exited")
 	state = false

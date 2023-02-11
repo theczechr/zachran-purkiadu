@@ -1,6 +1,6 @@
 extends Control
 
-const ItemScene := preload("Item.tscn")	
+const ItemScene := preload("Item.tscn")
 
 var inventory: Inventory = null setget set_inventory
 
@@ -37,16 +37,14 @@ func _unhandled_input(event):
 			get_node("../../YSort/Hasicak/Kolize").disabled = true
 
 			inventory.add_item("extinguisher")
-	
+
 	elif Input.is_key_pressed(KEY_E) and ohen_in_status:
 		if inventory.is_item("extinguisher"):
 			inventory.remove_item("extinguisher")
 
-#var ohen = get_tree().get_root().find_node("Ohen")
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		hasicak_in_status = true
-	#print("OEHEHHEH: ", ohen)
 
 func _on_Area2D_body_exited(body):
 	hasicak_in_status = false

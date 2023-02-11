@@ -1,7 +1,30 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://interface/Stats.gd" type="Script" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+export(int) var max_health = 1 setget set_max_health
+var health = max_health setget set_health
+
+signal no_health
+signal health_changed(value)
+signal max_health_changed(value)
+
+func set_max_health(value):
+	max_health = value
+	self.health = min(health, max_health)
+	emit_signal(\"max_health_changed\", max_health)
+
+func set_health(value):
+	health = value
+	emit_signal(\"health_changed\", health)
+	if health <= 0:
+		emit_signal(\"no_health\")
+
+func _ready():
+	self.health = max_health
+"
 
 [node name="Stats" type="Node"]
-script = ExtResource( 1 )
+script = SubResource( 1 )
 max_health = 4
