@@ -42,11 +42,11 @@ func _unhandled_input(event):
 		if inventory.is_item("extinguisher"):
 			inventory.remove_item("extinguisher")
 
-var ohen = get_tree().get_root().find_node("Ohen")
+#var ohen = get_tree().get_root().find_node("Ohen")
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		hasicak_in_status = true
-	print("OEHEHHEH: ", ohen)
+	#print("OEHEHHEH: ", ohen)
 
 func _on_Area2D_body_exited(body):
 	hasicak_in_status = false
