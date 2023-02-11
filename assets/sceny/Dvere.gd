@@ -13,9 +13,11 @@ func _unhandled_input(event):
 
 func _on_Interacteble_body_entered(body):
 	print("Press E to enter")
+	body.set("show_prompt", true)
 	if body.is_in_group("Player") and NEXT_LEVEL != "":
 		state = true
 
 func _on_Interacteble_body_exited(body):
+	body.set("show_prompt", false)
 	print("Exited")
 	state = false
