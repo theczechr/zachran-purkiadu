@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/vytah-interier.png" type="Texture" id=2]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/PlayerCharacter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=4]
 [ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=5]
-[ext_resource path="res://player/Camera/Camera2D.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 57, 10 )
@@ -43,20 +42,6 @@ texture = ExtResource( 2 )
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 415, 280 )
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-position = Vector2( 5, 6 )
-remote_path = NodePath("../../Camera2D")
-
-[node name="Camera2D" parent="." instance=ExtResource( 8 )]
-position = Vector2( 415, 280 )
-zoom = Vector2( 0.2, 0.2 )
-
-[node name="TopLeft" parent="Camera2D/Limits" index="0"]
-position = Vector2( 180, 101 )
-
-[node name="BottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 635, 411 )
-
 [node name="TileMap2" type="TileMap" parent="."]
 position = Vector2( 122, 29 )
 z_index = 2
@@ -75,5 +60,4 @@ visible = false
 [node name="Kolize" parent="Dvere" index="1"]
 position = Vector2( -10.0625, 2 )
 
-[editable path="Camera2D"]
 [editable path="Dvere"]

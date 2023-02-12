@@ -1,29 +1,16 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
 [ext_resource path="res://player/PlayerCharacter.tscn" type="PackedScene" id=2]
-[ext_resource path="res://interface/Checkpoint.tscn" type="PackedScene" id=3]
-[ext_resource path="res://1stul_zidle.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/tilemaps/tileset_edit.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/hasicak.png" type="Texture" id=8]
 [ext_resource path="res://assets/tilemaps/lista.png" type="Texture" id=9]
 [ext_resource path="res://assets/tilemaps/podlaha1.png" type="Texture" id=10]
-[ext_resource path="res://kos.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/sprites/kamera_doprava.png" type="Texture" id=13]
-[ext_resource path="res://Server.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Skrinky.tscn" type="PackedScene" id=15]
-[ext_resource path="res://stul_s_monitorem.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/tilemaps/zed-modra-nahore.png" type="Texture" id=18]
-[ext_resource path="res://PCaStolek.tscn" type="PackedScene" id=19]
-[ext_resource path="res://assets/sprites/kamera_vlevo.png" type="Texture" id=20]
 [ext_resource path="res://assets/tilemaps/zed-modra-stin.png" type="Texture" id=21]
 [ext_resource path="res://assets/tilemaps/zed-modra-uprostred.png" type="Texture" id=22]
 [ext_resource path="res://assets/tilemaps/lista-polovicni.png" type="Texture" id=23]
 [ext_resource path="res://assets/tilemaps/zed-modra-stin-polovicni.png" type="Texture" id=24]
-[ext_resource path="res://PolickasKnihami.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Ohen.tscn" type="PackedScene" id=26]
 [ext_resource path="res://interface/Inventory.tscn" type="PackedScene" id=27]
 [ext_resource path="res://assets/tilemaps/podlaha-svetla.png" type="Texture" id=29]
 
@@ -31,13 +18,13 @@
 script/source = "extends Node2D
 
 var _save: SaveGame
-onready var _player := $PlayerCharacter
+onready var _player := $YSort/PlayerCharacter
 onready var _inventory := $CanvasLayer/Inventory
 var _http = load(\"res://login/Firebase.gd\").new()
 onready var _level := get_tree().current_scene.get_name()
 
 func _ready():
-	get_node(\"Checkpoint\").connect(\"save_or_load_requested\", self, \"_save_game\")
+#	get_node(\"Checkpoint\").connect(\"save_or_load_requested\", self, \"_save_game\")
 	
 	_create_or_load_save()
 	
@@ -335,14 +322,6 @@ points = PoolVector2Array( 8, 16, 0, 16, 0, 16, 8, 16 )
 } ]
 0/z_index = 0
 
-[sub_resource type="GDScript" id=74]
-
-[sub_resource type="CapsuleShape2D" id=73]
-
-[sub_resource type="CapsuleShape2D" id=5]
-radius = 6.0
-height = 16.0
-
 [sub_resource type="TileSet" id=71]
 0/name = "black.png 0"
 0/texture = ExtResource( 7 )
@@ -394,14 +373,14 @@ height = 16.0
 } ]
 2/z_index = 0
 
-[node name="U55" type="Node2D"]
+[node name="Game" type="Node2D"]
 script = SubResource( 1 )
 
 [node name="Background" type="TextureRect" parent="."]
-margin_left = 3.0
-margin_top = -3.0
-margin_right = 6883.0
-margin_bottom = 5327.0
+margin_left = 33.0
+margin_top = 26.0
+margin_right = 6913.0
+margin_bottom = 5356.0
 rect_scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 7 )
 expand = true
@@ -410,27 +389,10 @@ stretch_mode = 2
 [node name="YSort" type="YSort" parent="."]
 position = Vector2( 58, 41 )
 
-[node name="stul_s_monitorem" parent="YSort" instance=ExtResource( 17 )]
-position = Vector2( 219, 259 )
-z_index = 1
-
-[node name="Dvere" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 200, 195 )
-scale = Vector2( 0.5, 0.5 )
-NEXT_LEVEL = "res://Chodba.tscn"
-
-[node name="Kolize" parent="YSort/Dvere" index="1"]
-position = Vector2( -0.5, 0.999969 )
-
 [node name="podlaha" type="TileMap" parent="YSort"]
 tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 851978, -1610612736, 0, 851979, -1610612736, 0, 851980, -1610612736, 0, 851981, -1610612736, 0, 851982, -1610612736, 0, 851983, -1610612736, 0, 851984, -1610612736, 0, 851985, -1610612736, 0, 851986, -1610612736, 0, 851987, -1610612736, 0, 851988, -1610612736, 0, 851989, -1610612736, 0, 851990, -1610612736, 0, 917514, -1610612736, 0, 917515, -1610612736, 0, 917516, -1610612736, 0, 917517, -1610612736, 0, 917518, -1610612736, 0, 917519, -1610612736, 0, 917520, -1610612736, 0, 917521, -1610612736, 0, 917522, -1610612736, 0, 917523, -1610612736, 0, 917524, -1610612736, 0, 917525, -1610612736, 0, 917526, -1610612736, 0, 983050, -1610612736, 0, 983051, -1610612736, 0, 983052, -1610612736, 0, 983053, -1610612736, 0, 983054, -1610612736, 0, 983055, -1610612736, 0, 983056, -1610612736, 0, 983057, -1610612736, 0, 983058, -1610612736, 0, 983059, -1610612736, 0, 983060, -1610612736, 0, 983061, -1610612736, 0, 983062, 0, 0, 1048586, -1610612736, 0, 1048587, -1610612736, 0, 1048588, -1610612736, 0, 1048589, -1610612736, 0, 1048590, -1610612736, 0, 1048591, -1610612736, 0, 1048592, -1610612736, 0, 1048593, -1610612736, 0, 1048594, -1610612736, 0, 1048595, -1610612736, 0, 1048596, -1610612736, 0, 1048597, -1610612736, 0, 1048598, 0, 0, 1114122, -1610612736, 0, 1114123, -1610612736, 0, 1114124, -1610612736, 0, 1114125, -1610612736, 0, 1114126, -1610612736, 0, 1114127, -1610612736, 0, 1114128, -1610612736, 0, 1114129, -1610612736, 0, 1114130, -1610612736, 0, 1114131, -1610612736, 0, 1114132, -1610612736, 0, 1114133, -1610612736, 0, 1114134, -1610612736, 0, 1179658, -1610612736, 0, 1179659, -1610612736, 0, 1179660, -1610612736, 0, 1179661, -1610612736, 0, 1179662, -1610612736, 0, 1179663, -1610612736, 0, 1179664, -1610612736, 0, 1179665, -1610612736, 0, 1179666, -1610612736, 0, 1179667, -1610612736, 0, 1179668, -1610612736, 0, 1179669, -1610612736, 0, 1179670, -1610612736, 0, 1245194, -1610612736, 0, 1245195, -1610612736, 0, 1245196, -1610612736, 0, 1245197, -1610612736, 0, 1245198, -1610612736, 0, 1245199, -1610612736, 0, 1245200, -1610612736, 0, 1245201, -1610612736, 0, 1245202, -1610612736, 0, 1245203, -1610612736, 0, 1245204, -1610612736, 0, 1245205, -1610612736, 0, 1245206, -1610612736, 0, 1310730, -1610612736, 0, 1310731, -1610612736, 0, 1310732, -1610612736, 0, 1310733, -1610612736, 0, 1310734, -1610612736, 0, 1310735, -1610612736, 0, 1310736, -1610612736, 0, 1310737, -1610612736, 0, 1310738, -1610612736, 0, 1310739, -1610612736, 0, 1310740, -1610612736, 0, 1310741, -1610612736, 0, 1310742, -1610612736, 0, 1376266, -1610612736, 0, 1376267, -1610612736, 0, 1376268, -1610612736, 0, 1376269, -1610612736, 0, 1376270, -1610612736, 0, 1376271, -1610612736, 0, 1376272, -1610612736, 0, 1376273, -1610612736, 0, 1376274, -1610612736, 0, 1376275, -1610612736, 0, 1376276, -1610612736, 0, 1376277, -1610612736, 0, 1376278, -1610612736, 0, 1441801, -1610612736, 0, 1441802, -1610612736, 0, 1441803, -1610612736, 0, 1441804, -1610612736, 0, 1441805, -1610612736, 0, 1441806, -1610612736, 0, 1441807, -1610612736, 0, 1441808, -1610612736, 0, 1441809, -1610612736, 0, 1441810, -1610612736, 0, 1441811, -1610612736, 0, 1441812, -1610612736, 0, 1441813, -1610612736, 0, 1441814, -1610612736, 0, 1441815, -1610612736, 0 )
-
-[node name="kos" parent="YSort" instance=ExtResource( 12 )]
-show_behind_parent = true
-position = Vector2( 246, -49 )
 
 [node name="zed" type="TileMap" parent="YSort"]
 tile_set = SubResource( 55 )
@@ -438,126 +400,38 @@ cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 8
 navigation_layers = 4
 format = 1
-tile_data = PoolIntArray( 655369, -1073741822, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 655376, 4, 0, 655377, 4, 0, 655378, 4, 0, 655379, 4, 0, 655380, 4, 0, 655381, 4, 0, 655382, 4, 0, 655383, -1610612734, 0, 720905, -1073741822, 0, 720906, -1073741818, 0, 720907, -1073741818, 0, 720908, -1073741818, 0, 720909, -1073741818, 0, 720910, -1073741818, 0, 720911, -1073741818, 0, 720912, -1073741818, 0, 720913, -1073741818, 0, 720914, 4, 0, 720915, -1073741818, 0, 720916, -1073741818, 0, 720917, -1073741818, 0, 720918, -1073741818, 0, 720919, -1610612734, 0, 786441, -1073741822, 0, 786442, -1610612730, 0, 786443, -1610612730, 0, 786444, -1610612730, 0, 786445, -1610612730, 0, 786446, -1610612730, 0, 786447, -1610612730, 0, 786448, -1610612730, 0, 786449, -1610612730, 0, 786450, 2, 0, 786451, -1610612730, 0, 786452, -1610612730, 0, 786453, -1610612730, 0, 786454, -1610612730, 0, 786455, -1610612734, 0, 851977, -1610612734, 0, 851986, 6, 0, 851991, -1610612734, 0, 917513, -1610612734, 0, 917527, -1610612734, 0, 983049, -1610612734, 0, 983063, -1610612734, 0, 1048585, -1610612734, 0, 1048599, -1610612734, 0, 1114121, -1610612734, 0, 1114130, -1610612729, 0, 1114135, -1610612734, 0, 1179657, -1610612734, 0, 1179666, -1610612729, 0, 1179671, -1610612734, 0, 1245193, -1610612734, 0, 1245202, -1610612729, 0, 1245207, -1610612734, 0, 1310729, -1610612734, 0, 1310738, -1610612729, 0, 1310743, -1610612734, 0, 1376265, -1610612734, 0, 1376274, -1610612729, 0, 1376279, -1610612734, 0, 1441801, -1610612734, 0, 1441810, -1610612729, 0, 1441815, -1610612734, 0 )
 
 [node name="polovicni_zed" type="TileMap" parent="YSort"]
 tile_set = SubResource( 65 )
 cell_size = Vector2( 8, 8 )
 cell_quadrant_size = 8
 format = 1
-tile_data = PoolIntArray( 2752548, 1610612736, 0, 2818084, 1610612736, 0, 4849738, 0, 0, 4915274, 0, 0, 4980810, 0, 0, 5046346, 0, 0, 5111882, 0, 0 )
+tile_data = PoolIntArray( 4849738, 0, 0, 4915274, 0, 0, 4980810, 0, 0, 5046346, 0, 0, 5111882, 0, 0 )
 
 [node name="lista" type="TileMap" parent="YSort"]
 tile_set = SubResource( 68 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786451, 0, 0, 786452, 0, 0, 786453, 0, 0, 786454, 0, 0, 851977, -1073741824, 0, 851986, 0, 0, 851991, -1610612736, 0, 917513, -1073741824, 0, 917527, -1610612736, 0, 983049, -1073741824, 0, 983063, -1610612736, 0, 1048585, -1073741824, 0, 1048599, -1610612736, 0, 1114121, -1073741824, 0, 1114130, -1610612735, 0, 1114135, -1610612736, 0, 1179657, -1073741824, 0, 1179671, -1610612736, 0, 1245193, -1073741824, 0, 1245207, -1610612736, 0, 1310729, -1073741824, 0, 1310743, -1610612736, 0, 1376265, -1073741824, 0, 1376279, -1610612736, 0, 1441801, -1073741824, 0, 1441815, -1610612736, 0 )
 
 [node name="polovicni_lista" type="TileMap" parent="YSort"]
 tile_set = SubResource( 70 )
 cell_size = Vector2( 8, 8 )
 format = 1
-tile_data = PoolIntArray( 2228260, 1610612736, 0, 2228261, 1610612736, 0 )
 
-[node name="Hasicak" type="KinematicBody2D" parent="YSort"]
-position = Vector2( 296, 215 )
-scale = Vector2( 0.5, 0.5 )
-script = SubResource( 74 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="YSort/Hasicak"]
-scale = Vector2( 2, 2 )
-texture = ExtResource( 8 )
-
-[node name="Area2D" type="Area2D" parent="YSort/Hasicak"]
-
-[node name="interakce" type="CollisionShape2D" parent="YSort/Hasicak/Area2D"]
-shape = SubResource( 73 )
-
-[node name="Kolize" type="CollisionShape2D" parent="YSort/Hasicak"]
-position = Vector2( 0, 2 )
-shape = SubResource( 5 )
-
-[node name="KameraDoprava" type="Sprite" parent="YSort"]
-position = Vector2( 157, 180 )
-texture = ExtResource( 13 )
-
-[node name="KameraDoprava2" type="Sprite" parent="YSort/KameraDoprava"]
-position = Vector2( 152, 16 )
-z_index = 2
-texture = ExtResource( 13 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="KinematicBody2D5" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 172, 295 )
-
-[node name="KinematicBody2D7" parent="YSort/KinematicBody2D5" instance=ExtResource( 4 )]
-position = Vector2( 65, 0 )
-
-[node name="KinematicBody2D6" parent="YSort/KinematicBody2D5" instance=ExtResource( 4 )]
-position = Vector2( 32, 0 )
-
-[node name="KinematicBody2D8" parent="YSort/KinematicBody2D5" instance=ExtResource( 4 )]
-position = Vector2( 100, 0 )
-
-[node name="KinematicBody2D" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 272, 329 )
-
-[node name="KinematicBody2D4" parent="YSort/KinematicBody2D" instance=ExtResource( 4 )]
-position = Vector2( -35, 0 )
-
-[node name="KinematicBody2D2" parent="YSort/KinematicBody2D" instance=ExtResource( 4 )]
-position = Vector2( -100, 0 )
-
-[node name="KinematicBody2D3" parent="YSort/KinematicBody2D" instance=ExtResource( 4 )]
-position = Vector2( -68, 0 )
-
-[node name="Skrinky2" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( 243, 194 )
-
-[node name="PCaStolek" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 351, 197 )
-
-[node name="PolickasKnihami" parent="YSort" instance=ExtResource( 25 )]
-position = Vector2( 176, 196 )
-
-[node name="PolickasKnihami2" parent="YSort" instance=ExtResource( 25 )]
-position = Vector2( 350, 343 )
-z_index = 1
-
-[node name="Server" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 323, 270 )
-z_index = 1
-
-[node name="Server2" parent="YSort" instance=ExtResource( 14 )]
-position = Vector2( 323, 287 )
-scale = Vector2( 0.978754, 1 )
-z_index = 1
-
-[node name="PlayerCharacter" parent="." instance=ExtResource( 2 )]
-position = Vector2( 281, 287 )
-z_index = 1
-
-[node name="Zdi" type="TileMap" parent="."]
-position = Vector2( 122, 29 )
+[node name="strop" type="TileMap" parent="YSort"]
 z_index = 2
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 8, 8 )
 format = 1
-tile_data = PoolIntArray( -1, 0, 196608, -65536, 0, 7, 0, 0, 131075, 1376266, 0, 4, 1376267, 0, 196609, 1376268, 0, 196609, 1376269, 0, 196609, 1376270, 0, 196609, 1376271, 0, 196609, 1376272, 0, 196609, 1376273, 0, 196609, 1376274, 0, 196609, 1376275, 0, 196609, 1376276, 0, 196609, 1376277, 0, 196609, 1376278, 0, 196609, 1376279, 0, 196609, 1376280, 0, 196609, 1376281, 0, 196609, 1376282, 0, 196609, 1376283, 0, 196609, 1376284, 0, 6, 1376285, 0, 5, 1376286, 0, 196609, 1376287, 0, 196609, 1376288, 0, 196609, 1376289, 0, 196609, 1376290, 0, 196609, 1376291, 0, 196609, 1376292, 0, 196609, 1376293, 0, 196609, 1376294, 0, 196609, 1376295, 0, 7, 1441802, 0, 65539, 1441820, 0, 65536, 1441821, 0, 65538, 1441831, 0, 65539, 1507338, 0, 65539, 1507356, 0, 65536, 1507357, 0, 65538, 1507367, 0, 65539, 1572874, 0, 65539, 1572892, 0, 65536, 1572893, 0, 65538, 1572903, 0, 65539, 1638410, 0, 65539, 1638428, 0, 65536, 1638429, 0, 65538, 1638439, 0, 65539, 1703946, 0, 65539, 1703964, 0, 131072, 1703965, 0, 131074, 1703975, 0, 65539, 1769482, 0, 65539, 1769511, 0, 65539, 1835018, 0, 65539, 1835047, 0, 65539, 1900554, 0, 65539, 1900583, 0, 65539, 1966090, 0, 65539, 1966119, 0, 65539, 2031626, 0, 65539, 2031655, 0, 65539, 2097162, 0, 65539, 2097191, 0, 65539, 2162698, 0, 65539, 2162716, 0, 0, 2162717, 0, 2, 2162727, 0, 65539, 2228234, 0, 65539, 2228252, 0, 65536, 2228253, 0, 65538, 2228263, 0, 65539, 2293770, 0, 65539, 2293788, 0, 65536, 2293789, 0, 65538, 2293799, 0, 65539, 2359306, 0, 65539, 2359324, 0, 65536, 2359325, 0, 65538, 2359335, 0, 65539, 2424842, 0, 65539, 2424860, 0, 65536, 2424861, 0, 65538, 2424871, 0, 65539, 2490378, 0, 65539, 2490396, 0, 65536, 2490397, 0, 65538, 2490407, 0, 65539, 2555914, 0, 65539, 2555932, 0, 65536, 2555933, 0, 65538, 2555943, 0, 65539, 2621450, 0, 65539, 2621468, 0, 65536, 2621469, 0, 65538, 2621479, 0, 65539, 2686986, 0, 65539, 2687004, 0, 65536, 2687005, 0, 65538, 2687015, 0, 65539, 2752522, 0, 65539, 2752540, 0, 65536, 2752541, 0, 65538, 2752551, 0, 65539, 2818058, 0, 65539, 2818076, 0, 65536, 2818077, 0, 65538, 2818087, 0, 65539, 2883594, 0, 65539, 2883612, 0, 65536, 2883613, 0, 65538, 2883623, 0, 65539, 2949130, 0, 65539, 2949148, 0, 65536, 2949149, 0, 65538, 2949159, 0, 65539, 3014666, 0, 65539, 3014684, 0, 65536, 3014685, 0, 65538, 3014695, 0, 65539, 3080202, 0, 196612, 3080203, 0, 196609, 3080204, 0, 196609, 3080205, 0, 196609, 3080206, 0, 196609, 3080207, 0, 196609, 3080208, 0, 196609, 3080209, 0, 196609, 3080210, 0, 196609, 3080211, 0, 196609, 3080212, 0, 196609, 3080213, 0, 196609, 3080214, 0, 196609, 3080215, 0, 196609, 3080216, 0, 196609, 3080217, 0, 196609, 3080218, 0, 196609, 3080219, 0, 196609, 3080220, 0, 196614, 3080221, 0, 196613, 3080222, 0, 196609, 3080223, 0, 196609, 3080224, 0, 196609, 3080225, 0, 196609, 3080226, 0, 196609, 3080227, 0, 196609, 3080228, 0, 196609, 3080229, 0, 196609, 3080230, 0, 196609, 3080231, 0, 196615, 4128851, 0, 196611 )
 
-[node name="KameraVlevo" type="Sprite" parent="."]
-position = Vector2( 429, 219 )
-texture = ExtResource( 20 )
+[node name="cerna" type="TileMap" parent="YSort"]
+tile_set = SubResource( 71 )
+cell_size = Vector2( 1, 1 )
+format = 1
 
-[node name="KameraVlevo2" type="Sprite" parent="."]
-position = Vector2( 341, 240 )
-z_index = 2
-texture = ExtResource( 20 )
+[node name="PlayerCharacter" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 223, 246 )
+z_index = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource( 22 )
@@ -565,93 +439,4 @@ script = ExtResource( 22 )
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource( 27 )]
 hasicak_uses = 5000
 
-[node name="cerna" type="TileMap" parent="."]
-tile_set = SubResource( 71 )
-cell_size = Vector2( 1, 1 )
-format = 1
-tile_data = PoolIntArray( 13369690, -1610612735, 0, 16253145, -1610612735, 0, 16253354, 1, 0, 26542426, -1610612735, 0, 26542441, -1610612735, 0 )
-
-[node name="KinematicBody2D" parent="." instance=ExtResource( 26 )]
-position = Vector2( 248, 376 )
-
-[node name="KinematicBody2D2" parent="." instance=ExtResource( 26 )]
-position = Vector2( 250, 394 )
-
-[node name="KinematicBody2D23" parent="." instance=ExtResource( 26 )]
-position = Vector2( 238, 382 )
-
-[node name="KinematicBody2D24" parent="." instance=ExtResource( 26 )]
-position = Vector2( 237, 393 )
-
-[node name="KinematicBody2D20" parent="." instance=ExtResource( 26 )]
-position = Vector2( 265, 391 )
-
-[node name="KinematicBody2D21" parent="." instance=ExtResource( 26 )]
-position = Vector2( 304, 392 )
-
-[node name="KinematicBody2D22" parent="." instance=ExtResource( 26 )]
-position = Vector2( 339, 391 )
-
-[node name="KinematicBody2D16" parent="." instance=ExtResource( 26 )]
-position = Vector2( 281, 374 )
-
-[node name="KinematicBody2D17" parent="." instance=ExtResource( 26 )]
-position = Vector2( 308, 368 )
-
-[node name="KinematicBody2D18" parent="." instance=ExtResource( 26 )]
-position = Vector2( 225, 373 )
-
-[node name="KinematicBody2D19" parent="." instance=ExtResource( 26 )]
-position = Vector2( 316, 389 )
-
-[node name="KinematicBody2D3" parent="." instance=ExtResource( 26 )]
-position = Vector2( 253, 242 )
-
-[node name="KinematicBody2D4" parent="." instance=ExtResource( 26 )]
-position = Vector2( 221, 391 )
-
-[node name="KinematicBody2D5" parent="." instance=ExtResource( 26 )]
-position = Vector2( 296, 244 )
-
-[node name="KinematicBody2D6" parent="." instance=ExtResource( 26 )]
-position = Vector2( 273, 378 )
-
-[node name="KinematicBody2D7" parent="." instance=ExtResource( 26 )]
-position = Vector2( 279, 392 )
-
-[node name="KinematicBody2D8" parent="." instance=ExtResource( 26 )]
-position = Vector2( 325, 394 )
-
-[node name="KinematicBody2D25" parent="." instance=ExtResource( 26 )]
-position = Vector2( 316, 372 )
-
-[node name="KinematicBody2D9" parent="." instance=ExtResource( 26 )]
-position = Vector2( 292, 392 )
-
-[node name="KinematicBody2D10" parent="." instance=ExtResource( 26 )]
-position = Vector2( 271, 237 )
-
-[node name="KinematicBody2D11" parent="." instance=ExtResource( 26 )]
-position = Vector2( 323, 237 )
-
-[node name="KinematicBody2D12" parent="." instance=ExtResource( 26 )]
-position = Vector2( 230, 240 )
-
-[node name="KinematicBody2D13" parent="." instance=ExtResource( 26 )]
-position = Vector2( 265, 245 )
-
-[node name="KinematicBody2D14" parent="." instance=ExtResource( 26 )]
-position = Vector2( 415, 331 )
-
-[node name="KinematicBody2D15" parent="." instance=ExtResource( 26 )]
-position = Vector2( 372, 343 )
-
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
-
-[node name="Checkpoint" parent="." instance=ExtResource( 3 )]
-position = Vector2( 329, 300 )
-
-[connection signal="body_entered" from="YSort/Hasicak/Area2D" to="CanvasLayer/Inventory" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="YSort/Hasicak/Area2D" to="CanvasLayer/Inventory" method="_on_Area2D_body_exited"]
-
-[editable path="YSort/Dvere"]

@@ -611,10 +611,7 @@ anims/RESET = SubResource( 51 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.2, 0.2 )
-limit_left = -200
-limit_top = -200
-limit_right = 500
-limit_bottom = 500
+limit_smoothed = true
 smoothing_enabled = true
 
 [connection signal="input_event" from="." to="." method="_on_Player_input_event"]
