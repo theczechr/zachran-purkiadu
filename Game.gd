@@ -15,9 +15,14 @@ func _ready():
 	if get_tree().get_current_scene().get_name() == "Level1":
 		get_node("YSort/Hasicak").connect("pickup_hasicak", self, "_pickup_hasicak")
 	
+	if get_tree().get_current_scene().get_name() == "Level2":
+		GlobalData.hasicak = false
+		_inventory.inventory.remove_item("extinguisher")
+		_save_game()
+	
 	var dialog = Dialogic.start("Level" + str(_player.stats.level))
 	add_child(dialog)
-	
+
 func _create_or_load_save() -> void:
 	if SaveGame.save_exists():
 		_save = SaveGame.load_savegame() as SaveGame
