@@ -15,6 +15,12 @@
 			"name": "hasicak_used",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1676236669-648",
+			"name": "next_level",
+			"type": 0,
+			"value": "false"
 		}
 	]
 }

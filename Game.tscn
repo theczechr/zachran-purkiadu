@@ -30,8 +30,8 @@ func _ready():
 	get_node(\"Checkpoint\").connect(\"checkpoint_requested\", self, \"_checkpoint\")
 	
 	#get_node(\"YSort/Hasicak\").connect(\"pickup_hasicak\", self, \"_pickup_hasicak\")
-	
-	var dialog = Dialogic.start(\"Level\" + str(_player.stats.level))
+	print(\"level: \", str(_player.stats.level))
+	var dialog = Dialogic.start(str(get_tree().get_current_scene().get_name()))
 	add_child(dialog)
 	
 func _create_or_load_save() -> void:
