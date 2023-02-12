@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/scenes/Kreslo zlute prave.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scenes/Kreslo-modre-dolni.tscn" type="PackedScene" id=2]
@@ -25,7 +25,7 @@
 [ext_resource path="res://assets/sprites/svit-dveri.png" type="Texture" id=23]
 [ext_resource path="res://Game.tscn" type="PackedScene" id=24]
 [ext_resource path="res://assets/scenes/automat.tscn" type="PackedScene" id=25]
-
+[ext_resource path="res://interface/Checkpoint.tscn" type="PackedScene" id=26]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.0
@@ -65,7 +65,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 0/z_index = 0
 
-[node name="Chodba_level4" instance=ExtResource( 24 )]
+[node name="Level4" instance=ExtResource( 24 )]
 
 [node name="Background" parent="." index="0"]
 margin_left = -638.0
@@ -543,14 +543,14 @@ position = Vector2( 372, 343 )
 position = Vector2( 353, 337 )
 
 [node name="TileMap2" type="TileMap" parent="." index="4"]
-position = Vector2( 0, 1 )
+position = Vector2( -58, -40 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 8, 8 )
 format = 1
 tile_data = PoolIntArray( 2621405, 0, 0, 2621406, 0, 0, 2621407, 0, 0, 2621408, 0, 0, 2621409, 0, 0, 2621410, 0, 0, 2621411, 0, 0, 2621412, 0, 0, 2621413, 0, 0, 2621414, 0, 0, 2621415, 0, 0, 2621416, 0, 0, 2621417, 0, 0, 2621418, 0, 0, 2621419, 0, 0, 2686939, 0, 0, 2686940, 0, 0, 2686941, 0, 0, 2686942, 0, 0, 2686943, 0, 0, 2686944, 0, 0, 2686945, 0, 0, 2686946, 0, 0, 2686947, 0, 0, 2686948, 0, 0, 2686949, 0, 0, 2686950, 0, 0, 2686951, 0, 0, 2686952, 0, 0, 2686953, 0, 0, 2686954, 0, 0, 2686955, 0, 0, 2686956, 0, 0, 2686957, 0, 0, 2752473, 0, 0, 2752474, 0, 0, 2752475, 0, 0, 2752476, 0, 0, 2752477, 0, 0, 2752491, 0, 0, 2752492, 0, 0, 2752493, 0, 0, 2752494, 0, 0, 2752495, 0, 0, 2818008, 0, 0, 2818009, 0, 0, 2818010, 0, 0, 2818011, 0, 0, 2818029, 0, 0, 2818030, 0, 0, 2818031, 0, 0, 2818032, 0, 0, 2883543, 0, 0, 2883544, 0, 0, 2883545, 0, 0, 2883567, 0, 0, 2883568, 0, 0, 2883569, 0, 0, 2949078, 0, 0, 2949079, 0, 0, 2949080, 0, 0, 2949104, 0, 0, 2949105, 0, 0, 2949106, 0, 0, 3014613, 0, 0, 3014614, 0, 0, 3014615, 0, 0, 3014641, 0, 0, 3014642, 0, 0, 3014643, 0, 0, 3080148, 0, 0, 3080149, 0, 0, 3080150, 0, 0, 3080178, 0, 0, 3080179, 0, 0, 3080180, 0, 0, 3145683, 0, 0, 3145684, 0, 0, 3145685, 0, 0, 3145715, 0, 0, 3145716, 0, 0, 3145717, 0, 0, 3211219, 0, 0, 3211220, 0, 0, 3211252, 0, 0, 3211253, 0, 0, 3276754, 0, 0, 3276755, 0, 0, 3276789, 0, 0, 3276790, 0, 0, 3342290, 0, 0, 3342291, 0, 0, 3342325, 0, 0, 3342326, 0, 0, 3407826, 0, 0, 3407827, 0, 0, 3407861, 0, 0, 3407862, 0, 0 )
 
 [node name="Svit" type="Sprite" parent="." index="5"]
-position = Vector2( 81, 313 )
+position = Vector2( 23, 272 )
 z_index = 2
 texture = ExtResource( 3 )
 
@@ -565,23 +565,23 @@ z_index = 1
 texture = ExtResource( 7 )
 
 [node name="Svit2" type="Sprite" parent="." index="6"]
-position = Vector2( 171, 313 )
+position = Vector2( 113, 272 )
 z_index = 2
 texture = ExtResource( 3 )
 
 [node name="Dvere-stin" type="Sprite" parent="." index="7"]
-position = Vector2( 435, 377 )
+position = Vector2( 377, 336 )
 rotation = -1.5708
 z_index = 2
 texture = ExtResource( 23 )
 
 [node name="Dvere-stin2" type="Sprite" parent="." index="8"]
-position = Vector2( -406, 410 )
+position = Vector2( -464, 369 )
 z_index = 2
 texture = ExtResource( 23 )
 
 [node name="Dvere2" parent="." index="9" instance=ExtResource( 16 )]
-position = Vector2( 435, 335 )
+position = Vector2( 377, 294 )
 scale = Vector2( 0.5, 0.5 )
 NEXT_LEVEL = "res://Vytah.tscn"
 
@@ -589,15 +589,15 @@ NEXT_LEVEL = "res://Vytah.tscn"
 visible = false
 
 [node name="Dvere3" parent="." index="10" instance=ExtResource( 16 )]
-position = Vector2( 454, 377 )
+position = Vector2( 396, 336 )
 scale = Vector2( 0.5, 0.5 )
-NEXT_LEVEL = "res://Level5.tscn"
+NEXT_LEVEL = "res://Level2.tscn"
 
 [node name="Sprite" parent="Dvere3" index="0"]
 visible = false
 
 [node name="Dvere" parent="." index="11" instance=ExtResource( 16 )]
-position = Vector2( -402, 441 )
+position = Vector2( -460, 400 )
 NEXT_LEVEL = "res://Level3.tscn"
 
 [node name="Sprite" parent="Dvere" index="0"]
@@ -605,6 +605,10 @@ visible = false
 
 [node name="Kolize" parent="Dvere" index="1"]
 position = Vector2( 0, 10 )
+
+[node name="Checkpoint" parent="." index="12" instance=ExtResource( 26 )]
+position = Vector2( 352, 337 )
+NEXT_PROGRESS = 4
 
 [editable path="Dvere2"]
 [editable path="Dvere3"]
