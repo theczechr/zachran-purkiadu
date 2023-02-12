@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/sprites/controllery.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Server.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/icons/svit-dveri.png" type="Texture" id=8]
 [ext_resource path="res://assets/sprites/podlaha.png" type="Texture" id=9]
+[ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22, 8.5 )
@@ -32,25 +33,32 @@ z_index = 1
 [node name="strop" parent="YSort" index="5"]
 tile_data = PoolIntArray( 1245212, 0, 4, 1245213, 0, 196609, 1245214, 0, 196609, 1245215, 0, 196609, 1245216, 0, 196609, 1245217, 0, 196609, 1245218, 0, 196609, 1245219, 0, 196609, 1245220, 0, 196609, 1245221, 0, 196609, 1245222, 0, 196609, 1245223, 0, 196609, 1245224, 0, 196609, 1245225, 0, 196609, 1245226, 0, 196609, 1245227, 0, 196609, 1245228, 0, 196609, 1245229, 0, 196609, 1245230, 0, 196609, 1245231, 0, 7, 1310748, 0, 65539, 1310767, 0, 65539, 1376284, 0, 65539, 1376303, 0, 65539, 1441820, 0, 65539, 1441839, 0, 65539, 1507356, 0, 65539, 1507375, 0, 65539, 1572892, 0, 65539, 1572911, 0, 65539, 1638428, 0, 65539, 1638447, 0, 65539, 1703964, 0, 65539, 1703983, 0, 65539, 1769500, 0, 65539, 1769519, 0, 65539, 1835036, 0, 65539, 1835055, 0, 65539, 1900572, 0, 65539, 1900591, 0, 65539, 1966108, 0, 65539, 1966127, 0, 65539, 2031644, 0, 65539, 2031663, 0, 65539, 2097180, 0, 65539, 2097199, 0, 65539, 2162716, 0, 65539, 2162735, 0, 65539, 2228252, 0, 65539, 2228264, 0, 4, 2228265, 0, 196609, 2228266, 0, 196609, 2228267, 0, 196609, 2228268, 0, 196609, 2228269, 0, 196609, 2228270, 0, 196609, 2228271, 0, 196615, 2293788, 0, 65539, 2293800, 0, 65539, 2359324, 0, 65539, 2359336, 0, 65539, 2424860, 0, 65539, 2424872, 0, 65539, 2490396, 0, 196612, 2490397, 0, 7, 2490400, 0, 4, 2490401, 0, 196609, 2490402, 0, 196609, 2490403, 0, 196609, 2490404, 0, 196609, 2490405, 0, 196609, 2490406, 0, 196609, 2490407, 0, 196609, 2490408, 0, 196615, 2555933, 0, 65539, 2555936, 0, 65539, 2621469, 0, 196612, 2621470, 0, 196609, 2621471, 0, 196609, 2621472, 0, 196615 )
 
-[node name="kos2" parent="YSort" index="7" instance=ExtResource( 6 )]
+[node name="Dvere" parent="YSort" index="7" instance=ExtResource( 10 )]
+position = Vector2( 248, 345 )
+NEXT_LEVEL = "res://Level2.tscn"
+
+[node name="Sprite" parent="YSort/Dvere" index="0"]
+visible = false
+
+[node name="kos2" parent="YSort" index="8" instance=ExtResource( 6 )]
 position = Vector2( 312, 294 )
 z_index = 0
 
-[node name="Server3" parent="YSort" index="8" instance=ExtResource( 7 )]
+[node name="Server3" parent="YSort" index="9" instance=ExtResource( 7 )]
 position = Vector2( 351, 234 )
 z_index = 1
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Server4" parent="YSort" index="9" instance=ExtResource( 7 )]
+[node name="Server4" parent="YSort" index="10" instance=ExtResource( 7 )]
 position = Vector2( 351, 262 )
 z_index = 1
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="stul" type="KinematicBody2D" parent="YSort" index="10"]
+[node name="stul" type="KinematicBody2D" parent="YSort" index="11"]
 __meta__ = {
 "_edit_group_": true
 }
@@ -68,12 +76,12 @@ texture = ExtResource( 4 )
 position = Vector2( 273, 208.5 )
 shape = SubResource( 1 )
 
-[node name="Controllery2" type="Sprite" parent="YSort" index="11"]
+[node name="Controllery2" type="Sprite" parent="YSort" index="12"]
 position = Vector2( 333, 181 )
 z_index = 1
 texture = ExtResource( 2 )
 
-[node name="zidle" type="KinematicBody2D" parent="YSort" index="12"]
+[node name="zidle" type="KinematicBody2D" parent="YSort" index="13"]
 position = Vector2( -8, 0 )
 z_index = 1
 
@@ -85,7 +93,7 @@ texture = ExtResource( 5 )
 position = Vector2( 273, 220 )
 shape = SubResource( 2 )
 
-[node name="zidle2" type="KinematicBody2D" parent="YSort" index="13"]
+[node name="zidle2" type="KinematicBody2D" parent="YSort" index="14"]
 position = Vector2( 13, 0 )
 z_index = 1
 
@@ -97,7 +105,7 @@ texture = ExtResource( 5 )
 position = Vector2( 273, 220 )
 shape = SubResource( 2 )
 
-[node name="Podlahy" type="Node2D" parent="YSort" index="14"]
+[node name="Podlahy" type="Node2D" parent="YSort" index="15"]
 
 [node name="Podlaha" type="Sprite" parent="YSort/Podlahy" index="0"]
 position = Vector2( 348, 225 )
@@ -155,7 +163,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PlayerCharacter" parent="YSort" index="15"]
+[node name="PlayerCharacter" parent="YSort" index="16"]
 position = Vector2( 247, 283 )
 
 [node name="Dvere-stin2" type="Sprite" parent="." index="4"]
@@ -163,3 +171,5 @@ position = Vector2( 306, 345 )
 scale = Vector2( 0.5, 1 )
 z_index = 2
 texture = ExtResource( 8 )
+
+[editable path="YSort/Dvere"]

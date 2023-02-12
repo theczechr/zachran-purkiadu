@@ -9,7 +9,7 @@ extents = Vector2( 8, 5 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7, 7.5 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="1lavice" type="KinematicBody2D"]
 __meta__ = {
 "_edit_group_": true
 }

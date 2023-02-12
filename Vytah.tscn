@@ -52,7 +52,7 @@ tile_data = PoolIntArray( -1, 0, 196608, -65536, 0, 7, 0, 0, 131075, 1441824, 0,
 
 [node name="Dvere" parent="." instance=ExtResource( 5 )]
 position = Vector2( 380, 275 )
-NEXT_LEVEL = "res://Chodba_level4.tscn"
+NEXT_LEVEL = "res://Level4.tscn"
 
 [node name="Sprite" parent="Dvere" index="0"]
 visible = false
