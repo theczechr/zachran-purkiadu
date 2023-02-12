@@ -27,6 +27,8 @@ func _ready():
 	
 	get_node(\"Checkpoint\").connect(\"checkpoint_requested\", self, \"_checkpoint\")
 	
+	#get_node(\"YSort/Hasicak\").connect(\"pickup_hasicak\", self, \"_pickup_hasicak\")
+	
 	var dialog = Dialogic.start(\"Level\" + str(_player.stats.level))
 	add_child(dialog)
 	
@@ -64,6 +66,10 @@ func _progress_sync() -> void:
 	print(\"character level: \", _player.stats.level)
 	print()
 	print(\"server level: \", server_level)
+	
+func _pickup_hasicak() -> void:
+	_inventory.inventory.add_item(\"extinguisher\")
+	get_node(\"YSort/Hasicak\").hide()
 "
 
 [sub_resource type="TileSet" id=3]

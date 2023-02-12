@@ -35,13 +35,19 @@ tile_data = PoolIntArray( 1572898, 0, 0, 1572903, 0, 0, 1835043, 0, 0, 1835046, 
 [node name="strop" parent="YSort" index="5"]
 tile_data = PoolIntArray( 1310736, 0, 4, 1310737, 0, 196609, 1310738, 0, 196609, 1310739, 0, 196609, 1310740, 0, 196609, 1310741, 0, 196609, 1310742, 0, 196609, 1310743, 0, 196609, 1310744, 0, 196609, 1310745, 0, 196609, 1310746, 0, 196609, 1310747, 0, 196609, 1310748, 0, 196609, 1310749, 0, 196609, 1310750, 0, 196609, 1310751, 0, 196609, 1310752, 0, 196609, 1310753, 0, 196609, 1310754, 0, 196609, 1310755, 0, 196609, 1310756, 0, 6, 1310757, 0, 5, 1310758, 0, 196609, 1310759, 0, 196609, 1310760, 0, 196609, 1310761, 0, 196609, 1310762, 0, 196609, 1310763, 0, 196609, 1310764, 0, 196609, 1310765, 0, 196609, 1310766, 0, 196609, 1310767, 0, 7, 1376272, 0, 65539, 1376292, 0, 65536, 1376293, 0, 65538, 1376303, 0, 65539, 1441808, 0, 65539, 1441828, 0, 65536, 1441829, 0, 65538, 1441839, 0, 65539, 1507344, 0, 65539, 1507364, 0, 65536, 1507365, 0, 65538, 1507375, 0, 65539, 1572880, 0, 65539, 1572900, 0, 131072, 1572901, 0, 131074, 1572911, 0, 65539, 1638416, 0, 65539, 1638447, 0, 65539, 1703952, 0, 65539, 1703983, 0, 65539, 1769488, 0, 65539, 1769519, 0, 65539, 1835024, 0, 65539, 1835055, 0, 65539, 1900560, 0, 65539, 1900591, 0, 65539, 1966096, 0, 65539, 1966127, 0, 65539, 2031632, 0, 65539, 2031663, 0, 65539, 2097168, 0, 65539, 2097199, 0, 65539, 2162704, 0, 65539, 2162735, 0, 65539, 2228240, 0, 65539, 2228260, 0, 0, 2228261, 0, 2, 2228271, 0, 65539, 2293776, 0, 65539, 2293796, 0, 65536, 2293797, 0, 65538, 2293807, 0, 65539, 2359312, 0, 65539, 2359332, 0, 65536, 2359333, 0, 65538, 2359343, 0, 65539, 2424848, 0, 65539, 2424868, 0, 65536, 2424869, 0, 65538, 2424879, 0, 65539, 2490384, 0, 65539, 2490404, 0, 65536, 2490405, 0, 65538, 2490415, 0, 65539, 2555920, 0, 65539, 2555940, 0, 65536, 2555941, 0, 65538, 2555951, 0, 65539, 2621456, 0, 65539, 2621476, 0, 65536, 2621477, 0, 65538, 2621487, 0, 65539, 2686992, 0, 65539, 2687012, 0, 65536, 2687013, 0, 65538, 2687023, 0, 65539, 2752528, 0, 65539, 2752548, 0, 65536, 2752549, 0, 65538, 2752559, 0, 65539, 2818064, 0, 65539, 2818084, 0, 65536, 2818085, 0, 65538, 2818095, 0, 65539, 2883600, 0, 65539, 2883620, 0, 65536, 2883621, 0, 65538, 2883631, 0, 65539, 2949136, 0, 65539, 2949156, 0, 65536, 2949157, 0, 65538, 2949167, 0, 65539, 3014672, 0, 196612, 3014673, 0, 196609, 3014674, 0, 196609, 3014675, 0, 196609, 3014676, 0, 196609, 3014677, 0, 196609, 3014678, 0, 196609, 3014679, 0, 196609, 3014680, 0, 196609, 3014681, 0, 196609, 3014682, 0, 196609, 3014683, 0, 196609, 3014684, 0, 196609, 3014685, 0, 196609, 3014686, 0, 196609, 3014687, 0, 196609, 3014688, 0, 196609, 3014689, 0, 196609, 3014690, 0, 196609, 3014691, 0, 196609, 3014692, 0, 196614, 3014693, 0, 196613, 3014694, 0, 196609, 3014695, 0, 196609, 3014696, 0, 196609, 3014697, 0, 196609, 3014698, 0, 196609, 3014699, 0, 196609, 3014700, 0, 196609, 3014701, 0, 196609, 3014702, 0, 196609, 3014703, 0, 196615 )
 
-[node name="Dvere" parent="YSort" index="7" instance=ExtResource( 2 )]
+[node name="PlayerCharacter" parent="YSort" index="7"]
+position = Vector2( 207, 342 )
+
+[node name="Hasicak" parent="YSort" index="8" instance=ExtResource( 10 )]
+position = Vector2( 294, 227 )
+
+[node name="Dvere" parent="YSort" index="9" instance=ExtResource( 2 )]
 position = Vector2( 160, 195 )
 scale = Vector2( 0.5, 0.5 )
 z_index = 1
 NEXT_LEVEL = "res://Level2.tscn"
 
-[node name="Ohne" type="Node2D" parent="YSort" index="8"]
+[node name="Ohne" type="Node2D" parent="YSort" index="10"]
 position = Vector2( -58, -43 )
 z_index = 1
 
@@ -99,7 +105,7 @@ position = Vector2( 226, 276 )
 [node name="Ohen18" parent="YSort/Ohne" index="17" instance=ExtResource( 8 )]
 position = Vector2( 213, 270 )
 
-[node name="Lavice" type="Node2D" parent="YSort" index="9"]
+[node name="Lavice" type="Node2D" parent="YSort" index="11"]
 
 [node name="1lavice" parent="YSort/Lavice" index="0" instance=ExtResource( 5 )]
 position = Vector2( 162, 359 )
@@ -137,46 +143,39 @@ position = Vector2( 223, 288 )
 [node name="1lavice12" parent="YSort/Lavice" index="11" instance=ExtResource( 5 )]
 position = Vector2( 253, 288 )
 
-[node name="stul_s_monitorem" parent="YSort" index="10" instance=ExtResource( 4 )]
+[node name="stul_s_monitorem" parent="YSort" index="12" instance=ExtResource( 4 )]
 position = Vector2( 206, 256 )
 
-[node name="PCaStolek" parent="YSort" index="11" instance=ExtResource( 9 )]
+[node name="PCaStolek" parent="YSort" index="13" instance=ExtResource( 9 )]
 position = Vector2( 347, 204 )
 z_index = 1
 
-[node name="PCaStolek2" parent="YSort" index="12" instance=ExtResource( 9 )]
+[node name="PCaStolek2" parent="YSort" index="14" instance=ExtResource( 9 )]
 position = Vector2( 265, 204 )
 z_index = 1
 
-[node name="kos2" parent="YSort" index="13" instance=ExtResource( 6 )]
+[node name="kos2" parent="YSort" index="15" instance=ExtResource( 6 )]
 position = Vector2( 270, 282 )
 z_index = 0
 
-[node name="Server3" parent="YSort" index="14" instance=ExtResource( 7 )]
+[node name="Server3" parent="YSort" index="16" instance=ExtResource( 7 )]
 position = Vector2( 329, 291 )
 z_index = 1
 
-[node name="Server4" parent="YSort" index="15" instance=ExtResource( 7 )]
+[node name="Server4" parent="YSort" index="17" instance=ExtResource( 7 )]
 position = Vector2( 329, 319 )
 z_index = 1
 
-[node name="Server5" parent="YSort" index="16" instance=ExtResource( 7 )]
+[node name="Server5" parent="YSort" index="18" instance=ExtResource( 7 )]
 position = Vector2( 329, 347 )
 z_index = 1
 
-[node name="PolickasKnihami" parent="YSort" index="17" instance=ExtResource( 3 )]
+[node name="PolickasKnihami" parent="YSort" index="19" instance=ExtResource( 3 )]
 position = Vector2( 234, 203 )
 z_index = 1
 
-[node name="PolickasKnihami2" parent="YSort" index="18" instance=ExtResource( 3 )]
+[node name="PolickasKnihami2" parent="YSort" index="20" instance=ExtResource( 3 )]
 position = Vector2( 205, 203 )
-z_index = 1
-
-[node name="PlayerCharacter" parent="YSort" index="19"]
-position = Vector2( 207, 342 )
-
-[node name="Hasicak" parent="YSort" index="20" instance=ExtResource( 10 )]
-position = Vector2( 296, 229 )
 z_index = 1
 
 [node name="Checkpoint" parent="." index="4" instance=ExtResource( 11 )]
