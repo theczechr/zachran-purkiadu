@@ -18,14 +18,14 @@ extents = Vector2( 35, 13 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 35.5, 13.5 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 13.5, 14.25 )
-
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 14, 9 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 5, 6 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 13.5, 5.59375 )
 
 [node name="U59" instance=ExtResource( 1 )]
 
@@ -105,46 +105,19 @@ texture = ExtResource( 4 )
 position = Vector2( -80.5, 4.5 )
 shape = SubResource( 2 )
 
-[node name="Skrine" type="KinematicBody2D" parent="YSort" index="14"]
-z_index = 1
-
-[node name="Toaletak" type="Sprite" parent="YSort/Skrine" index="0"]
-position = Vector2( 358, 295 )
-scale = Vector2( 0.75, 0.75 )
-z_index = 1
-texture = ExtResource( 6 )
-
-[node name="ZachodSkrin" type="Sprite" parent="YSort/Skrine" index="1"]
-position = Vector2( 358, 306 )
-texture = ExtResource( 5 )
-
-[node name="Toaletak2" type="Sprite" parent="YSort/Skrine" index="2"]
-position = Vector2( 344, 296 )
-scale = Vector2( 0.75, 0.75 )
-z_index = 1
-texture = ExtResource( 6 )
-
-[node name="ZachodSkrin2" type="Sprite" parent="YSort/Skrine" index="3"]
-position = Vector2( 344, 306 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Skrine" index="4"]
-position = Vector2( 351.5, 306.25 )
-shape = SubResource( 4 )
-
-[node name="CervenaVec" type="Sprite" parent="YSort" index="15"]
+[node name="CervenaVec" type="Sprite" parent="YSort" index="14"]
 position = Vector2( 292, 278 )
 scale = Vector2( 0.75, 0.75 )
 z_index = 1
 texture = ExtResource( 8 )
 
-[node name="Svit dveri" type="Sprite" parent="YSort" index="16"]
+[node name="Svit dveri" type="Sprite" parent="YSort" index="15"]
 position = Vector2( 232, 373 )
 scale = Vector2( 1, 0.682057 )
 z_index = 1
 texture = ExtResource( 10 )
 
-[node name="Umyvadlo-cele" type="KinematicBody2D" parent="YSort" index="17"]
+[node name="Umyvadlo-cele" type="KinematicBody2D" parent="YSort" index="16"]
 position = Vector2( 233, 318 )
 
 [node name="Umyvadlo" type="Sprite" parent="YSort/Umyvadlo-cele" index="0"]
@@ -155,7 +128,7 @@ texture = ExtResource( 3 )
 position = Vector2( 0, 7 )
 shape = SubResource( 3 )
 
-[node name="Stolecek" type="KinematicBody2D" parent="YSort" index="18"]
+[node name="Stolecek" type="KinematicBody2D" parent="YSort" index="17"]
 z_index = 1
 
 [node name="Stolecek" type="Sprite" parent="YSort/Stolecek" index="0"]
@@ -166,8 +139,37 @@ texture = ExtResource( 7 )
 position = Vector2( 282, 351 )
 shape = SubResource( 5 )
 
-[node name="PlayerCharacter" parent="YSort" index="19"]
+[node name="PlayerCharacter" parent="YSort" index="18"]
 position = Vector2( 260, 350 )
+
+[node name="Skrine" type="KinematicBody2D" parent="YSort" index="19"]
+position = Vector2( 352, 320 )
+
+[node name="Toaletak" type="Sprite" parent="YSort/Skrine" index="0"]
+position = Vector2( 7, -18.125 )
+scale = Vector2( 0.75, 0.75 )
+z_index = 2
+texture = ExtResource( 6 )
+
+[node name="ZachodSkrin" type="Sprite" parent="YSort/Skrine" index="1"]
+position = Vector2( 7, -7.125 )
+z_index = 1
+texture = ExtResource( 5 )
+
+[node name="Toaletak2" type="Sprite" parent="YSort/Skrine" index="2"]
+position = Vector2( -7, -17.125 )
+scale = Vector2( 0.75, 0.75 )
+z_index = 2
+texture = ExtResource( 6 )
+
+[node name="ZachodSkrin2" type="Sprite" parent="YSort/Skrine" index="3"]
+position = Vector2( -7, -7.125 )
+z_index = 1
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Skrine" index="4"]
+position = Vector2( 0, -0.40625 )
+shape = SubResource( 4 )
 
 [node name="Podlahy" type="Node2D" parent="." index="2"]
 
