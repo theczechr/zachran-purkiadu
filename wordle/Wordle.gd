@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	$line_container.connect("game_over", self, "game_over")
+	$AspectRatioContainer/line_container.connect("game_over", self, "game_over")
 
 
 func game_over(word):
