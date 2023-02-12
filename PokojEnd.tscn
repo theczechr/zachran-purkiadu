@@ -1,0 +1,228 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=1]
+[ext_resource path="res://player/PlayerCharacter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sprites/pokoj/postel.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/pokoj/podlaha.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/pokoj/skrin.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/pokoj/koberec.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/pokoj/nocnii_stolek.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/pokoj/okno.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/pokoj/teddy.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/pokoj/stena.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/pokoj/drevena-zed-bok.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/svit-dveri.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/pokoj/okno_prazdne.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/pokoj/skate.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/pokoj/stul.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/pokoj/globus.png" type="Texture" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 22, 28 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "podlaha.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 44, 21 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14, 10 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 26, 7 )
+
+[sub_resource type="CircleShape2D" id=5]
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 96, 0, 96 )
+
+[sub_resource type="TileSet" id=7]
+0/name = "stena.png 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 96 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 6 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=9]
+0/name = "drevena-zed-bok.png 0"
+0/texture = ExtResource( 11 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 8 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="PokojEnd" type="Node2D"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 1 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="PlayerCharacter" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 368, 278 )
+z_index = 2
+
+[node name="Postel" type="KinematicBody2D" parent="YSort"]
+position = Vector2( 474, 216 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 2
+
+[node name="Sprite" type="Sprite" parent="YSort/Postel"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Postel"]
+position = Vector2( 0, 10 )
+shape = SubResource( 1 )
+
+[node name="Podlaha" type="TileMap" parent="YSort"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0, 851997, 0, 0, 851998, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 917532, 0, 0, 917533, 0, 0, 917534, 0, 0, 983061, 0, 0, 983062, 0, 0, 983063, 0, 0, 983064, 0, 0, 983065, 0, 0, 983066, 0, 0, 983067, 0, 0, 983068, 0, 0, 983069, 0, 0, 983070, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0, 1048605, 0, 0, 1048606, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1245206, 0, 0, 1245207, 0, 0 )
+
+[node name="Skrin" type="KinematicBody2D" parent="YSort"]
+position = Vector2( 410, 199 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 2
+
+[node name="Sprite" type="Sprite" parent="YSort/Skrin"]
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Skrin"]
+position = Vector2( 0, 15 )
+shape = SubResource( 3 )
+
+[node name="Nocni stolek" type="KinematicBody2D" parent="YSort"]
+position = Vector2( 456, 210 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 2
+
+[node name="Sprite" type="Sprite" parent="YSort/Nocni stolek"]
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Nocni stolek"]
+position = Vector2( 0, 8 )
+shape = SubResource( 4 )
+
+[node name="Koberec" type="Sprite" parent="YSort"]
+position = Vector2( 457, 227 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="Skate" type="Sprite" parent="YSort"]
+position = Vector2( 462, 228 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+texture = ExtResource( 14 )
+
+[node name="Stul" type="KinematicBody2D" parent="YSort"]
+position = Vector2( 362, 206 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+
+[node name="Sprite" type="Sprite" parent="YSort/Stul"]
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Stul"]
+position = Vector2( 0, 1 )
+shape = SubResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="YSort/Stul"]
+position = Vector2( 18, -20 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+texture = ExtResource( 16 )
+
+[node name="Teddy" type="KinematicBody2D" parent="."]
+position = Vector2( 481, 211 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 2
+
+[node name="Sprite" type="Sprite" parent="Teddy"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teddy"]
+position = Vector2( -5.00024, 4.99988 )
+shape = SubResource( 5 )
+
+[node name="Okno" type="Sprite" parent="."]
+position = Vector2( 468, 183 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+texture = ExtResource( 8 )
+
+[node name="Okno2" type="Sprite" parent="."]
+position = Vector2( 362, 183 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+texture = ExtResource( 13 )
+
+[node name="ZedHorni" type="TileMap" parent="."]
+position = Vector2( 0, 16 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = SubResource( 7 )
+cell_size = Vector2( 32, 96 )
+format = 1
+tile_data = PoolIntArray( 196629, 0, 0, 196630, 0, 0, 196631, 0, 0, 196632, 0, 0, 196633, 0, 0, 196634, 0, 0, 196635, 0, 0, 196636, 0, 0, 196637, 0, 0, 196638, 0, 0 )
+
+[node name="BocniZed" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+tile_set = SubResource( 9 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 1245225, 0, 0, 1245226, 0, 0, 1245227, 0, 0, 1245228, 0, 0, 1245229, 0, 0, 1245230, 0, 0, 1245231, 0, 0, 1245232, 0, 0, 1245233, 0, 0, 1245234, 0, 0, 1245235, 0, 0, 1245236, 0, 0, 1245237, 0, 0, 1245239, 0, 0, 1245240, 0, 0, 1245241, 0, 0, 1245242, 0, 0, 1245243, 0, 0, 1245244, 0, 0, 1245245, 0, 0, 1310761, -1073741824, 0, 1310782, -1610612736, 0, 1376297, -1073741824, 0, 1376318, -1610612736, 0, 1441833, -1073741824, 0, 1441854, -1610612736, 0, 1507369, -1073741824, 0, 1507390, -1610612736, 0, 1572905, -1073741824, 0, 1572926, -1610612736, 0, 1638441, -1073741824, 0, 1638462, -1610612736, 0, 1703977, -1073741824, 0, 1703998, -1610612736, 0, 1769513, -1073741824, 0, 1769534, -1610612736, 0, 1835049, -1073741824, 0, 1900585, -1073741824, 0, 1900606, -1610612736, 0, 1966121, -1073741824, 0, 1966142, -1610612736, 0, 2031657, -1073741824, 0, 2031678, -1610612736, 0, 2097193, -1073741824, 0, 2097214, -1610612736, 0, 2162750, -1610612736, 0, 2228265, -1073741824, 0, 2228286, -1610612736, 0, 2359337, 1610612736, 0, 2359338, 1610612736, 0, 2359343, 1610612736, 0, 2359344, 1610612736, 0, 2359345, 1610612736, 0, 2359346, 1610612736, 0, 2359347, 1610612736, 0, 2359348, 1610612736, 0, 2359349, 1610612736, 0, 2359350, 1610612736, 0, 2359351, 1610612736, 0, 2359352, 1610612736, 0, 2359353, 1610612736, 0, 2359354, 1610612736, 0, 2359355, 1610612736, 0, 2359356, 1610612736, 0, 2359357, 1610612736, 0, 2424875, -1073741824, 0, 2424879, -1610612736, 0, 2490415, -1610612736, 0, 2555947, 1610612736, 0, 2555949, 1610612736, 0, 2555950, 1610612736, 0 )
+
+[node name="StinDveri" type="Sprite" parent="."]
+position = Vector2( 364, 303 )
+texture = ExtResource( 12 )

@@ -33,11 +33,4 @@ func _ready():
 		# Instance the scene
 		var my_scene = packed_scene.instance()
 		add_child(my_scene)
-		print("level 4 loaded")		
-	if ResourceLoader.exists("user://Level5.tscn") && _save.character.level == 5:
-		# Load the PackedScene resource
-		var packed_scene = load("user://Level5.tscn")
-		# Instance the scene
-		var my_scene = packed_scene.instance()
-		add_child(my_scene)
-		print("level 5 loaded")		
+		print("level 4 loaded")
