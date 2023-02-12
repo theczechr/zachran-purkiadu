@@ -1,7 +1,7 @@
 extends HTTPRequest
 
-const PORT := "20234"
-const SERVER_URL := "http://130.61.30.242:%s" % PORT
+const PORT := "20239"
+const SERVER_URL := "http://130.61.197.60:%s" % PORT
 const SALT := "robbin"
 
 func _parse_result(result: Array) -> String:

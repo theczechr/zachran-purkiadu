@@ -2,6 +2,7 @@
 
 [ext_resource path="res://assets/tilemaps/tileset_edit.tres" type="TileSet" id=1]
 [ext_resource path="res://player/PlayerCharacter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game.gd" type="Script" id=3]
 [ext_resource path="res://assets/tilemaps/tileset_edit.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=7]
 [ext_resource path="res://assets/tilemaps/lista.png" type="Texture" id=9]
@@ -13,68 +14,6 @@
 [ext_resource path="res://assets/tilemaps/zed-modra-stin-polovicni.png" type="Texture" id=24]
 [ext_resource path="res://interface/Inventory.tscn" type="PackedScene" id=27]
 [ext_resource path="res://assets/tilemaps/podlaha-svetla.png" type="Texture" id=29]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
-
-var _save: SaveGame
-var packed_scene = PackedScene.new()
-
-onready var _player := $YSort/PlayerCharacter
-onready var _inventory := $UI/Inventory
-var _http = load(\"res://login/Firebase.gd\").new()
-
-func _ready():
-	_create_or_load_save()
-	
-	get_node(\"Checkpoint\").connect(\"checkpoint_requested\", self, \"_checkpoint\")
-	
-	#get_node(\"YSort/Hasicak\").connect(\"pickup_hasicak\", self, \"_pickup_hasicak\")
-	
-	var dialog = Dialogic.start(\"Level\" + str(_player.stats.level))
-	add_child(dialog)
-	
-func _create_or_load_save() -> void:
-	if SaveGame.save_exists():
-		_save = SaveGame.load_savegame() as SaveGame
-	else:
-		_save = SaveGame.new()
-		_save.inventory = Inventory.new()
-		_save.character = Character.new()
-		_save.character.id = GlobalData.username_from_login
-		
-		_save.write_savegame()
-
-	_player.stats = _save.character
-	_inventory.inventory = _save.inventory
-	
-	_progress_sync()
-	
-func _checkpoint(progress: int) -> void:
-	if progress > _player.stats.level:
-		_player.stats.level = progress
-		_progress_sync()
-	
-func _save_game() -> void:
-	packed_scene.pack(get_tree().get_current_scene())
-	ResourceSaver.save(\"user://\" + get_tree().get_current_scene().get_name() + \".tscn\", packed_scene)
-	_save.write_savegame()
-
-func _progress_sync() -> void:
-	_save_game()
-	var server_level = str(yield(_http.get_progress(_save.character.id, $HTTPRequest), \"completed\") as int)
-	print(\"save character: \", _player.stats.id)
-	print(\"save level: \", _save.character.level)
-	print()
-	print(\"character: \", _save.character.id)
-	print(\"character level: \", _player.stats.level)
-	print()
-	print(\"server level: \", server_level)
-	
-func _pickup_hasicak() -> void:
-	_inventory.inventory.add_item(\"extinguisher\")
-	get_node(\"YSort/Hasicak\").hide()
-"
 
 [sub_resource type="TileSet" id=3]
 0/name = "podlaha1.png 0"
@@ -381,7 +320,7 @@ points = PoolVector2Array( 8, 16, 0, 16, 0, 16, 8, 16 )
 2/z_index = 0
 
 [node name="Game" type="Node2D"]
-script = SubResource( 1 )
+script = ExtResource( 3 )
 
 [node name="Background" type="TextureRect" parent="."]
 margin_right = 1280.0
