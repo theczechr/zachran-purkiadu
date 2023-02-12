@@ -9,11 +9,11 @@
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": 0,
+	"offset_y": 500,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://assets/sprites/ondar.png"
 		}
 	],
 	"scale": 100,
