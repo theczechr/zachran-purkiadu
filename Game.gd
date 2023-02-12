@@ -20,7 +20,7 @@ func _ready():
 		_inventory.inventory.remove_item("extinguisher")
 		_save_game()
 	
-	var dialog = Dialogic.start("Level" + str(_player.stats.level))
+	var dialog = Dialogic.start(str(get_tree().get_current_scene().get_name()))
 	add_child(dialog)
 
 func _create_or_load_save() -> void:
