@@ -5,11 +5,12 @@
 [ext_resource path="res://assets/sprites/big_stul.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/monitory.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/zidle_k_pc.png" type="Texture" id=5]
-[ext_resource path="res://kos.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Server.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/icons/svit-dveri.png" type="Texture" id=8]
+[ext_resource path="res://assets/scenes/kos.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/scenes/Server.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/svit-dveri.png" type="Texture" id=8]
 [ext_resource path="res://assets/sprites/podlaha.png" type="Texture" id=9]
-[ext_resource path="res://assets/sceny/Dvere.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/scenes/Dvere.tscn" type="PackedScene" id=10]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 22, 8.5 )

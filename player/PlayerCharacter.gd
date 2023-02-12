@@ -1,8 +1,5 @@
 extends KinematicBody2D
 
-export var ACCELERATION = 500
-export var MAX_SPEED = 80
-export var FRICTION = 500
 var stats: Character setget set_stats
 
 export(bool) var show_prompt setget _show_prompt_set
@@ -32,10 +29,10 @@ func _physics_process(delta):
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationState.travel("Run")
-		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		velocity = velocity.move_toward(input_vector * 80, 500 * delta)
 	else:
 		animationState.travel("Idle")
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		velocity = velocity.move_toward(Vector2.ZERO, 500 * delta)
 	
 	velocity = move_and_slide(velocity)
 

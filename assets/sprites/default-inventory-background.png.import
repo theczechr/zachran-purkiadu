@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex"
+path="res://.import/default-inventory-background.png-bedd236d998a73cb262c131c8544180b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tabule.png"
-dest_files=[ "res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex" ]
+source_file="res://assets/sprites/default-inventory-background.png"
+dest_files=[ "res://.import/default-inventory-background.png-bedd236d998a73cb262c131c8544180b.stex" ]
 
 [params]
 

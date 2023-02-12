@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex"
+path="res://.import/svit-spodniho-okna.png-cdacd23ba02ebeec74d821354cf7b6cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tabule.png"
-dest_files=[ "res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex" ]
+source_file="res://assets/sprites/svit-spodniho-okna.png"
+dest_files=[ "res://.import/svit-spodniho-okna.png-cdacd23ba02ebeec74d821354cf7b6cf.stex" ]
 
 [params]
 
