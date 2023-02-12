@@ -21,6 +21,12 @@ height = 4.0
 
 [node name="Level3" instance=ExtResource( 1 )]
 
+[node name="Background" parent="." index="0"]
+margin_left = -1065.0
+margin_top = -574.0
+margin_right = 1503.0
+margin_bottom = 1222.0
+
 [node name="podlaha" parent="YSort" index="0"]
 tile_data = PoolIntArray( 851982, -1610612736, 0, 917518, -1610612736, 0, 983054, -1610612736, 0, 1048590, -1610612736, 0, 1114126, -1610612736, 0, 1179662, -1610612736, 0, 1245199, 0, 0 )
 

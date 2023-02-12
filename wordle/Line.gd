@@ -17,7 +17,12 @@ func _input(event):
 			print("enter")
 			emit_signal("word_to_container", word_input)
 			update_label()
-		elif (event.is_action("backspace") and word_input.length() > 0):
+		elif (
+			event.is_action("backspace") and 
+			word_input.length() > 0 and 
+			event.is_echo() == false and 
+			event.is_pressed()
+			):
 			word_input.erase(word_input.length() - 1, 1)
 			update_label()
 			print("backspace")

@@ -1,0 +1,24 @@
+{
+	"events": [
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Budu se do tech dveri muset hacknout.."
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"change_scene": "res://wordle/Wordle.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1676236540.json",
+		"name": "open_dvere"
+	}
+}

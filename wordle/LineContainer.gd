@@ -55,12 +55,12 @@ func check_letter(word):
 		if word[i] == today_word[i]:
 			get_child(line_active).get_child(i).change_status(2)
 			temp_word.erase(temp_word.find(word[i]), 1)
-	for i in range(today_word.length()):
-		if word[i] in temp_word:
-			get_child(line_active).get_child(i).change_status(3)
-			temp_word.erase(temp_word.find(word[i]), 1)
 		else:
-			get_child(line_active).get_child(i).change_status(1)
+			if word[i] in temp_word:
+				get_child(line_active).get_child(i).change_status(3)
+				temp_word.erase(temp_word.find(word[i]), 1)
+			else:
+				get_child(line_active).get_child(i).change_status(1)
 	
 	for i in range(today_word.length()):
 		yield(get_tree().create_timer(0.1), "timeout")
