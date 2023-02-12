@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex"
+path="res://.import/kvetina-mala.png-144de1129150fe7b1f6904bd6ff9e169.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tabule.png"
-dest_files=[ "res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex" ]
+source_file="res://assets/sprites/kvetina-mala.png"
+dest_files=[ "res://.import/kvetina-mala.png-144de1129150fe7b1f6904bd6ff9e169.stex" ]
 
 [params]
 

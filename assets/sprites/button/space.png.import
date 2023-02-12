@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex"
+path="res://.import/space.png-093435123c6629f91f384528f738c5b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tabule.png"
-dest_files=[ "res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex" ]
+source_file="res://assets/sprites/button/space.png"
+dest_files=[ "res://.import/space.png-093435123c6629f91f384528f738c5b2.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

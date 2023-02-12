@@ -1,0 +1,183 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Game.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/scenes/Dvere.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/scenes/PolickasKnihami.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/scenes/stul_s_monitorem.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/scenes/1stul_zidle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/scenes/kos.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/scenes/Server.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/scenes/Ohen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/scenes/PCaStolek.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/scenes/Hasicak.tscn" type="PackedScene" id=10]
+[ext_resource path="res://interface/Checkpoint.tscn" type="PackedScene" id=11]
+
+[node name="U58" instance=ExtResource( 1 )]
+
+[node name="podlaha" parent="YSort" index="0"]
+tile_data = PoolIntArray( 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, -1610612736, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, -1610612736, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, -1610612736, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983058, 0, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, -1610612736, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, -1610612736, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, -1610612736, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0, 1310732, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1310738, 0, 0, 1310739, 0, 0, 1310740, 0, 0, 1310741, 0, 0, 1310742, 0, 0, 1376265, 0, 0, 1376266, 0, 0, 1376267, 0, 0, 1376268, 0, 0, 1376269, 0, 0, 1376270, 0, 0, 1376271, 0, 0, 1376272, 0, 0, 1376273, 0, 0, 1376274, 0, 0, 1376275, 0, 0, 1376276, 0, 0, 1376277, 0, 0, 1376278, 0, 0, 1441801, 0, 0, 1441802, 0, 0, 1441803, 0, 0, 1441804, 0, 0, 1441805, 0, 0, 1441806, 0, 0, 1441807, 0, 0, 1441808, 0, 0, 1441809, 0, 0, 1441810, 0, 0, 1441811, 0, 0, 1441812, 0, 0, 1441813, 0, 0, 1441814, 0, 0 )
+
+[node name="zed" parent="YSort" index="1"]
+z_index = 1
+tile_data = PoolIntArray( 655368, 2, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 655376, 4, 0, 655378, 2, 0, 655380, 4, 0, 655381, 4, 0, 655382, 4, 0, 655383, -1610612734, 0, 720904, 2, 0, 720905, 6, 0, 720906, 6, 0, 720907, 6, 0, 720908, 6, 0, 720909, 6, 0, 720910, 6, 0, 720911, -1073741818, 0, 720912, -1073741818, 0, 720914, 2, 0, 720916, -1073741818, 0, 720917, -1073741818, 0, 720918, -1073741818, 0, 720919, -1610612734, 0, 786440, 2, 0, 786441, 6, 0, 786442, 6, 0, 786443, 6, 0, 786444, 6, 0, 786445, 6, 0, 786446, 6, 0, 786447, -1610612730, 0, 786448, -1610612730, 0, 786452, -1610612730, 0, 786453, -1610612730, 0, 786454, -1610612730, 0, 786455, -1610612734, 0, 851976, 2, 0, 851991, -1610612734, 0, 917512, 2, 0, 917527, -1610612734, 0, 983048, 2, 0, 983063, -1610612734, 0, 1048584, 2, 0, 1048599, -1610612734, 0, 1114120, 2, 0, 1114135, 2, 0, 1179656, 2, 0, 1179671, 2, 0, 1245192, 2, 0, 1245207, 2, 0, 1310728, 2, 0, 1310743, 2, 0, 1376264, 2, 0, 1376279, 2, 0, 1441800, 2, 0, 1441815, 2, 0 )
+
+[node name="polovicni_zed" parent="YSort" index="2"]
+tile_data = PoolIntArray( 1376290, 0, 0, 1376291, 0, 0, 1376294, 0, 0, 1376295, 0, 0, 1441826, 1, 0, 1441827, 0, 0, 1441830, 0, 0, 1441831, 1, 0, 1507362, 1, 0, 1507363, 0, 0, 1507366, 0, 0, 1507367, 1, 0, 1572898, 1, 0, 1572899, 0, 0, 1572902, 0, 0, 1572903, 1, 0, 1638434, 1, 0, 1638435, 0, 0, 1638436, 0, 0, 1638437, 0, 0, 1638438, 0, 0, 1638439, 1, 0, 1703971, 1, 0, 1703972, 1, 0, 1703973, 1, 0, 1703974, 1, 0, 1769507, 1, 0, 1769508, 1, 0, 1769509, 1, 0, 1769510, 1, 0, 1835043, 1, 0, 1835044, 1, 0, 1835045, 1, 0, 1835046, 1, 0, 1900579, 1, 0, 1900580, 1, 0, 1900581, 1, 0, 1900582, 1, 0, 2228259, 0, 0, 2228262, 0, 0, 2293795, 0, 0, 2293798, 0, 0, 2359331, 0, 0, 2359334, 0, 0, 2424867, 0, 0, 2424870, 0, 0, 2490403, 0, 0, 2490406, 0, 0, 2555939, 0, 0, 2555942, 0, 0, 2621475, 0, 0, 2621478, 0, 0, 2687011, 0, 0, 2687014, 0, 0, 2752547, 0, 0, 2752550, 0, 0, 2818083, 0, 0, 2818086, 0, 0, 2883619, 0, 0, 2883622, 0, 0, 2949155, 0, 0, 2949158, 0, 0 )
+
+[node name="lista" parent="YSort" index="3"]
+z_index = 1
+show_collision = true
+tile_data = PoolIntArray( 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786452, 0, 0, 786453, 0, 0, 786454, 0, 0, 851976, -1073741824, 0, 851985, -1610612735, 0, 851987, -1073741823, 0, 851991, -1610612736, 0, 917512, -1073741824, 0, 917521, -1610612735, 0, 917522, 0, 0, 917523, -1073741823, 0, 917527, -1610612736, 0, 983048, -1073741824, 0, 983063, -1610612736, 0, 1048584, -1073741824, 0, 1048599, -1610612736, 0, 1114120, -1073741824, 0, 1114129, -1610612735, 0, 1114131, -1073741823, 0, 1114135, -1610612736, 0, 1179656, -1073741824, 0, 1179665, -1610612735, 0, 1179667, -1073741823, 0, 1179671, -1610612736, 0, 1245192, -1073741824, 0, 1245201, -1610612735, 0, 1245203, -1073741823, 0, 1245207, -1610612736, 0, 1310728, -1073741824, 0, 1310737, -1610612735, 0, 1310739, -1073741823, 0, 1310743, -1610612736, 0, 1376264, -1073741824, 0, 1376273, -1610612735, 0, 1376275, -1073741823, 0, 1376279, -1610612736, 0, 1441800, -1073741824, 0, 1441809, -1610612735, 0, 1441811, -1073741823, 0, 1441815, -1610612736, 0 )
+
+[node name="polovicni_lista" parent="YSort" index="4"]
+tile_data = PoolIntArray( 1572898, 0, 0, 1572903, 0, 0, 1835043, 0, 0, 1835046, 0, 0 )
+
+[node name="strop" parent="YSort" index="5"]
+tile_data = PoolIntArray( 1310736, 0, 4, 1310737, 0, 196609, 1310738, 0, 196609, 1310739, 0, 196609, 1310740, 0, 196609, 1310741, 0, 196609, 1310742, 0, 196609, 1310743, 0, 196609, 1310744, 0, 196609, 1310745, 0, 196609, 1310746, 0, 196609, 1310747, 0, 196609, 1310748, 0, 196609, 1310749, 0, 196609, 1310750, 0, 196609, 1310751, 0, 196609, 1310752, 0, 196609, 1310753, 0, 196609, 1310754, 0, 196609, 1310755, 0, 196609, 1310756, 0, 6, 1310757, 0, 5, 1310758, 0, 196609, 1310759, 0, 196609, 1310760, 0, 196609, 1310761, 0, 196609, 1310762, 0, 196609, 1310763, 0, 196609, 1310764, 0, 196609, 1310765, 0, 196609, 1310766, 0, 196609, 1310767, 0, 7, 1376272, 0, 65539, 1376292, 0, 65536, 1376293, 0, 65538, 1376303, 0, 65539, 1441808, 0, 65539, 1441828, 0, 65536, 1441829, 0, 65538, 1441839, 0, 65539, 1507344, 0, 65539, 1507364, 0, 65536, 1507365, 0, 65538, 1507375, 0, 65539, 1572880, 0, 65539, 1572900, 0, 131072, 1572901, 0, 131074, 1572911, 0, 65539, 1638416, 0, 65539, 1638447, 0, 65539, 1703952, 0, 65539, 1703983, 0, 65539, 1769488, 0, 65539, 1769519, 0, 65539, 1835024, 0, 65539, 1835055, 0, 65539, 1900560, 0, 65539, 1900591, 0, 65539, 1966096, 0, 65539, 1966127, 0, 65539, 2031632, 0, 65539, 2031663, 0, 65539, 2097168, 0, 65539, 2097199, 0, 65539, 2162704, 0, 65539, 2162735, 0, 65539, 2228240, 0, 65539, 2228260, 0, 0, 2228261, 0, 2, 2228271, 0, 65539, 2293776, 0, 65539, 2293796, 0, 65536, 2293797, 0, 65538, 2293807, 0, 65539, 2359312, 0, 65539, 2359332, 0, 65536, 2359333, 0, 65538, 2359343, 0, 65539, 2424848, 0, 65539, 2424868, 0, 65536, 2424869, 0, 65538, 2424879, 0, 65539, 2490384, 0, 65539, 2490404, 0, 65536, 2490405, 0, 65538, 2490415, 0, 65539, 2555920, 0, 65539, 2555940, 0, 65536, 2555941, 0, 65538, 2555951, 0, 65539, 2621456, 0, 65539, 2621476, 0, 65536, 2621477, 0, 65538, 2621487, 0, 65539, 2686992, 0, 65539, 2687012, 0, 65536, 2687013, 0, 65538, 2687023, 0, 65539, 2752528, 0, 65539, 2752548, 0, 65536, 2752549, 0, 65538, 2752559, 0, 65539, 2818064, 0, 65539, 2818084, 0, 65536, 2818085, 0, 65538, 2818095, 0, 65539, 2883600, 0, 65539, 2883620, 0, 65536, 2883621, 0, 65538, 2883631, 0, 65539, 2949136, 0, 65539, 2949156, 0, 65536, 2949157, 0, 65538, 2949167, 0, 65539, 3014672, 0, 196612, 3014673, 0, 196609, 3014674, 0, 196609, 3014675, 0, 196609, 3014676, 0, 196609, 3014677, 0, 196609, 3014678, 0, 196609, 3014679, 0, 196609, 3014680, 0, 196609, 3014681, 0, 196609, 3014682, 0, 196609, 3014683, 0, 196609, 3014684, 0, 196609, 3014685, 0, 196609, 3014686, 0, 196609, 3014687, 0, 196609, 3014688, 0, 196609, 3014689, 0, 196609, 3014690, 0, 196609, 3014691, 0, 196609, 3014692, 0, 196614, 3014693, 0, 196613, 3014694, 0, 196609, 3014695, 0, 196609, 3014696, 0, 196609, 3014697, 0, 196609, 3014698, 0, 196609, 3014699, 0, 196609, 3014700, 0, 196609, 3014701, 0, 196609, 3014702, 0, 196609, 3014703, 0, 196615 )
+
+[node name="Dvere" parent="YSort" index="7" instance=ExtResource( 2 )]
+position = Vector2( 160, 195 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+NEXT_LEVEL = "res://Level2.tscn"
+
+[node name="Ohne" type="Node2D" parent="YSort" index="8"]
+position = Vector2( -58, -43 )
+z_index = 1
+
+[node name="Ohen" parent="YSort/Ohne" index="0" instance=ExtResource( 8 )]
+position = Vector2( 411, 391 )
+
+[node name="Ohen2" parent="YSort/Ohne" index="1" instance=ExtResource( 8 )]
+position = Vector2( 420, 384 )
+
+[node name="Ohen3" parent="YSort/Ohne" index="2" instance=ExtResource( 8 )]
+position = Vector2( 408, 376 )
+
+[node name="Ohen4" parent="YSort/Ohne" index="3" instance=ExtResource( 8 )]
+position = Vector2( 419, 365 )
+
+[node name="Ohen5" parent="YSort/Ohne" index="4" instance=ExtResource( 8 )]
+position = Vector2( 410, 351 )
+
+[node name="Ohen6" parent="YSort/Ohne" index="5" instance=ExtResource( 8 )]
+position = Vector2( 411, 358 )
+
+[node name="Ohen7" parent="YSort/Ohne" index="6" instance=ExtResource( 8 )]
+position = Vector2( 418, 371 )
+
+[node name="Ohen8" parent="YSort/Ohne" index="7" instance=ExtResource( 8 )]
+position = Vector2( 377, 300 )
+
+[node name="Ohen9" parent="YSort/Ohne" index="8" instance=ExtResource( 8 )]
+position = Vector2( 393, 298 )
+
+[node name="Ohen10" parent="YSort/Ohne" index="9" instance=ExtResource( 8 )]
+position = Vector2( 406, 302 )
+
+[node name="Ohen11" parent="YSort/Ohne" index="10" instance=ExtResource( 8 )]
+position = Vector2( 410, 316 )
+
+[node name="Ohen12" parent="YSort/Ohne" index="11" instance=ExtResource( 8 )]
+position = Vector2( 324, 264 )
+
+[node name="Ohen13" parent="YSort/Ohne" index="12" instance=ExtResource( 8 )]
+position = Vector2( 314, 270 )
+
+[node name="Ohen14" parent="YSort/Ohne" index="13" instance=ExtResource( 8 )]
+position = Vector2( 241, 247 )
+
+[node name="Ohen15" parent="YSort/Ohne" index="14" instance=ExtResource( 8 )]
+position = Vector2( 256, 266 )
+
+[node name="Ohen16" parent="YSort/Ohne" index="15" instance=ExtResource( 8 )]
+position = Vector2( 227, 261 )
+
+[node name="Ohen17" parent="YSort/Ohne" index="16" instance=ExtResource( 8 )]
+position = Vector2( 226, 276 )
+
+[node name="Ohen18" parent="YSort/Ohne" index="17" instance=ExtResource( 8 )]
+position = Vector2( 213, 270 )
+
+[node name="Lavice" type="Node2D" parent="YSort" index="9"]
+
+[node name="1lavice" parent="YSort/Lavice" index="0" instance=ExtResource( 5 )]
+position = Vector2( 162, 359 )
+
+[node name="1lavice2" parent="YSort/Lavice" index="1" instance=ExtResource( 5 )]
+position = Vector2( 192, 359 )
+
+[node name="1lavice3" parent="YSort/Lavice" index="2" instance=ExtResource( 5 )]
+position = Vector2( 223, 359 )
+
+[node name="1lavice4" parent="YSort/Lavice" index="3" instance=ExtResource( 5 )]
+position = Vector2( 253, 359 )
+
+[node name="1lavice5" parent="YSort/Lavice" index="4" instance=ExtResource( 5 )]
+position = Vector2( 162, 322 )
+
+[node name="1lavice6" parent="YSort/Lavice" index="5" instance=ExtResource( 5 )]
+position = Vector2( 192, 322 )
+
+[node name="1lavice7" parent="YSort/Lavice" index="6" instance=ExtResource( 5 )]
+position = Vector2( 223, 322 )
+
+[node name="1lavice8" parent="YSort/Lavice" index="7" instance=ExtResource( 5 )]
+position = Vector2( 253, 322 )
+
+[node name="1lavice9" parent="YSort/Lavice" index="8" instance=ExtResource( 5 )]
+position = Vector2( 162, 288 )
+
+[node name="1lavice10" parent="YSort/Lavice" index="9" instance=ExtResource( 5 )]
+position = Vector2( 192, 288 )
+
+[node name="1lavice11" parent="YSort/Lavice" index="10" instance=ExtResource( 5 )]
+position = Vector2( 223, 288 )
+
+[node name="1lavice12" parent="YSort/Lavice" index="11" instance=ExtResource( 5 )]
+position = Vector2( 253, 288 )
+
+[node name="stul_s_monitorem" parent="YSort" index="10" instance=ExtResource( 4 )]
+position = Vector2( 206, 256 )
+
+[node name="PCaStolek" parent="YSort" index="11" instance=ExtResource( 9 )]
+position = Vector2( 347, 204 )
+z_index = 1
+
+[node name="PCaStolek2" parent="YSort" index="12" instance=ExtResource( 9 )]
+position = Vector2( 265, 204 )
+z_index = 1
+
+[node name="kos2" parent="YSort" index="13" instance=ExtResource( 6 )]
+position = Vector2( 270, 282 )
+z_index = 0
+
+[node name="Server3" parent="YSort" index="14" instance=ExtResource( 7 )]
+position = Vector2( 329, 291 )
+z_index = 1
+
+[node name="Server4" parent="YSort" index="15" instance=ExtResource( 7 )]
+position = Vector2( 329, 319 )
+z_index = 1
+
+[node name="Server5" parent="YSort" index="16" instance=ExtResource( 7 )]
+position = Vector2( 329, 347 )
+z_index = 1
+
+[node name="PolickasKnihami" parent="YSort" index="17" instance=ExtResource( 3 )]
+position = Vector2( 234, 203 )
+z_index = 1
+
+[node name="PolickasKnihami2" parent="YSort" index="18" instance=ExtResource( 3 )]
+position = Vector2( 205, 203 )
+z_index = 1
+
+[node name="PlayerCharacter" parent="YSort" index="19"]
+position = Vector2( 207, 342 )
+
+[node name="Hasicak" parent="YSort" index="20" instance=ExtResource( 10 )]
+position = Vector2( 296, 229 )
+z_index = 1
+
+[node name="Checkpoint" parent="." index="4" instance=ExtResource( 11 )]
+position = Vector2( 208, 342 )

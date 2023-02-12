@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex"
+path="res://.import/svit-dveri.png-72372e08bd3959da12b3bdbd2c0e5354.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tabule.png"
-dest_files=[ "res://.import/tabule.png-676ec6386e026038444be2bdd5e404ac.stex" ]
+source_file="res://assets/sprites/svit-dveri.png"
+dest_files=[ "res://.import/svit-dveri.png-72372e08bd3959da12b3bdbd2c0e5354.stex" ]
 
 [params]
 

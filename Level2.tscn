@@ -1,0 +1,183 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://assets/sprites/podlozka.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/nastenka_medaile.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/nastenka2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/kamera_doprava.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/svetly_kos.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/lavicka.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/nastenka.png" type="Texture" id=7]
+[ext_resource path="res://assets/scenes/Dvere.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/sprites/stolecek.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/moderni_dvere.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/mmm.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/trofeje.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/svit-dveri.png" type="Texture" id=13]
+[ext_resource path="res://Game.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/sprites/ppp.png" type="Texture" id=15]
+[ext_resource path="res://interface/Checkpoint.tscn" type="PackedScene" id=16]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.0
+height = 4.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 22.5, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6, 5.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 21.5, 8.5 )
+
+[node name="U56" instance=ExtResource( 14 )]
+
+[node name="Background" parent="." index="0"]
+margin_left = 5.0
+margin_right = 7165.0
+
+[node name="podlaha" parent="YSort" index="0"]
+tile_data = PoolIntArray( 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 1610612736, 0, 786439, 1610612736, 0, 786440, 1610612736, 0, 786441, 1610612736, 0, 786442, -1073741824, 0, 786443, -1073741824, 0, 786444, -1073741824, 0, 786445, 1610612736, 0, 786446, 1610612736, 0, 786447, 1610612736, 0, 786448, 1610612736, 0, 786449, 1610612736, 0, 786450, 1610612736, 0, 786451, 1610612736, 0, 786452, 1610612736, 0, 786453, 1610612736, 0, 786454, 1610612736, 0, 786455, 1610612736, 0, 786456, 1610612736, 0, 786457, 1610612736, 0, 851973, 0, 0, 851974, 1610612736, 0, 851975, 1610612736, 0, 851976, 1610612736, 0, 851977, 1610612736, 0, 851978, 1610612736, 0, 851979, 1610612736, 0, 851980, 1610612736, 0, 851981, 1610612736, 0, 851982, 1610612736, 0, 851983, 1610612736, 0, 851984, 1610612736, 0, 851985, 1610612736, 0, 851986, 1610612736, 0, 851987, 1610612736, 0, 851988, 1610612736, 0, 851989, 1610612736, 0, 851990, 1610612736, 0, 851991, 1610612736, 0, 851992, 1610612736, 0, 851993, 1610612736, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 1610612736, 0, 917511, 1610612736, 0, 917512, 1610612736, 0, 917513, 1610612736, 0, 917514, 1610612736, 0, 917515, 1610612736, 0, 917516, 1610612736, 0, 917517, 1610612736, 0, 917518, 1610612736, 0, 917519, 1610612736, 0, 917520, 1610612736, 0, 917521, 1610612736, 0, 917522, 1610612736, 0, 917523, 1610612736, 0, 917524, 1610612736, 0, 917525, 1610612736, 0, 917526, 1610612736, 0, 917527, 1610612736, 0, 917528, 1610612736, 0, 917529, 1610612736, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 1610612736, 0, 983047, 1610612736, 0, 983048, 1610612736, 0, 983049, 1610612736, 0, 983050, 1610612736, 0, 983051, 1610612736, 0, 983052, 1610612736, 0, 983053, 1610612736, 0, 983054, 1610612736, 0, 983055, 1610612736, 0, 983056, 1610612736, 0, 983057, 1610612736, 0, 983058, 1610612736, 0, 983059, 1610612736, 0, 983060, 1610612736, 0, 983061, 1610612736, 0, 983062, 1610612736, 0, 983063, 1610612736, 0, 983064, 1610612736, 0, 983065, 1610612736, 0, 1048583, 0, 0 )
+
+[node name="zed" parent="YSort" index="1"]
+tile_data = PoolIntArray( 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 524291, 6, 0, 524292, 6, 0, 524293, 6, 0, 524303, 4, 0, 524304, 4, 0, 524305, 4, 0, 589827, 6, 0, 589828, 6, 0, 589829, 6, 0, 589830, -1073741822, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 2, 0, 589839, 6, 0, 589840, 6, 0, 589841, 6, 0, 589842, 2, 0, 589843, 4, 0, 589844, 4, 0, 589845, 4, 0, 589846, 4, 0, 589847, 4, 0, 589848, 4, 0, 589849, 4, 0, 655366, -1073741820, 0, 655367, 1610612742, 0, 655368, 1610612742, 0, 655369, 1610612742, 0, 655370, 1610612742, 0, 655371, 1610612742, 0, 655372, 1610612742, 0, 655373, 1610612742, 0, 655374, -1610612732, 0, 655375, 1610612742, 0, 655376, 1610612742, 0, 655377, 1610612742, 0, 655378, -1073741820, 0, 655379, 1610612742, 0, 655380, 1610612742, 0, 655381, 1610612742, 0, 655382, 1610612742, 0, 655383, 1610612742, 0, 655384, 1610612742, 0, 655385, 1610612742, 0, 720902, -1073741820, 0, 720903, 1610612742, 0, 720904, 1610612742, 0, 720905, 1610612742, 0, 720906, 6, 0, 720907, 6, 0, 720908, 6, 0, 720909, 6, 0, 720910, -1610612732, 0, 720914, -1073741820, 0, 720915, 6, 0, 720916, 6, 0, 720917, 6, 0, 720918, 6, 0, 720919, 6, 0, 720920, 1610612742, 0, 720921, 1610612742, 0, 786434, 1610612740, 0, 786435, 1610612740, 0, 786436, 1610612740, 0, 851970, 6, 0, 851971, 6, 0, 851972, -1610612730, 0 )
+
+[node name="polovicni_zed" parent="YSort" index="2"]
+tile_data = PoolIntArray( 917509, 0, 0, 917516, 0, 0, 983045, 0, 0, 983052, 0, 0, 1048581, 0, 0, 1048588, 0, 0, 1114117, 0, 0, 1114124, 0, 0, 1114142, 0, 0, 1114147, 0, 0, 1179653, 0, 0, 1179684, 0, 0, 1245189, 0, 0, 1310725, 0, 0, 1376261, 0, 0, 1441797, 0, 0, 1507333, 0, 0 )
+
+[node name="lista" parent="YSort" index="3"]
+tile_data = PoolIntArray( 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0 )
+
+[node name="polovicni_lista" parent="YSort" index="4"]
+tile_data = PoolIntArray( 1310724, -1073741824, 0, 1310732, -1610612736, 0, 1376260, -1073741824, 0, 1376268, -1610612736, 0, 1441796, -1073741824, 0, 1441804, -1610612736, 0, 1441820, -1073741824, 0, 1441828, -1610612736, 0, 1507332, -1073741824, 0, 1507340, -1610612736, 0, 1507356, -1073741824, 0, 1507364, -1610612736, 0 )
+
+[node name="strop" parent="YSort" index="5"]
+tile_data = PoolIntArray( 917508, 0, 4, 917509, 0, 196609, 917510, 0, 196609, 917511, 0, 196609, 917512, 0, 196609, 917513, 0, 196609, 917514, 0, 196609, 917515, 0, 196609, 917516, 0, 196609, 917517, 0, 7, 983044, 0, 65539, 983053, 0, 65539, 1048580, 0, 65539, 1048589, 0, 65539, 1048605, 0, 4, 1048606, 0, 196609, 1048607, 0, 196609, 1048608, 0, 196609, 1048609, 0, 196609, 1048610, 0, 196609, 1048611, 0, 196609, 1048612, 0, 7, 1114116, 0, 65539, 1114125, 0, 65539, 1114141, 0, 65539, 1114148, 0, 65539, 1179652, 0, 65539, 1179661, 0, 196612, 1179662, 0, 196609, 1179663, 0, 196609, 1179664, 0, 196609, 1179665, 0, 196609, 1179666, 0, 196609, 1179667, 0, 196609, 1179668, 0, 196609, 1179669, 0, 196609, 1179670, 0, 196609, 1179671, 0, 196609, 1179672, 0, 196609, 1179673, 0, 196609, 1179674, 0, 196609, 1179675, 0, 196609, 1179676, 0, 196609, 1179677, 0, 196615, 1179684, 0, 196612, 1179685, 0, 196609, 1179686, 0, 196609, 1179687, 0, 196609, 1179688, 0, 196609, 1179689, 0, 196609, 1179690, 0, 196609, 1179691, 0, 196609, 1179692, 0, 196609, 1179693, 0, 196609, 1179694, 0, 196609, 1179695, 0, 196609, 1179696, 0, 196609, 1179697, 0, 196609, 1179698, 0, 196609, 1179699, 0, 196609, 1179700, 0, 7, 1245188, 0, 65539, 1245236, 0, 65539, 1310724, 0, 65539, 1310772, 0, 65539, 1376260, 0, 65539, 1376308, 0, 65539, 1441796, 0, 65539, 1441844, 0, 65539, 1507332, 0, 65539, 1507380, 0, 65539, 1572867, 0, 4, 1572868, 0, 196616, 1572869, 0, 196609, 1572870, 0, 196609, 1572871, 0, 196609, 1572872, 0, 196609, 1572873, 0, 196610, 1572916, 0, 65539, 1638403, 0, 65539, 1638452, 0, 65539, 1703939, 0, 65539, 1703988, 0, 65539, 1769475, 0, 65539, 1769524, 0, 65539, 1835011, 0, 65539, 1835060, 0, 65539, 1900547, 0, 65539, 1900596, 0, 65539, 1966083, 0, 65539, 1966132, 0, 65539, 2031619, 0, 65539, 2031668, 0, 65539, 2097155, 0, 196612, 2097156, 0, 196609, 2097157, 0, 196609, 2097158, 0, 196609, 2097159, 0, 196609, 2097160, 0, 196609, 2097161, 0, 196609, 2097162, 0, 196609, 2097163, 0, 196609, 2097164, 0, 196609, 2097165, 0, 7, 2097168, 0, 4, 2097169, 0, 196609, 2097170, 0, 196609, 2097171, 0, 196609, 2097172, 0, 196609, 2097173, 0, 196609, 2097174, 0, 196609, 2097175, 0, 196609, 2097176, 0, 196609, 2097177, 0, 196609, 2097178, 0, 196609, 2097179, 0, 196609, 2097180, 0, 196609, 2097181, 0, 196609, 2097182, 0, 196609, 2097183, 0, 196609, 2097184, 0, 196609, 2097185, 0, 196609, 2097186, 0, 196609, 2097187, 0, 196609, 2097188, 0, 196609, 2097189, 0, 196609, 2097190, 0, 196609, 2097191, 0, 196609, 2097192, 0, 196609, 2097193, 0, 196609, 2097194, 0, 196609, 2097195, 0, 196609, 2097196, 0, 196609, 2097197, 0, 196609, 2097198, 0, 196609, 2097199, 0, 196609, 2097200, 0, 196609, 2097201, 0, 196609, 2097202, 0, 196609, 2097203, 0, 196609, 2097204, 0, 196615, 2162701, 0, 65539, 2162704, 0, 65539, 2228237, 0, 196612, 2228238, 0, 196609, 2228239, 0, 196609, 2228240, 0, 196615 )
+
+[node name="PlayerCharacter" parent="YSort" index="7"]
+position = Vector2( 121, 227 )
+
+[node name="Mmm" type="Sprite" parent="YSort" index="8"]
+position = Vector2( 142, 170 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Ppp" type="Sprite" parent="YSort/Mmm" index="0"]
+position = Vector2( -40, 0 )
+texture = ExtResource( 15 )
+
+[node name="kos2" type="KinematicBody2D" parent="YSort" index="9"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SvetlyKos2" type="Sprite" parent="YSort/kos2" index="0"]
+show_behind_parent = true
+position = Vector2( 56, 185 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/kos2" index="1"]
+position = Vector2( 56, 187 )
+shape = SubResource( 1 )
+
+[node name="ModerniDvere" type="Sprite" parent="YSort" index="10"]
+position = Vector2( 384, 180 )
+texture = ExtResource( 10 )
+
+[node name="lavecka" type="KinematicBody2D" parent="YSort" index="11"]
+position = Vector2( 54, 226 )
+z_index = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lavicka" type="Sprite" parent="YSort/lavecka" index="0"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/lavecka" index="1"]
+shape = SubResource( 2 )
+
+[node name="lavecka1" type="KinematicBody2D" parent="YSort" index="12"]
+position = Vector2( 200, 192 )
+z_index = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Lavicka" type="Sprite" parent="YSort/lavecka1" index="0"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/lavecka1" index="1"]
+shape = SubResource( 2 )
+
+[node name="Dvere" parent="YSort" index="13" instance=ExtResource( 8 )]
+position = Vector2( 84, 147 )
+scale = Vector2( 0.5, 0.5 )
+NEXT_LEVEL = "res://Level4.tscn"
+
+[node name="Dvere2" parent="YSort" index="14" instance=ExtResource( 8 )]
+position = Vector2( 60, 147 )
+scale = Vector2( 0.509028, 0.50442 )
+
+[node name="Dvere3" parent="YSort" index="15" instance=ExtResource( 8 )]
+position = Vector2( 120, 268 )
+scale = Vector2( 0.5, 0.5 )
+NEXT_LEVEL = "res://Game.tscn"
+
+[node name="Sprite" parent="YSort/Dvere3" index="0"]
+visible = false
+
+[node name="Kolize" parent="YSort/Dvere3" index="1"]
+position = Vector2( 0, 7.5 )
+
+[node name="KameraDoprava2" type="Sprite" parent="YSort" index="16"]
+position = Vector2( 85, 199 )
+z_index = 2
+texture = ExtResource( 4 )
+
+[node name="NastenkaMedaile" type="Sprite" parent="YSort" index="17"]
+position = Vector2( 167, 171 )
+texture = ExtResource( 2 )
+
+[node name="Trofeje" type="Sprite" parent="YSort" index="18"]
+position = Vector2( 264, 162 )
+z_index = 1
+texture = ExtResource( 12 )
+
+[node name="Nastenka2" type="Sprite" parent="YSort" index="19"]
+position = Vector2( 316, 171 )
+texture = ExtResource( 7 )
+
+[node name="Nastenka3" type="Sprite" parent="YSort" index="20"]
+position = Vector2( 264, 153 )
+texture = ExtResource( 3 )
+
+[node name="KinematicBody2D2" type="KinematicBody2D" parent="YSort" index="21"]
+
+[node name="Stolecek" type="Sprite" parent="YSort/KinematicBody2D2" index="0"]
+position = Vector2( 166, 192 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/KinematicBody2D2" index="1"]
+position = Vector2( 166, 190 )
+shape = SubResource( 3 )
+
+[node name="KinematicBody2D3" type="KinematicBody2D" parent="YSort" index="22"]
+
+[node name="Podlozka" type="Sprite" parent="YSort/KinematicBody2D3" index="0"]
+position = Vector2( 264, 173 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/KinematicBody2D3" index="1"]
+position = Vector2( 264.5, 172.5 )
+shape = SubResource( 4 )
+
+[node name="dvere_stin" type="Sprite" parent="YSort" index="23"]
+position = Vector2( 178, 299 )
+texture = ExtResource( 13 )
+
+[node name="Checkpoint" parent="." index="4" instance=ExtResource( 16 )]
+position = Vector2( 121, 227 )
+NEXT_PROGRESS = 2
+
+[editable path="YSort/Dvere3"]
