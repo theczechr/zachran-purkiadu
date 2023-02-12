@@ -266,7 +266,6 @@ __meta__ = {
 }
 
 [node name="Checkpoint" parent="." index="5" instance=ExtResource( 12 )]
-position = Vector2( 237, 359 )
-NEXT_PROGRESS = 5
+position = Vector2( 179, 349 )
 
 [editable path="YSort/Dvere"]
