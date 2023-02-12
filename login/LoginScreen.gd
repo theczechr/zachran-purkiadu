@@ -8,7 +8,7 @@ onready var popup : AcceptDialog = $PopUp
 
 func _ready():
 	if SaveGame.save_exists():
-		get_tree().change_scene("res://Level1.tscn")
+		get_tree().change_scene("res://ControlsInfo.tscn")
 
 func _on_LoginButton_pressed() -> void:
 	if username.text.empty() or password.text.empty():

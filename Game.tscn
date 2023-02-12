@@ -18,11 +18,13 @@
 script/source = "extends Node2D
 
 var _save: SaveGame
+var packed_scene = PackedScene.new()
+
 onready var _player := $YSort/PlayerCharacter
 onready var _inventory := $UI/Inventory
 var _http = load(\"res://login/Firebase.gd\").new()
 
-func _ready():	
+func _ready():
 	_create_or_load_save()
 	
 	get_node(\"Checkpoint\").connect(\"checkpoint_requested\", self, \"_checkpoint\")
@@ -54,6 +56,8 @@ func _checkpoint(progress: int) -> void:
 		_progress_sync()
 	
 func _save_game() -> void:
+	packed_scene.pack(get_tree().get_current_scene())
+	ResourceSaver.save(\"user://\" + get_tree().get_current_scene().get_name() + \".tscn\", packed_scene)
 	_save.write_savegame()
 
 func _progress_sync() -> void:

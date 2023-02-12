@@ -30,7 +30,7 @@ extents = Vector2( 6, 5.5 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 21.5, 8.5 )
 
-[node name="U56" instance=ExtResource( 14 )]
+[node name="Level2" instance=ExtResource( 14 )]
 
 [node name="Background" parent="." index="0"]
 margin_left = 5.0
@@ -113,7 +113,7 @@ shape = SubResource( 2 )
 [node name="Dvere" parent="YSort" index="13" instance=ExtResource( 8 )]
 position = Vector2( 84, 147 )
 scale = Vector2( 0.5, 0.5 )
-NEXT_LEVEL = "res://Level4.tscn"
+NEXT_LEVEL = "res://Level5.tscn"
 
 [node name="Dvere2" parent="YSort" index="14" instance=ExtResource( 8 )]
 position = Vector2( 60, 147 )
@@ -122,7 +122,7 @@ scale = Vector2( 0.509028, 0.50442 )
 [node name="Dvere3" parent="YSort" index="15" instance=ExtResource( 8 )]
 position = Vector2( 120, 268 )
 scale = Vector2( 0.5, 0.5 )
-NEXT_LEVEL = "res://Game.tscn"
+NEXT_LEVEL = "res://Level1.tscn"
 
 [node name="Sprite" parent="YSort/Dvere3" index="0"]
 visible = false
