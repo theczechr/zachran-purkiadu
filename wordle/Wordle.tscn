@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://line_container.gd" type="Script" id=1]
-[ext_resource path="res://line1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://wordle/LineContainer.gd" type="Script" id=1]
+[ext_resource path="res://wordle/Line.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/bg_dark.tres" type="Theme" id=3]
-[ext_resource path="res://wordle.gd" type="Script" id=4]
+[ext_resource path="res://wordle/Wordle.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
