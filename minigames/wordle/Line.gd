@@ -14,7 +14,7 @@ func _input(event):
 			event.is_action("enter") and 
 			word_input.length() == get_child_count()
 		):
-			print("enter")
+			#print("enter")
 			emit_signal("word_to_container", word_input)
 			update_label()
 		elif (
@@ -25,7 +25,7 @@ func _input(event):
 			):
 			word_input.erase(word_input.length() - 1, 1)
 			update_label()
-			print("backspace")
+			#print("backspace")
 		elif (event is InputEventKey and 
 		event.is_echo() == false and 
 		event.is_pressed() and 
@@ -34,7 +34,7 @@ func _input(event):
 			word_input += event.as_text()
 			update_label()
 			get_child(word_input.length() -1).pop_anim()
-			print(word_input)
+			#print(word_input)
 
 func update_label():
 	for i in range(get_child_count()):

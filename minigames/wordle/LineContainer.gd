@@ -17,7 +17,7 @@ func _ready():
 	
 	get_child(line_active).line_status = true
 	connect_to_line()
-	print(today_word)
+	#print(today_word)
 
 func load_data(dir):
 	file = File.new()
@@ -37,15 +37,15 @@ func connect_to_line():
 
 func check_word(word):
 	get_child(line_active).line_status = false
-	print("checkword ", word)
+	#print("checkword ", word)
 	check_letter(word)
 	if word == today_word:
 		emit_signal("game_over", today_word, true)
-		print("win")
+		#print("win")
 	else:
 		for i in range(data.size()):
 			if word == data[i]["word"].to_upper():
-				print("valid")
+				#print("valid")
 				
 
 func check_letter(word):
@@ -72,6 +72,6 @@ func change_line():
 		line_active += 1
 		get_child(line_active).line_status = true
 	else:
-		print("game over")
+		#print("game over")
 		emit_signal("game_over", today_word, false)
 		
