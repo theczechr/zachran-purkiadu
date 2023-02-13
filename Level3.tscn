@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Game.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/sprites/controllery.png" type="Texture" id=2]
+[ext_resource path="res://assets/scenes/Controlery.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/sprites/big_stul.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/monitory.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/zidle_k_pc.png" type="Texture" id=5]
@@ -83,12 +83,7 @@ texture = ExtResource( 4 )
 position = Vector2( 273, 208.5 )
 shape = SubResource( 1 )
 
-[node name="Controllery2" type="Sprite" parent="YSort" index="12"]
-position = Vector2( 333, 181 )
-z_index = 1
-texture = ExtResource( 2 )
-
-[node name="zidle" type="KinematicBody2D" parent="YSort" index="13"]
+[node name="zidle" type="KinematicBody2D" parent="YSort" index="12"]
 position = Vector2( -8, 0 )
 z_index = 1
 
@@ -100,7 +95,7 @@ texture = ExtResource( 5 )
 position = Vector2( 273, 220 )
 shape = SubResource( 2 )
 
-[node name="zidle2" type="KinematicBody2D" parent="YSort" index="14"]
+[node name="zidle2" type="KinematicBody2D" parent="YSort" index="13"]
 position = Vector2( 13, 0 )
 z_index = 1
 
@@ -112,7 +107,7 @@ texture = ExtResource( 5 )
 position = Vector2( 273, 220 )
 shape = SubResource( 2 )
 
-[node name="Podlahy" type="Node2D" parent="YSort" index="15"]
+[node name="Podlahy" type="Node2D" parent="YSort" index="14"]
 
 [node name="Podlaha" type="Sprite" parent="YSort/Podlahy" index="0"]
 position = Vector2( 348, 225 )
@@ -170,8 +165,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PlayerCharacter" parent="YSort" index="16"]
+[node name="PlayerCharacter" parent="YSort" index="15"]
 position = Vector2( 250, 290 )
+
+[node name="Controlery" parent="YSort" index="16" instance=ExtResource( 2 )]
+position = Vector2( 336, 189 )
 
 [node name="Dvere-stin2" type="Sprite" parent="." index="4"]
 position = Vector2( 306, 345 )
@@ -184,3 +182,4 @@ position = Vector2( 251, 291 )
 NEXT_PROGRESS = 3
 
 [editable path="YSort/Dvere"]
+[editable path="YSort/Controlery"]
