@@ -603,9 +603,6 @@ NEXT_LEVEL = "res://Level3.tscn"
 [node name="Sprite" parent="Dvere" index="0"]
 visible = false
 
-[node name="Kolize" parent="Dvere" index="1"]
-position = Vector2( 0, 10 )
-
 [node name="Checkpoint" parent="." index="12" instance=ExtResource( 26 )]
 position = Vector2( 352, 337 )
 NEXT_PROGRESS = 4
