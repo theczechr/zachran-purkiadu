@@ -112,7 +112,7 @@ _global_script_class_icons={
 
 config/name="zachran-purkiadu"
 run/main_scene="res://login/LoginScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://ficon.png"
 
 [autoload]
 
