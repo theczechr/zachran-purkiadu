@@ -28,26 +28,8 @@
 			"value": "false"
 		},
 		{
-			"id": "1676290921-483",
-			"name": "Level5_entered",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1676290895-146",
-			"name": "Level3_entered",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1676290882-366",
 			"name": "Level2_entered",
-			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1676318798-648",
-			"name": "Controlery_done",
 			"type": 0,
 			"value": "false"
 		},
@@ -58,10 +40,34 @@
 			"value": "false"
 		},
 		{
+			"id": "1676290921-483",
+			"name": "Level5_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
 			"id": "1676321296-648",
 			"name": "flash_used",
 			"type": 0,
 			"value": "false"
+		},
+		{
+			"id": "1676318798-648",
+			"name": "Controlery_done",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676290895-146",
+			"name": "Level3_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676323062-648",
+			"name": "pokoj_entered",
+			"type": 0,
+			"value": "flase"
 		}
 	]
 }

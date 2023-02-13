@@ -51,9 +51,27 @@
 			"text": "Hurrááá, Purkiáda je zachráněna."
 		},
 		{
+			"definition": "1676321296-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "false"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 3
+			"wait_seconds": 3,
+			"waiting_skippable": false
+		},
+		{
+			"condition": "",
+			"definition": "1676321296-648",
+			"event_id": "dialogic_012",
+			"value": "true"
 		},
 		{
 			"anchor_id": "anchor-1634488067",
@@ -61,6 +79,10 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"change_scene": "res://PokojEnd.tscn",
+			"event_id": "dialogic_041"
 		},
 		{
 			"event_id": "dialogic_013"

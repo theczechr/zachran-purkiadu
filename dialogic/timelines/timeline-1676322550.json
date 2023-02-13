@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Eh....."
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Co se stalo ?"
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "To byl jenom sen ?"
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Měl bych to jít zjistit."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1676322550.json",
+		"name": "PokojEnd"
+	}
+}
