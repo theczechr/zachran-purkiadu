@@ -42,11 +42,6 @@ func check_word(word):
 	if word == today_word:
 		emit_signal("game_over", today_word, true)
 		#print("win")
-	else:
-		for i in range(data.size()):
-			if word == data[i]["word"].to_upper():
-				#print("valid")
-				
 
 func check_letter(word):
 	var temp_word:String = today_word
