@@ -1,6 +1,12 @@
 {
 	"events": [
 		{
+			"condition": "",
+			"definition": "1676290895-146",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
 			"character": "character-1675689989.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -11,6 +17,9 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Hmm, jaké by tu tak mohlo být heslo?"
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {

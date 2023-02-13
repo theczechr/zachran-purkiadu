@@ -2,11 +2,9 @@ extends Node2D
 
 var _save: SaveGame
 var packed_scene = PackedScene.new()
-
 onready var _player := $YSort/PlayerCharacter
 onready var _inventory := $UI/Inventory
-var _http = load("res://login/Firebase.gd").new()
-
+var loaded := load("ControlsInfo.tscn")
 func _ready():
 	_create_or_load_save()
 	
@@ -19,9 +17,12 @@ func _ready():
 		GlobalData.hasicak = false
 		_inventory.inventory.remove_item("extinguisher")
 		_save_game()
-	
-	var dialog = Dialogic.start(str(get_tree().get_current_scene().get_name()))
-	add_child(dialog)
+	var lo = loaded.instance()
+	if str(get_tree().get_current_scene().get_name()) != "EmptySceen":
+		var dialog = Dialogic.start(str(get_tree().get_current_scene().get_name()))
+		add_child(dialog)
+		print(str(get_tree().get_current_scene().get_name()) + "_entered in game.gd")
+		Dialogic.set_variable(((str(get_tree().get_current_scene().get_name()) + "_entered")), "true")
 
 func _create_or_load_save() -> void:
 	if SaveGame.save_exists():

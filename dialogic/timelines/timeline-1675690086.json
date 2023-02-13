@@ -1,6 +1,12 @@
 {
 	"events": [
 		{
+			"condition": "",
+			"definition": "1676290839-787",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
 			"wait_seconds": 5
@@ -27,6 +33,9 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Hmmm, abych se dostal ke dveřím musím nějak uhasit ten oheň."
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {

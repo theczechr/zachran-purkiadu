@@ -1,13 +1,6 @@
 {
 	"glossary": [
-		{
-			"extra": "",
-			"id": "1675734157-198",
-			"name": "New glossary entry",
-			"text": "",
-			"title": "",
-			"type": 1
-		}
+
 	],
 	"variables": [
 		{
@@ -17,8 +10,44 @@
 			"value": "false"
 		},
 		{
+			"id": "1676290882-366",
+			"name": "Level2_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676290839-787",
+			"name": "Level1_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676290895-146",
+			"name": "Level3_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676290910-918",
+			"name": "Level4_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676290921-483",
+			"name": "Level5_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
 			"id": "1676236669-648",
 			"name": "next_level",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676292569-970",
+			"name": "dvere_kliknuty",
 			"type": 0,
 			"value": "false"
 		}

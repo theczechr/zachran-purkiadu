@@ -1,10 +1,19 @@
 {
 	"events": [
 		{
+			"condition": "",
+			"definition": "1676290910-918",
+			"event_id": "dialogic_012",
+			"value": "false"
+		},
+		{
 			"character": "character-1675689989.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Panebože co mám dělat všude je oheň!!!"
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
