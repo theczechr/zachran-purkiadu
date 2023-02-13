@@ -22,6 +22,9 @@ func _ready():
 		GlobalData.hasicak = false
 		_inventory.inventory.remove_item("extinguisher")
 		_save_game()
+	
+	if get_tree().get_current_scene().get_name() == "Level3_uhaseno":
+		get_node("YSort/Server3").connect("use_flash_disk", self, "_use_flash_disk")
 
 	var lo = loaded.instance()
 	if str(get_tree().get_current_scene().get_name()) != "EmptySceen":
@@ -88,4 +91,9 @@ func _pickup_flash_disk() -> void:
 	_inventory.inventory.add_item("flash-disk")
 	GlobalData.hasicak = true
 	get_node("YSort/Flash-disk").hide()
+	_save_game()
+
+func _use_flash_disk() -> void:
+	GlobalData.flash_disk = false
+	_inventory.inventory.remove_item("flash-disk")
 	_save_game()
