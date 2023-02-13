@@ -3,29 +3,28 @@
 [ext_resource path="res://assets/fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
-size = 10
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 8
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 12
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.2, 0.113725, 0.113725, 1 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=6]
 
 [sub_resource type="DynamicFont" id=3]
-size = 12
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=7]
+size = 18
 font_data = ExtResource( 1 )
 
 [resource]

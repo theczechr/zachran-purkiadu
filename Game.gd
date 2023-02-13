@@ -53,7 +53,7 @@ func _save_game() -> void:
 
 func _progress_sync() -> void:
 	_save_game()
-	#var server_level = str(yield(_http.get_progress(_player.stats.id, $HTTPRequest), "completed") as int)
+	var server_level = yield(_http.get_progress(_player.stats.id, $HTTPRequest), "completed") as int
 	print()
 	print("save character: ", _player.stats.id)
 	print("save level: ", _save.character.level)
@@ -61,10 +61,15 @@ func _progress_sync() -> void:
 	print("character: ", _save.character.id)
 	print("character level: ", _player.stats.level)
 	print()
-	#print("server level: ", server_level)
+	print("server level: ", server_level)
 	print()
-	#if server_level < _player.stats.level:
-	#	yield(_http.set_progress(_player.stats.id, _player.stats.level, $HTTPRequest), "completed")
+	if server_level < _player.stats.level:
+		print("odesilani na server: ", _player.stats.level)
+		yield(_http.set_progress(_player.stats.id, str(_player.stats.level), $HTTPRequest), "completed")
+	elif server_level > _player.stats.level:
+		$UI/PopUp.show()
+		$UI/PopUp.dialog_text = "Chyba synchronizace postupu.\nDatabáze má vyšší postup ("+ str(server_level) +"),\nnež načtená hra ("+ str(_player.stats.level) +").\n\nPokud toto vidíš, oznam to dozoru."
+		print("popup-varovani server")
 	
 func _pickup_hasicak() -> void:
 	_inventory.inventory.add_item("extinguisher")
