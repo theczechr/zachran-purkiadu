@@ -4,12 +4,6 @@
 	],
 	"variables": [
 		{
-			"id": "1676290839-787",
-			"name": "Level1_entered",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1676290910-918",
 			"name": "Level4_entered",
 			"type": 0,
@@ -66,6 +60,12 @@
 		{
 			"id": "1676321296-648",
 			"name": "flash_used",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676290839-787",
+			"name": "Level1_entered",
 			"type": 0,
 			"value": "false"
 		}

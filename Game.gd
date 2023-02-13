@@ -31,6 +31,7 @@ func _ready():
 	if str(get_tree().get_current_scene().get_name()) != "EmptySceen":
 		var dialog = Dialogic.start(str(get_tree().get_current_scene().get_name()))
 		add_child(dialog)
+		dialog.connect("dialogic_signal", self, "dialogic_signal")
 		print(str(get_tree().get_current_scene().get_name()) + "_entered in game.gd")
 		Dialogic.set_variable(((str(get_tree().get_current_scene().get_name()) + "_entered")), "true")
 
@@ -98,3 +99,9 @@ func _use_flash_disk() -> void:
 	GlobalData.flash_disk = false
 	_inventory.inventory.remove_item("flash-disk")
 	_save_game()
+
+	
+func dialogic_signal(argument):
+	if argument == "fade_out":
+		$CanvasLayer/AnimationPlayer.play("fade_out")
+		print("faded out")
