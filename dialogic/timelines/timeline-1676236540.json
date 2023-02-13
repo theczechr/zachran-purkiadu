@@ -26,7 +26,7 @@
 			"wait_seconds": 1
 		},
 		{
-			"change_scene": "res://wordle/Wordle.tscn",
+			"change_scene": "res://minigames/wordle/Wordle.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

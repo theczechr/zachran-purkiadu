@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://wordle/LineContainer.gd" type="Script" id=1]
-[ext_resource path="res://wordle/Line.tscn" type="PackedScene" id=2]
+[ext_resource path="res://minigames/wordle/LineContainer.gd" type="Script" id=1]
+[ext_resource path="res://minigames/wordle/Line.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/bg_dark.tres" type="Theme" id=3]
-[ext_resource path="res://wordle/Wordle.gd" type="Script" id=4]
+[ext_resource path="res://minigames/wordle/Wordle.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/background/info_bgr.png" type="Texture" id=5]
 [ext_resource path="res://assets/fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=6]
 
