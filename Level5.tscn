@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/sprites/podlaha.png" type="Texture" id=9]
 [ext_resource path="res://assets/sprites/svit-dveri.png" type="Texture" id=10]
 [ext_resource path="res://assets/scenes/Dvere.tscn" type="PackedScene" id=11]
-[ext_resource path="res://interface/Checkpoint.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/scenes/Flash-disk.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35, 13 )
@@ -178,6 +178,10 @@ texture = ExtResource( 5 )
 position = Vector2( 0, -0.40625 )
 shape = SubResource( 4 )
 
+[node name="Flash-disk" parent="YSort" index="20" instance=ExtResource( 13 )]
+position = Vector2( 245, 322 )
+z_index = 1
+
 [node name="Podlahy" type="Node2D" parent="." index="2"]
 position = Vector2( -63, -44 )
 
@@ -264,8 +268,5 @@ texture = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Checkpoint" parent="." index="5" instance=ExtResource( 12 )]
-position = Vector2( 179, 349 )
 
 [editable path="YSort/Dvere"]

@@ -19,9 +19,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -160.0
+margin_left = -200.0
 margin_top = -64.0
-margin_right = 160.0
+margin_right = 200.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 320, 120 )
 
@@ -66,7 +66,20 @@ margin_right = 309.0
 margin_bottom = 128.0
 texture_normal = ExtResource( 2 )
 
+[node name="MarginContainer4" type="MarginContainer" parent="NinePatchRect/HBoxContainer"]
+margin_left = 313.0
+margin_right = 348.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 35, 120 )
+
+[node name="TextureButton5" type="TextureButton" parent="NinePatchRect/HBoxContainer"]
+margin_left = 352.0
+margin_right = 397.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 2 )
+
 [connection signal="pressed" from="NinePatchRect/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="NinePatchRect/HBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]
 [connection signal="pressed" from="NinePatchRect/HBoxContainer/TextureButton3" to="." method="_on_TextureButton3_pressed"]
 [connection signal="pressed" from="NinePatchRect/HBoxContainer/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="NinePatchRect/HBoxContainer/TextureButton5" to="." method="_on_TextureButton5_pressed"]
