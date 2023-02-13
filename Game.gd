@@ -15,6 +15,7 @@ func _ready():
 	
 	if get_tree().get_current_scene().get_name() == "Level1":
 		get_node("YSort/Hasicak").connect("pickup_hasicak", self, "_pickup_hasicak")
+		
 	if get_tree().get_current_scene().get_name() == "Level5":
 		get_node("YSort/Flash-disk").connect("pickup_flash_disk", self, "_pickup_flash_disk")
 	

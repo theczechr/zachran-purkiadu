@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"character": "character-1676324489.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*Tento výtah neslouží k evakuaci osob.*"
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Asi odsud nezdrhnu."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1676324452.json",
+		"name": "Vytah"
+	}
+}

@@ -13,6 +13,18 @@
 			"text": "ZACHODYYYYYYYYYYYYY"
 		},
 		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Karel tu nechal flashdisk s Purkiadou"
+		},
+		{
+			"character": "character-1675689989.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ten budu potřebovat"
+		},
+		{
 			"event_id": "dialogic_013"
 		}
 	],

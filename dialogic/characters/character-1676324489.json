@@ -1,0 +1,21 @@
+{
+	"color": "#ffff0e0e",
+	"description": "",
+	"display_name": "Výtah",
+	"display_name_bool": true,
+	"id": "character-1676324489.json",
+	"mirror_portraits": false,
+	"name": "Výtah.json",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}
