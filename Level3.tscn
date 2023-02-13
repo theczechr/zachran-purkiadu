@@ -42,7 +42,7 @@ tile_data = PoolIntArray( 1245212, 0, 4, 1245213, 0, 196609, 1245214, 0, 196609,
 
 [node name="Dvere" parent="YSort" index="7" instance=ExtResource( 10 )]
 position = Vector2( 248, 345 )
-NEXT_LEVEL = "res://Level2.tscn"
+NEXT_LEVEL = "res://Level4.tscn"
 
 [node name="Sprite" parent="YSort/Dvere" index="0"]
 visible = false

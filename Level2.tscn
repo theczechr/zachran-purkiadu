@@ -122,13 +122,10 @@ scale = Vector2( 0.509028, 0.50442 )
 [node name="Dvere3" parent="YSort" index="15" instance=ExtResource( 8 )]
 position = Vector2( 120, 268 )
 scale = Vector2( 0.5, 0.5 )
-NEXT_LEVEL = "res://Level1.tscn"
+NEXT_LEVEL = "user://Level1.tscn"
 
 [node name="Sprite" parent="YSort/Dvere3" index="0"]
 visible = false
-
-[node name="Kolize" parent="YSort/Dvere3" index="1"]
-position = Vector2( 0, 7.5 )
 
 [node name="KameraDoprava2" type="Sprite" parent="YSort" index="16"]
 position = Vector2( 85, 199 )
