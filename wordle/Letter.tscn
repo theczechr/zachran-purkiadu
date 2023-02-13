@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/bg_default.tres" type="Theme" id=1]
 [ext_resource path="res://wordle/Letter.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=3]
 
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -72,6 +75,7 @@ margin_bottom = 14.0
 rect_min_size = Vector2( 50, 50 )
 rect_pivot_offset = Vector2( 25, 25 )
 theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 5 )
 align = 1
 valign = 1
 script = ExtResource( 2 )
