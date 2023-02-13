@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Game.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scenes/Dvere.tscn" type="PackedScene" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://assets/scenes/PCaStolek.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/scenes/Hasicak.tscn" type="PackedScene" id=10]
 [ext_resource path="res://interface/Checkpoint.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/scenes/Flash-disk.tscn" type="PackedScene" id=12]
 
 [node name="Level1" instance=ExtResource( 1 )]
 
@@ -182,10 +181,6 @@ z_index = 1
 
 [node name="PolickasKnihami2" parent="YSort" index="20" instance=ExtResource( 3 )]
 position = Vector2( 205, 203 )
-z_index = 1
-
-[node name="Flash-disk" parent="YSort" index="21" instance=ExtResource( 12 )]
-position = Vector2( 235, 256 )
 z_index = 1
 
 [node name="Checkpoint" parent="." index="4" instance=ExtResource( 11 )]

@@ -10,10 +10,12 @@ var loaded := load("ControlsInfo.tscn")
 func _ready():
 	_create_or_load_save()
 	
-	get_node("Checkpoint").connect("checkpoint_requested", self, "_checkpoint")
+	if get_tree().get_current_scene().get_name() != "Level5":
+		get_node("Checkpoint").connect("checkpoint_requested", self, "_checkpoint")
 	
 	if get_tree().get_current_scene().get_name() == "Level1":
 		get_node("YSort/Hasicak").connect("pickup_hasicak", self, "_pickup_hasicak")
+	if get_tree().get_current_scene().get_name() == "Level5":
 		get_node("YSort/Flash-disk").connect("pickup_flash_disk", self, "_pickup_flash_disk")
 	
 	if get_tree().get_current_scene().get_name() == "Level2":
