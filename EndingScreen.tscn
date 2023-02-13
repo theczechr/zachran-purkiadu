@@ -61,11 +61,11 @@ margin_bottom = 248.0
 alignment = 1
 
 [node name="Pokracovani" type="Label" parent="NinePatchRect/HlBox/Pokracovani2"]
-margin_left = 114.0
-margin_right = 866.0
+margin_left = 50.0
+margin_right = 930.0
 margin_bottom = 16.0
 custom_fonts/font = SubResource( 4 )
-text = "Code: Robin Jarůšek, Karol Raffay, Adam Kopřiva"
+text = "Programování: Robin Jarůšek, Karol Raffay, Adam Kopřiva"
 align = 1
 valign = 1
 
@@ -76,11 +76,11 @@ margin_bottom = 268.0
 alignment = 1
 
 [node name="Pokracovani" type="Label" parent="NinePatchRect/HlBox/Pokracovani3"]
-margin_left = 202.0
-margin_right = 778.0
+margin_left = 218.0
+margin_right = 762.0
 margin_bottom = 16.0
 custom_fonts/font = SubResource( 4 )
-text = "Graphics: Ondřej Dítě, Jan Truneček "
+text = "Grafika: Jan Truneček, Ondřej Dítě"
 align = 1
 valign = 1
 

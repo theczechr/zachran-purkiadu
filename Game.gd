@@ -19,15 +19,16 @@ func _ready():
 	if get_tree().get_current_scene().get_name() == "Level5":
 		get_node("YSort/Flash-disk").connect("pickup_flash_disk", self, "_pickup_flash_disk")
 	
+	if get_tree().get_current_scene().get_name() == "Level3_uhaseno":
+		get_node("YSort/Server3").connect("use_flash_disk", self, "_use_flash_disk")
+		_player.stats.level = 6
+		_progress_sync()
+	
 	if get_tree().get_current_scene().get_name() == "Level2":
 		GlobalData.hasicak = false
 		_inventory.inventory.remove_item("extinguisher")
 		_save_game()
 	
-	if get_tree().get_current_scene().get_name() == "Level3_uhaseno":
-		get_node("YSort/Server3").connect("use_flash_disk", self, "_use_flash_disk")
-
-	var lo = loaded.instance()
 	if str(get_tree().get_current_scene().get_name()) != "EmptySceen":
 		var dialog = Dialogic.start(str(get_tree().get_current_scene().get_name()))
 		add_child(dialog)
