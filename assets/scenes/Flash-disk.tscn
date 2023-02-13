@@ -4,15 +4,14 @@
 [ext_resource path="res://assets/scenes/Flash-disk.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 133.333
+radius = 20.0
 height = 0.0
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 23.0
+radius = 6.0
 height = 0.0
 
 [node name="Flash-disk" type="KinematicBody2D"]
-scale = Vector2( 0.15, 0.15 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
