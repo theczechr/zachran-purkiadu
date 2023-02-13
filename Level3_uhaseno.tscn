@@ -18,7 +18,7 @@ extents = Vector2( 22, 8.5 )
 radius = 5.0
 height = 4.0
 
-[node name="Level3" instance=ExtResource( 2 )]
+[node name="Level3_uhaseno" instance=ExtResource( 2 )]
 
 [node name="Background" parent="." index="0"]
 margin_left = -1065.0
@@ -171,7 +171,7 @@ z_index = 2
 texture = ExtResource( 10 )
 
 [node name="Checkpoint" parent="." index="5" instance=ExtResource( 6 )]
-position = Vector2( 338, 216 )
-NEXT_PROGRESS = 3
+position = Vector2( 322, 231 )
+NEXT_PROGRESS = 5
 
 [editable path="YSort/Controlery"]

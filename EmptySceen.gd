@@ -22,20 +22,27 @@ func _ready():
 		my_scene = packed_scene.instance()
 		add_child(my_scene)
 		print("level 2 loaded")
-	if ResourceLoader.exists("user://Level3.tscn") && _save.character.level == 3:
+	if ResourceLoader.exists("user://Level3.tscn") && _save.character.level == 4:
 		# Load the PackedScene resource
 		var packed_scene = load("user://Level3.tscn")
 		# Instance the scene
 		my_scene = packed_scene.instance()
 		add_child(my_scene)
 		print("level 3 loaded")
-	if ResourceLoader.exists("user://Level4.tscn") && _save.character.level == 4:
+	if ResourceLoader.exists("user://Level4.tscn") && _save.character.level == 3:
 		# Load the PackedScene resource
 		var packed_scene = load("user://Level4.tscn")
 		# Instance the scene
 		my_scene = packed_scene.instance()
 		add_child(my_scene)
 		print("level 4 loaded")
+	if ResourceLoader.exists("user://Level3_uhaseno.tscn") && _save.character.level == 5:
+		# Load the PackedScene resource
+		var packed_scene = load("user://Level3_uhaseno.tscn")
+		# Instance the scene
+		my_scene = packed_scene.instance()
+		add_child(my_scene)
+		print("level 3 uhaseno loaded")
 	if lo.loaded_scene:
 		print("loaded scene state:", lo.loaded_scene)
 		var dialog = Dialogic.start(str(my_scene.get_name()))
