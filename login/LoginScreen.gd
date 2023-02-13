@@ -24,7 +24,7 @@ func _on_LoginButton_pressed() -> void:
 		popup.show()
 		popup.dialog_text = "Nesprávné přihlašovací jméno"
 		return
-		
+
 	GlobalData.username_from_login = username.text
 	get_tree().change_scene("res://ControlsInfo.tscn")
 

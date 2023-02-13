@@ -15,4 +15,4 @@ func game_over(word, guessed):
 
 
 func _on_Button_pressed():
-	
+	pass
