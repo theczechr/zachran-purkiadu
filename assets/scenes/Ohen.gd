@@ -11,11 +11,11 @@ func _unhandled_input(event):
 				get_node("Area2D/interakce").queue_free()
 
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") && GlobalData.hasicak:
 		body.set("show_prompt", true)
 		state = true
 
 func _on_Area2D_body_exited(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") && GlobalData.hasicak:
 		body.set("show_prompt", false)
 		state = false
