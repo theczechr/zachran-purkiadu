@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=1]
 [ext_resource path="res://player/PlayerCharacter.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://assets/sprites/pokoj/beanbag.png" type="Texture" id=20]
 [ext_resource path="res://assets/sprites/pokoj/knihovna.png" type="Texture" id=21]
 [ext_resource path="res://assets/scenes/Dvere.tscn" type="PackedScene" id=22]
+[ext_resource path="res://PokojEnd.gd" type="Script" id=23]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=15]
 
@@ -121,6 +122,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 0/z_index = 0
 
 [node name="PokojEnd" type="Node2D"]
+script = ExtResource( 23 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 margin_right = 1280.0

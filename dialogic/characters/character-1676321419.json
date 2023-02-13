@@ -1,0 +1,21 @@
+{
+	"color": "#ff76ff04",
+	"description": "Server",
+	"display_name": "Server",
+	"display_name_bool": true,
+	"id": "character-1676321419.json",
+	"mirror_portraits": false,
+	"name": "Server.json",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

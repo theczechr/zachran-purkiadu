@@ -125,69 +125,87 @@ tile_data = PoolIntArray( 17890990, 2, 0, 17890991, 2, 0, 17890992, 2, 0, 178909
 
 [node name="Stolecek-chodba" parent="YSort" index="7" instance=ExtResource( 21 )]
 position = Vector2( -435, 212 )
+z_index = 1
 
 [node name="Stolecek-chodba2" parent="YSort" index="8" instance=ExtResource( 21 )]
 position = Vector2( -337, 212 )
+z_index = 1
 
 [node name="Stolecek-chodba3" parent="YSort" index="9" instance=ExtResource( 21 )]
 position = Vector2( -218, 212 )
+z_index = 1
 
 [node name="Stolecek-chodba4" parent="YSort" index="10" instance=ExtResource( 21 )]
 position = Vector2( -109, 212 )
+z_index = 1
 
 [node name="Stolecek-chodba6" parent="YSort" index="11" instance=ExtResource( 21 )]
 position = Vector2( 327, 234 )
+z_index = 1
 
 [node name="Stolecek-chodba5" parent="YSort" index="12" instance=ExtResource( 21 )]
 position = Vector2( -43, 315 )
+z_index = 1
 
 [node name="Kreslo cervene leve" parent="YSort" index="13" instance=ExtResource( 6 )]
 position = Vector2( -466, 207 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo cervene leve2" parent="YSort" index="14" instance=ExtResource( 6 )]
 position = Vector2( -250, 210 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo-modre-dolni" parent="YSort" index="15" instance=ExtResource( 2 )]
 position = Vector2( -435, 230 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo-modre-dolni2" parent="YSort" index="16" instance=ExtResource( 2 )]
 position = Vector2( -337, 230 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo-modre-dolni3" parent="YSort" index="17" instance=ExtResource( 2 )]
 position = Vector2( -43, 332 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo-bile-dolni" parent="YSort" index="18" instance=ExtResource( 10 )]
 position = Vector2( -217, 228 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo zlute prave" parent="YSort" index="19" instance=ExtResource( 1 )]
 position = Vector2( -405, 207 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo zlute prave2" parent="YSort" index="20" instance=ExtResource( 1 )]
 position = Vector2( -77, 209 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo bile prave" parent="YSort" index="21" instance=ExtResource( 20 )]
 position = Vector2( -187, 209 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo bile prave2" parent="YSort" index="22" instance=ExtResource( 20 )]
 position = Vector2( -306, 209 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kreslo-cervene-horni" parent="YSort" index="23" instance=ExtResource( 19 )]
 position = Vector2( -43, 291 )
 scale = Vector2( 0.6, 0.6 )
+z_index = 1
 
 [node name="Kvetina-chodba-1" parent="YSort" index="24" instance=ExtResource( 15 )]
 position = Vector2( -465, 186 )
 scale = Vector2( 0.5, 0.5 )
+z_index = 1
 
 [node name="Kvetina-mala" type="KinematicBody2D" parent="YSort" index="25"]
 position = Vector2( -32, 203 )

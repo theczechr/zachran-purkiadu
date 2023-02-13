@@ -16,12 +16,6 @@
 			"value": "false"
 		},
 		{
-			"id": "1675733096-807",
-			"name": "hasicak_used",
-			"type": 0,
-			"value": "false"
-		},
-		{
 			"id": "1676292569-970",
 			"name": "dvere_kliknuty",
 			"type": 0,
@@ -34,8 +28,32 @@
 			"value": "false"
 		},
 		{
+			"id": "1676290882-366",
+			"name": "Level2_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1675733096-807",
+			"name": "hasicak_used",
+			"type": 0,
+			"value": "false"
+		},
+		{
 			"id": "1676290921-483",
 			"name": "Level5_entered",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676321296-648",
+			"name": "flash_used",
+			"type": 0,
+			"value": "false"
+		},
+		{
+			"id": "1676318798-648",
+			"name": "Controlery_done",
 			"type": 0,
 			"value": "false"
 		},
@@ -46,16 +64,10 @@
 			"value": "false"
 		},
 		{
-			"id": "1676290882-366",
-			"name": "Level2_entered",
+			"id": "1676323062-648",
+			"name": "pokoj_entered",
 			"type": 0,
-			"value": "false"
-		},
-		{
-			"id": "1676318798-648",
-			"name": "Controlery_done",
-			"type": 0,
-			"value": "false"
+			"value": "flase"
 		}
 	]
 }

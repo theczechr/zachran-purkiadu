@@ -30,6 +30,14 @@
 			"event_id": "dialogic_041"
 		},
 		{
+			"definition": "1676292569-970",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "false"
+		},
+		{
 			"event_id": "dialogic_013"
 		}
 	],

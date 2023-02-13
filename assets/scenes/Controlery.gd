@@ -13,7 +13,7 @@ func _unhandled_input(event):
 
 
 func _on_Area2D_body_entered(body):
-	if done == false: 
+	if done == false and GlobalData.flash_disk: 
 		body.set("show_prompt", true)
 		state = true
 		#print("level 3 state je true *---------------")
