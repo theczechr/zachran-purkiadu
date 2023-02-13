@@ -46,13 +46,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
 
+[node name="YSort" type="YSort" parent="."]
+
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -347.0
-margin_top = -163.0
-margin_right = 293.0
-margin_bottom = 197.0
+margin_left = -744.0
+margin_top = -486.0
+margin_right = 612.0
+margin_bottom = 414.0
 texture = ExtResource( 5 )
 stretch_mode = 1
 
@@ -60,45 +62,65 @@ stretch_mode = 1
 anims/RESET = SubResource( 1 )
 anims/fade_in = SubResource( 2 )
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
-margin_left = 507.0
-margin_top = 227.0
-margin_right = 773.0
-margin_bottom = 493.0
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -197.5
+margin_top = -197.5
+margin_right = 197.5
+margin_bottom = 197.5
 
-[node name="line_container" type="VBoxContainer" parent="AspectRatioContainer"]
-margin_right = 266.0
-margin_bottom = 266.0
+[node name="ColorRect" type="ColorRect" parent="AspectRatioContainer3"]
+margin_right = 395.0
+margin_bottom = 395.0
+color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="AspectRatioContainer3"]
+margin_left = 5.0
+margin_right = 5.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+color = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="AspectRatioContainer3"]
+margin_right = 395.0
+margin_bottom = 395.0
+
+[node name="line_container" type="VBoxContainer" parent="AspectRatioContainer3/AspectRatioContainer"]
+margin_right = 395.0
+margin_bottom = 395.0
 alignment = 1
 script = ExtResource( 1 )
 
-[node name="line1" parent="AspectRatioContainer/line_container" instance=ExtResource( 2 )]
-margin_top = 0.0
-margin_right = 266.0
-margin_bottom = 50.0
+[node name="line1" parent="AspectRatioContainer3/AspectRatioContainer/line_container" instance=ExtResource( 2 )]
+margin_top = 64.0
+margin_right = 395.0
+margin_bottom = 114.0
 
-[node name="line2" parent="AspectRatioContainer/line_container" instance=ExtResource( 2 )]
-margin_top = 54.0
-margin_right = 266.0
-margin_bottom = 104.0
+[node name="line2" parent="AspectRatioContainer3/AspectRatioContainer/line_container" instance=ExtResource( 2 )]
+margin_top = 118.0
+margin_right = 395.0
+margin_bottom = 168.0
 
-[node name="line3" parent="AspectRatioContainer/line_container" instance=ExtResource( 2 )]
-margin_top = 108.0
-margin_right = 266.0
-margin_bottom = 158.0
+[node name="line3" parent="AspectRatioContainer3/AspectRatioContainer/line_container" instance=ExtResource( 2 )]
+margin_top = 172.0
+margin_right = 395.0
+margin_bottom = 222.0
 
-[node name="line4" parent="AspectRatioContainer/line_container" instance=ExtResource( 2 )]
-margin_top = 162.0
-margin_right = 266.0
-margin_bottom = 212.0
+[node name="line4" parent="AspectRatioContainer3/AspectRatioContainer/line_container" instance=ExtResource( 2 )]
+margin_top = 226.0
+margin_right = 395.0
+margin_bottom = 276.0
 
-[node name="line5" parent="AspectRatioContainer/line_container" instance=ExtResource( 2 )]
-margin_top = 216.0
-margin_right = 266.0
-margin_bottom = 266.0
+[node name="line5" parent="AspectRatioContainer3/AspectRatioContainer/line_container" instance=ExtResource( 2 )]
+margin_top = 280.0
+margin_right = 395.0
+margin_bottom = 330.0
 
-[node name="Camera2D" type="Camera2D" parent="AspectRatioContainer"]
-position = Vector2( 133, 133 )
+[node name="Camera2D" type="Camera2D" parent="AspectRatioContainer3/AspectRatioContainer"]
+position = Vector2( 197.5, 196.5 )
 current = true
 
 [node name="AspectRatioContainer2" type="AspectRatioContainer" parent="."]
@@ -118,3 +140,14 @@ custom_fonts/font = SubResource( 3 )
 text = "TODAY"
 align = 1
 valign = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+margin_left = 460.0
+margin_top = 175.0
+margin_right = 855.0
+margin_bottom = 570.0
+
+[node name="ColorRect" type="ColorRect" parent="AspectRatioContainer"]
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0.219608, 0.0352941, 0.0352941, 1 )
