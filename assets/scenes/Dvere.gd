@@ -13,8 +13,8 @@ func _unhandled_input(event):
 			if NEXT_LEVEL == "Level" or NEXT_LEVEL == "":
 				print("Dveře jsou zamčené")
 			else:
-					get_tree().change_scene(NEXT_LEVEL)
-					player.set_position(Vector2(x_position, y_position))
+				get_tree().change_scene(NEXT_LEVEL)
+				player.set_position(Vector2(x_position, y_position))
 				
 
 func _on_Area2D_body_entered(body):

@@ -59,6 +59,15 @@
 			"set_value": "false"
 		},
 		{
+			"emit_signal": "fade_out",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
 			"change_scene": "res://PokojEnd.tscn",
 			"event_id": "dialogic_041"
 		},

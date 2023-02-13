@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/scenes/Server.gd" type="Script" id=1]
 [ext_resource path="res://Game.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/sprites/monitory.png" type="Texture" id=9]
 [ext_resource path="res://assets/sprites/svit-dveri.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/big_stul.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/background/black.png" type="Texture" id=12]
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 20.025
@@ -21,6 +22,35 @@ extents = Vector2( 22, 8.5 )
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 5.0
 height = 4.0
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Level3_uhaseno" instance=ExtResource( 2 )]
 
@@ -169,11 +199,14 @@ __meta__ = {
 }
 
 [node name="PlayerCharacter" parent="YSort" index="14"]
-position = Vector2( 337, 215 )
+position = Vector2( 298, 225 )
 
 [node name="Controlery" parent="YSort" index="15" instance=ExtResource( 4 )]
 position = Vector2( 273, 206 )
 script = null
+
+[node name="Interacteble" parent="YSort/Controlery/Area2D" index="0"]
+position = Vector2( 0, 13 )
 
 [node name="Dvere-stin2" type="Sprite" parent="." index="4"]
 position = Vector2( 306, 345 )
@@ -184,6 +217,20 @@ texture = ExtResource( 10 )
 [node name="Checkpoint" parent="." index="5" instance=ExtResource( 6 )]
 position = Vector2( 322, 231 )
 NEXT_PROGRESS = 5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
+scale = Vector2( 5, 5 )
+transform = Transform2D( 5, 0, 0, 5, 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer" index="0"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 370, 261.5 )
+scale = Vector2( 5.84536, 5.37209 )
+texture = ExtResource( 12 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" index="1"]
+anims/RESET = SubResource( 4 )
+anims/fade_out = SubResource( 5 )
 
 [connection signal="body_entered" from="YSort/Server3/Area2D" to="YSort/Server3" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="YSort/Server3/Area2D" to="YSort/Server3" method="_on_Area2D_body_exited"]

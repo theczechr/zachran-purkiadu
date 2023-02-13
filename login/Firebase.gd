@@ -14,7 +14,7 @@ func get_progress(username: String, http: HTTPRequest) -> int:
 
 	http.request(request, [], false, HTTPClient.METHOD_GET)
 	var result := yield(http, "request_completed") as Array
-	print(result)
+	#print(result)
 	var return_value = PoolByteArray(result[3]).get_string_from_utf8()
 	#print("get ", int(return_value), ", ", str(return_value), ", ", return_value)
 
