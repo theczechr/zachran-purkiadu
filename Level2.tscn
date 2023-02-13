@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/sprites/podlozka.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/nastenka_medaile.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Game.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/sprites/ppp.png" type="Texture" id=15]
 [ext_resource path="res://interface/Checkpoint.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/sprites/tretina-jsou-merge-commity.png" type="Texture" id=17]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0
@@ -98,7 +99,7 @@ texture = ExtResource( 6 )
 shape = SubResource( 2 )
 
 [node name="lavecka1" type="KinematicBody2D" parent="YSort" index="12"]
-position = Vector2( 200, 192 )
+position = Vector2( 132, 191 )
 z_index = 1
 __meta__ = {
 "_edit_group_": true
@@ -141,7 +142,7 @@ z_index = 1
 texture = ExtResource( 12 )
 
 [node name="Nastenka2" type="Sprite" parent="YSort" index="19"]
-position = Vector2( 316, 171 )
+position = Vector2( 203, 171 )
 texture = ExtResource( 7 )
 
 [node name="Nastenka3" type="Sprite" parent="YSort" index="20"]
@@ -171,6 +172,11 @@ shape = SubResource( 4 )
 [node name="dvere_stin" type="Sprite" parent="YSort" index="23"]
 position = Vector2( 178, 299 )
 texture = ExtResource( 13 )
+
+[node name="Tretina-jsou-merge-commity" type="Sprite" parent="YSort" index="24"]
+position = Vector2( 332, 176 )
+scale = Vector2( 0.0864431, 0.1 )
+texture = ExtResource( 17 )
 
 [node name="Checkpoint" parent="." index="4" instance=ExtResource( 16 )]
 position = Vector2( 121, 227 )
