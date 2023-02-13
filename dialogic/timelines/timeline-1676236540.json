@@ -18,7 +18,7 @@
 			"character": "character-1675689989.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Budu se do tech dveri muset hacknout.."
+			"text": "Budu se do těch dveří muset hacknout..."
 		},
 		{
 			"event_id": "dialogic_023",
@@ -39,6 +39,10 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"change_scene": "res://minigames/wordle/Wordle.tscn",
+			"event_id": "dialogic_041"
 		}
 	],
 	"metadata": {
