@@ -40,7 +40,7 @@ func check_word(word):
 	print("checkword ", word)
 	check_letter(word)
 	if word == today_word:
-		emit_signal("game_over", today_word)
+		emit_signal("game_over", today_word, true)
 		print("win")
 	else:
 		for i in range(data.size()):
@@ -73,5 +73,5 @@ func change_line():
 		get_child(line_active).line_status = true
 	else:
 		print("game over")
-		emit_signal("game_over", today_word)
+		emit_signal("game_over", today_word, false)
 		
