@@ -5,7 +5,6 @@ var packed_scene = PackedScene.new()
 onready var _player := $YSort/PlayerCharacter
 onready var _inventory := $UI/Inventory
 var _http = load("res://login/Firebase.gd").new()
-
 var loaded := load("ControlsInfo.tscn")
 
 func _ready():
