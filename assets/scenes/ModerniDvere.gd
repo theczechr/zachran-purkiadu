@@ -3,6 +3,10 @@ extends Sprite
 var state = false
 func _unhandled_input(event):
 	if (Input.is_key_pressed(KEY_E) and state):
+		if not GlobalData.flash_disk:
+			var dialog = Dialogic.start("potrebuju_flash")
+			add_child(dialog)
+		else:
 			var dialog = Dialogic.start("open_dvere")
 			add_child(dialog)
 
