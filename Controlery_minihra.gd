@@ -14,7 +14,7 @@ var state4 = 0
 
 func _process(delta):
 	if(state1 == 0 and state2 == 1 and state3 == 1 and state4 == 0):
-		get_tree().change_scene("res://Level3.tscn")
+		get_tree().change_scene("res://Level3_uhaseno.tscn")
 func _on_TextureButton_pressed() -> void:
 	if _texture_toggle == 1:
 		texture_button.texture_pressed = _texture2
