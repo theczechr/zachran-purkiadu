@@ -379,7 +379,6 @@ z_index = 1
 script = ExtResource( 22 )
 
 [node name="PopUp" type="AcceptDialog" parent="UI"]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
