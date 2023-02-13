@@ -105,4 +105,4 @@ func _use_flash_disk() -> void:
 func dialogic_signal(argument):
 	if argument == "fade_out":
 		$CanvasLayer/AnimationPlayer.play("fade_out")
-		print("faded out")
+		#print("faded out")

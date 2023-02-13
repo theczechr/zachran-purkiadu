@@ -11,7 +11,8 @@ var state = false
 func _unhandled_input(event):
 	if (Input.is_key_pressed(KEY_E) and state):
 			if NEXT_LEVEL == "Level" or NEXT_LEVEL == "":
-				print("Dveře jsou zamčené")
+				pass
+				#print("Dveře jsou zamčené")
 			else:
 				get_tree().change_scene(NEXT_LEVEL)
 				player.set_position(Vector2(x_position, y_position))
