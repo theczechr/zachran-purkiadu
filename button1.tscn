@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/bg_dark.tres" type="Theme" id=1]
+[ext_resource path="res://assets/fonts/kenney_fontpackage/Fonts/Kenney Future.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=4]
+size = 39
+font_data = ExtResource( 2 )
+
+[node name="Button" type="Button"]
+margin_left = 847.0
+margin_top = 248.0
+margin_right = 890.0
+margin_bottom = 293.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 4 )
+text = "?"

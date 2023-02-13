@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://minigames/wordle/LineContainer.gd" type="Script" id=1]
 [ext_resource path="res://minigames/wordle/Line.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/bg_dark.tres" type="Theme" id=3]
+[ext_resource path="res://button1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://minigames/wordle/Wordle.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/background/info_bgr.png" type="Texture" id=5]
-[ext_resource path="res://assets/fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://assets/fonts/kenney_fontpackage/Fonts/Kenney Future.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Label.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -38,13 +37,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 39
-font_data = ExtResource( 7 )
 
 [node name="wordle" type="Control"]
 anchor_right = 1.0
@@ -142,29 +134,11 @@ color = Color( 0.219608, 0.0352941, 0.0352941, 1 )
 position = Vector2( 640, 359 )
 current = true
 
-[node name="Label" type="Label" parent="ReferenceRect"]
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -130.5
-margin_top = 185.0
-margin_right = 129.5
-margin_bottom = 218.0
-rect_min_size = Vector2( 75, 25 )
-theme = ExtResource( 3 )
-custom_fonts/font = SubResource( 3 )
-text = "TODAY"
-align = 1
-valign = 1
-autowrap = true
+[node name="Label" parent="ReferenceRect" instance=ExtResource( 6 )]
 
-[node name="Button" type="Button" parent="."]
-margin_left = 847.0
-margin_top = 248.0
-margin_right = 890.0
-margin_bottom = 293.0
-theme = ExtResource( 3 )
-custom_fonts/font = SubResource( 4 )
-text = "?"
+[node name="Button" parent="." instance=ExtResource( 3 )]
+margin_left = 850.0
+margin_right = 886.0
+icon_align = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

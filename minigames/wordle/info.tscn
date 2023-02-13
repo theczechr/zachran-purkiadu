@@ -1,0 +1,147 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://button1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/bg_dark.tres" type="Theme" id=2]
+[ext_resource path="res://assets/sprites/mesto.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/laska.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/strom.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://minigames/wordle/info.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[node name="Panel" type="Panel"]
+margin_right = 1280.0
+margin_bottom = 720.0
+script = ExtResource( 7 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Mesto" type="Sprite" parent="."]
+position = Vector2( 638, 251 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+
+[node name="Strom" type="Sprite" parent="."]
+position = Vector2( 640, 394 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+
+[node name="Laska" type="Sprite" parent="."]
+position = Vector2( 640, 530 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -119.0
+margin_top = -85.0
+margin_right = 119.0
+margin_bottom = -24.0
+border_color = Color( 0, 0, 0, 1 )
+border_width = 5.0
+editor_only = false
+
+[node name="Button" parent="ReferenceRect" instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -121.0
+margin_top = -32.5
+margin_right = 121.0
+margin_bottom = 32.5
+text = "CHápu"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -239.5
+margin_right = 239.5
+margin_bottom = 50.0
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "UHODNI HESLO"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -405.0
+margin_top = 73.0
+margin_right = 405.0
+margin_bottom = 175.0
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Každý pokus musí být platné 5písmenné slovo.
+Potvrď stisknutím klávesy Enter.
+
+Po každém uhodnutí se barva dlaždic změní, 
+podle toho, jak blízko byl tvůj odhad slovu."
+align = 1
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -405.0
+margin_top = -55.5
+margin_right = 405.0
+margin_bottom = -18.5
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Písmeno 'S' je ve slově na správném místě."
+align = 1
+
+[node name="Label4" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -468.0
+margin_top = 90.5
+margin_right = 468.0
+margin_bottom = 127.5
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Písmeno 'S' je ve slově obsaženo, ale na jiném místě."
+align = 1
+
+[node name="Label5" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -468.0
+margin_top = -132.0
+margin_right = 468.0
+margin_bottom = -95.0
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Slovo neobsahuje zádné z těchto písmén."
+align = 1
+
+[connection signal="pressed" from="ReferenceRect/Button" to="." method="_on_Button_pressed"]
