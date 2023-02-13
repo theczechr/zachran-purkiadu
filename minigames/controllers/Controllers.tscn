@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/sprites/background/info_bgr.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/packa-hore.png" type="Texture" id=2]
-[ext_resource path="res://Controlery_minihra.gd" type="Script" id=3]
+[ext_resource path="res://minigames/controllers/Controllers.gd" type="Script" id=3]
 
 [node name="Controlery_minihra" type="Control"]
 anchor_right = 1.0
