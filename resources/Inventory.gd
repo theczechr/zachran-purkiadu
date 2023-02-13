@@ -17,12 +17,12 @@ func get_amount(item_unique_id: String) -> int:
 	
 	return items[item_unique_id]
 
-func remove_item(item_unique_id: String, amount := 1) -> void:
+func remove_item(item_unique_id: String) -> void:
 	if not item_unique_id in items:
 		printerr("Trying to remove item %s but the inventory doesn't have it." % item_unique_id)
 		return
 
-	items[item_unique_id] -= amount
+	items[item_unique_id] = 0
 	if items[item_unique_id] <= 0:
 		items.erase(item_unique_id)
 	emit_changed()

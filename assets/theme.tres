@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=2]
+[gd_resource type="Theme" load_steps=10 format=2]
 
 [ext_resource path="res://assets/fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
 
@@ -10,6 +10,9 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.2, 0.113725, 0.113725, 1 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 30
@@ -29,6 +32,7 @@ default_font = SubResource( 7 )
 Button/fonts/font = SubResource( 1 )
 Label/fonts/font = SubResource( 4 )
 LineEdit/fonts/font = SubResource( 2 )
+Panel/styles/panel = SubResource( 8 )
 PopupDialog/fonts/font = SubResource( 5 )
 PopupPanel/fonts/font = SubResource( 6 )
 TextEdit/fonts/font = SubResource( 3 )
