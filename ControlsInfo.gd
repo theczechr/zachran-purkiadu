@@ -11,4 +11,4 @@ func _physics_process(delta):
 		else:
 			#print("went straight to level one yeah")
 			get_tree().change_scene("res://Level1.tscn")
-	print(loaded_scene)
+	#print(loaded_scene)
