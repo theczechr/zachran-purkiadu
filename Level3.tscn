@@ -169,7 +169,7 @@ __meta__ = {
 position = Vector2( 250, 290 )
 
 [node name="Controlery" parent="YSort" index="16" instance=ExtResource( 2 )]
-position = Vector2( 336, 189 )
+position = Vector2( 274, 206 )
 
 [node name="Dvere-stin2" type="Sprite" parent="." index="4"]
 position = Vector2( 306, 345 )
