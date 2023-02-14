@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/sprites/background/info_bgr.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://EndingScreen.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/button/space.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -54,10 +53,25 @@ margin_right = 980.0
 margin_bottom = 228.0
 rect_min_size = Vector2( 0, 140 )
 
-[node name="Pokracovani2" type="HBoxContainer" parent="NinePatchRect/HlBox"]
+[node name="Pokracovani4" type="Label" parent="NinePatchRect/HlBox"]
 margin_top = 232.0
 margin_right = 980.0
 margin_bottom = 248.0
+custom_fonts/font = SubResource( 4 )
+text = "Děkujeme za dohrání hry, doufáme že se ti líbila."
+align = 1
+valign = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="NinePatchRect/HlBox"]
+margin_top = 252.0
+margin_right = 980.0
+margin_bottom = 392.0
+rect_min_size = Vector2( 0, 140 )
+
+[node name="Pokracovani2" type="HBoxContainer" parent="NinePatchRect/HlBox"]
+margin_top = 396.0
+margin_right = 980.0
+margin_bottom = 412.0
 alignment = 1
 
 [node name="Pokracovani" type="Label" parent="NinePatchRect/HlBox/Pokracovani2"]
@@ -70,9 +84,9 @@ align = 1
 valign = 1
 
 [node name="Pokracovani3" type="HBoxContainer" parent="NinePatchRect/HlBox"]
-margin_top = 252.0
+margin_top = 416.0
 margin_right = 980.0
-margin_bottom = 268.0
+margin_bottom = 432.0
 alignment = 1
 
 [node name="Pokracovani" type="Label" parent="NinePatchRect/HlBox/Pokracovani3"]
@@ -85,29 +99,13 @@ align = 1
 valign = 1
 
 [node name="MarginContainer3" type="MarginContainer" parent="NinePatchRect/HlBox"]
-margin_top = 272.0
+margin_top = 436.0
 margin_right = 980.0
-margin_bottom = 412.0
+margin_bottom = 576.0
 rect_min_size = Vector2( 0, 140 )
 
 [node name="Pokracovani" type="HBoxContainer" parent="NinePatchRect/HlBox"]
-margin_top = 416.0
+margin_top = 580.0
 margin_right = 980.0
-margin_bottom = 432.0
+margin_bottom = 580.0
 alignment = 1
-
-[node name="Pokracovani" type="Label" parent="NinePatchRect/HlBox/Pokracovani"]
-margin_left = 304.0
-margin_right = 624.0
-margin_bottom = 16.0
-custom_fonts/font = SubResource( 4 )
-text = "Pro ukončení stiskni"
-align = 1
-valign = 1
-
-[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect/HlBox/Pokracovani"]
-margin_left = 628.0
-margin_right = 676.0
-margin_bottom = 16.0
-rect_min_size = Vector2( 48, 16 )
-texture = ExtResource( 5 )
