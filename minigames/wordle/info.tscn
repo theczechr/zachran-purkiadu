@@ -21,55 +21,31 @@ font_data = ExtResource( 6 )
 [sub_resource type="StyleBoxEmpty" id=4]
 
 [node name="Panel" type="Panel"]
-margin_right = 1280.0
-margin_bottom = 720.0
+margin_left = -1586.0
+margin_top = -1067.0
+margin_right = 2480.0
+margin_bottom = 2203.0
 script = ExtResource( 7 )
 
-[node name="YSort" type="YSort" parent="."]
+[node name="ReferenceRect2" type="ReferenceRect" parent="."]
+margin_left = 1586.0
+margin_top = 1067.0
+margin_right = 2866.0
+margin_bottom = 1787.0
 
-[node name="Mesto" type="Sprite" parent="."]
+[node name="YSort" type="YSort" parent="ReferenceRect2"]
+
+[node name="Mesto" type="Sprite" parent="ReferenceRect2"]
 position = Vector2( 638, 251 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 640, 360 )
-
-[node name="Strom" type="Sprite" parent="."]
+[node name="Strom" type="Sprite" parent="ReferenceRect2"]
 position = Vector2( 640, 394 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
 
-[node name="Laska" type="Sprite" parent="."]
-position = Vector2( 640, 530 )
-scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 4 )
-
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -119.0
-margin_top = -85.0
-margin_right = 119.0
-margin_bottom = -24.0
-border_color = Color( 0, 0, 0, 1 )
-border_width = 5.0
-editor_only = false
-
-[node name="Button" parent="ReferenceRect" instance=ExtResource( 1 )]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -121.0
-margin_top = -32.5
-margin_right = 121.0
-margin_bottom = 32.5
-text = "CHápu"
-
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="ReferenceRect2"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -239.5
@@ -82,7 +58,7 @@ text = "UHODNI HESLO"
 align = 1
 valign = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="ReferenceRect2"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -405.0
@@ -99,7 +75,7 @@ Po každém uhodnutí se barva dlaždic změní,
 podle toho, jak blízko byl tvůj odhad slovu."
 align = 1
 
-[node name="Label3" type="Label" parent="."]
+[node name="Label3" type="Label" parent="ReferenceRect2"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -114,14 +90,14 @@ custom_styles/normal = SubResource( 4 )
 text = "Písmeno 'S' je ve slově na správném místě."
 align = 1
 
-[node name="Label4" type="Label" parent="."]
+[node name="Label4" type="Label" parent="ReferenceRect2"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -468.0
 margin_top = 90.5
-margin_right = 468.0
+margin_right = 486.0
 margin_bottom = 127.5
 theme = ExtResource( 2 )
 custom_fonts/font = SubResource( 3 )
@@ -129,7 +105,7 @@ custom_styles/normal = SubResource( 4 )
 text = "Písmeno 'S' je ve slově obsaženo, ale na jiném místě."
 align = 1
 
-[node name="Label5" type="Label" parent="."]
+[node name="Label5" type="Label" parent="ReferenceRect2"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -144,4 +120,37 @@ custom_styles/normal = SubResource( 4 )
 text = "Slovo neobsahuje zádné z těchto písmén."
 align = 1
 
-[connection signal="pressed" from="ReferenceRect/Button" to="." method="_on_Button_pressed"]
+[node name="Laska" type="Sprite" parent="ReferenceRect2"]
+position = Vector2( 640, 530 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="ReferenceRect2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -119.0
+margin_top = -85.0
+margin_right = 119.0
+margin_bottom = -24.0
+border_color = Color( 0, 0, 0, 1 )
+border_width = 5.0
+editor_only = false
+
+[node name="Button" parent="ReferenceRect2/ReferenceRect" instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -121.0
+margin_top = -32.5
+margin_right = 121.0
+margin_bottom = 32.5
+text = "CHápu"
+
+[node name="Camera2D" type="Camera2D" parent="ReferenceRect2"]
+position = Vector2( 640, 360 )
+current = true
+
+[connection signal="pressed" from="ReferenceRect2/ReferenceRect/Button" to="." method="_on_Button_pressed"]

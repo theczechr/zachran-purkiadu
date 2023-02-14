@@ -45,7 +45,7 @@ func check_word(word):
 	else:
 		for i in range(data.size()):
 			if word == data[i]["word"].to_upper():
-				#print("valid")
+				print("valid")
 				
 
 func check_letter(word):
