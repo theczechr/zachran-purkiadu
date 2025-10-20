@@ -7,13 +7,7 @@
 <p align="center">
   <strong>A short 2D pixel art adventure game that combines logic puzzles with IT concepts</strong>
   <br />
-  Built with Godot Engine • Created for Purkiáda 2023
-  <br />
-  <br />
-  <a href="#about">About</a> •
-  <a href="#gameplay">Gameplay</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#development">Development</a>
+  Built with Godot Engine and created for Purkiáda 2023
 </p>
 
 <hr />
@@ -22,12 +16,12 @@
 
 **Zachraň Purkiádu** (Save Purkiáda) is an immersive 2D logic game that takes players on an exciting journey through a school in crisis. Set in the year 2022, players must use their wit, logical thinking, and IT knowledge to save the annual Purkiáda event from catastrophe. Based on our experience with the previous year's competition, fixing major issues with the servers the evening before it.
 
-
 ## Gameplay
 
-> *You wake up in your school on the day before Purkiáda 2022. Something's terribly wrong - the school is on fire, systems are failing, and chaos reigns. As the only one who can save the day, you must navigate through various challenges, solve complex puzzles, and restore the school's critical systems before it's too late.*
+> _You wake up in your school on the day before Purkiáda 2022. Something's terribly wrong - the school is on fire, systems are failing, and chaos reigns. As the only one who can save the day, you must navigate through various challenges, solve complex puzzles, and restore the school's critical systems before it's too late._
 
-### Key Elements:
+### Your goals:
+
 - **Explore** the school environment and uncover hidden clues
 - **Solve** IT-themed logic puzzles to progress
 - **Save** the Purkiáda event from total disaster
@@ -35,10 +29,12 @@
 ## Installation
 
 ### Requirements
+
 - Godot Engine 3.x or higher
 - Windows/Linux/macOS
 
 ### Quick Start
+
 1. Clone this repository
    ```bash
    git clone https://github.com/theczechr/zachran-purkiadu.git
@@ -48,4 +44,4 @@
 
 ## Development
 
-This educational game was created in 2 weeks in a team of 4 people specifically for **Purkiáda 2023**. Built using the Godot Engine. Most assets were bought, so the MIT license does not apply to them.
+This educational game was created in 2 weeks in a team of 4 people specifically for **Purkiáda 2023** built using the Godot Engine.
